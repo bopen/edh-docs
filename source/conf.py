@@ -26,3 +26,9 @@ exclude_patterns = []
 
 html_theme = 'shibuya'
 html_static_path = ['_static']
+html_css_files = ['portal-frame.css']
+html_js_files = ['portal-frame.js']
+html_context = {
+    'portal_url': 'https://earthdatahub.destine.eu',
+    'desp_platform_url': 'https://platform.destine.eu',
+}

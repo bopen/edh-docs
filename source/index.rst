@@ -20,3 +20,5 @@ documentation for details.
    markdown-test
 
    design-test
+
+   long-page-test

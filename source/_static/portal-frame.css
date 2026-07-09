@@ -1,0 +1,402 @@
+.edh-portal-header,
+.edh-portal-footer {
+  --desp-gradient-start: #8739c4;
+  --desp-gradient-end: #d93f88;
+  --desp-frame-hover-color: #1e2637;
+  --edh-dropdown-bg: #0d1527bb;
+  --edh-icon-violet: #7b34db;
+
+  background: #000;
+  color: #fff;
+  font: inherit;
+}
+
+.edh-portal-header a,
+.edh-portal-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.edh-portal-header button,
+.edh-portal-footer button {
+  appearance: none;
+  cursor: pointer;
+}
+
+.edh-portal-header [hidden],
+.edh-portal-footer [hidden] {
+  display: none !important;
+}
+
+.edh-portal-icon {
+  display: block;
+  height: 28px;
+  width: 28px;
+}
+
+.edh-portal-icon--close,
+[aria-expanded="true"] .edh-portal-icon--open {
+  display: none;
+}
+
+[aria-expanded="true"] .edh-portal-icon--close {
+  display: block;
+}
+
+.edh-portal-menu {
+  position: relative;
+}
+
+.edh-portal-dropdown {
+  background: var(--edh-dropdown-bg);
+  box-shadow: 0 12px 28px rgb(0 0 0 / 28%);
+  min-width: max-content;
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+}
+
+.edh-portal-dropdown a,
+.edh-portal-header__mobile-panel a {
+  display: block;
+  font-weight: 700;
+  padding: 10px 16px;
+  transition: background-color 250ms ease-in-out;
+  white-space: nowrap;
+}
+
+.edh-portal-dropdown a:hover,
+.edh-portal-dropdown a:focus,
+.edh-portal-header__mobile-panel a:hover,
+.edh-portal-header__mobile-panel a:focus {
+  background: var(--desp-frame-hover-color);
+}
+
+.edh-portal-header {
+  position: relative;
+  width: 100%;
+  z-index: 20;
+}
+
+.edh-portal-header__inner {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 12px;
+  width: 100%;
+}
+
+.edh-portal-header__brand-group {
+  align-items: center;
+  display: flex;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.edh-portal-header__destine-logo {
+  display: none;
+  flex: 0 0 auto;
+  padding: 8px;
+}
+
+.edh-portal-header__destine-logo img {
+  height: auto;
+  width: 69px;
+}
+
+.edh-portal-header__edh-logo {
+  align-items: center;
+  display: flex;
+  flex: 0 1 auto;
+  min-width: 42px;
+}
+
+.edh-portal-header .edh-portal-header__edh-logo-full {
+  display: none;
+  height: auto;
+  width: 78px;
+}
+
+.edh-portal-header .edh-portal-header__edh-logo-minimal {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.edh-portal-header__nav-actions {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 16px;
+}
+
+.edh-portal-header__nav-list {
+  align-items: center;
+  display: none;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.edh-portal-header__nav-link {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 4px;
+  transition: opacity 250ms ease-in-out;
+  white-space: nowrap;
+}
+
+.edh-portal-header__nav-link:hover,
+.edh-portal-header__nav-link:focus {
+  opacity: .4;
+}
+
+.edh-portal-header__actions {
+  align-items: center;
+  display: inline-flex;
+  gap: 16px;
+}
+
+.edh-portal-header__icon-button,
+.edh-portal-header__mobile-button {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.edh-portal-header__icon-button {
+  height: 40px;
+  width: 40px;
+}
+
+.edh-portal-header__mobile-button {
+  height: 48px;
+  width: 48px;
+}
+
+.edh-portal-header__mobile-button .edh-portal-icon {
+  height: 32px;
+  width: 32px;
+}
+
+.edh-portal-header__icon-button:focus-visible,
+.edh-portal-header__mobile-button:focus-visible,
+.edh-portal-footer__policies-button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.edh-portal-header__info-menu {
+  top: calc(100% + 8px);
+}
+
+.edh-portal-header__signin {
+  align-items: center;
+  background: linear-gradient(
+    249deg,
+    var(--desp-gradient-start) 20%,
+    #db3f86 64%,
+    var(--desp-gradient-end) 100%
+  );
+  border-radius: 19px;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 700;
+  gap: 24px;
+  min-height: 40px;
+  padding: 0 16px;
+  transition: box-shadow 250ms ease-in-out;
+  white-space: nowrap;
+}
+
+.edh-portal-header__signin:hover,
+.edh-portal-header__signin:focus {
+  box-shadow: inset 200px 0 0 0 var(--desp-gradient-start);
+}
+
+.edh-portal-header__signin-icon {
+  display: none;
+  height: 20px;
+  width: 20px;
+}
+
+.edh-portal-header__mobile-menu {
+  display: inline-flex;
+  position: static;
+}
+
+.edh-portal-header__mobile-panel {
+  background: #000;
+  box-shadow: 0 12px 28px rgb(0 0 0 / 28%);
+  left: 0;
+  padding: 16px 24px 24px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 999;
+}
+
+.edh-docs-sidebar-tools {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.edh-portal-footer {
+  border-top: 2px solid var(--edh-icon-violet);
+  display: flex;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.edh-portal-footer__inner {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 64px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.edh-portal-footer__desp-logo {
+  align-items: center;
+  display: flex;
+}
+
+.edh-portal-footer__desp-logo img {
+  height: auto;
+  width: 56px;
+}
+
+.edh-portal-footer__funders {
+  align-items: center;
+  display: none;
+  flex: 2 1 auto;
+  justify-content: center;
+}
+
+.edh-portal-footer__funders a,
+.edh-portal-footer__funders img {
+  flex: 0 0 auto;
+}
+
+.edh-portal-footer__funder-destine {
+  height: auto;
+  width: 176px;
+}
+
+.edh-portal-footer__funder-eu {
+  height: auto;
+  width: 144px;
+}
+
+.edh-portal-footer__funder-implemented {
+  height: auto;
+  width: 80px;
+}
+
+.edh-portal-footer__funder-ecmwf {
+  height: auto;
+  width: 96px;
+}
+
+.edh-portal-footer__funder-esa {
+  height: auto;
+  width: 64px;
+}
+
+.edh-portal-footer__funder-eumetsat {
+  height: auto;
+  width: 96px;
+}
+
+.edh-portal-footer__policies-button {
+  align-items: center;
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  min-width: 64px;
+  padding: 0 16px;
+}
+
+.edh-portal-footer__policies-button .edh-portal-icon {
+  height: 32px;
+  width: 32px;
+}
+
+.edh-portal-footer__policies-menu {
+  bottom: calc(100% + 8px);
+}
+
+@media (min-width: 640px) {
+  .edh-portal-header__signin-icon {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .edh-portal-header__destine-logo {
+    display: flex;
+  }
+
+  .edh-portal-header__edh-logo {
+    margin-left: 24px;
+  }
+
+  .edh-portal-header .edh-portal-header__edh-logo-full {
+    display: block;
+  }
+
+  .edh-portal-header .edh-portal-header__edh-logo-minimal {
+    display: none;
+  }
+
+  .edh-portal-header__signin {
+    min-width: 182px;
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .edh-portal-header__nav-actions {
+    gap: 32px;
+    margin-right: 8px;
+  }
+
+  .edh-portal-header__nav-list {
+    display: flex;
+  }
+
+  .edh-portal-header__mobile-menu {
+    display: none;
+  }
+
+  .edh-portal-header__mobile-button {
+    display: none;
+  }
+
+  .edh-portal-footer__funders {
+    display: flex;
+  }
+}
+
+@media (min-width: 1280px) {
+  .edh-portal-header__destine-logo img {
+    width: 196px;
+  }
+
+  .edh-portal-header .edh-portal-header__edh-logo-full {
+    width: 180px;
+  }
+
+  .edh-portal-header__nav-list {
+    gap: 24px;
+  }
+}
