@@ -15,6 +15,8 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
+   Overview <self>
+
    getting-started
 
    markdown-test
