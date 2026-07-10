@@ -250,10 +250,16 @@
   margin-bottom: 20px;
 }
 
+.sy-breadcrumbs {
+  top: 0;
+}
+
+/**
 .sy-breadcrumbs-inner > .md\:hidden.mr-3,
 .sy-breadcrumbs-inner > .xl\:hidden.ml-1 {
   display: none !important;
 }
+**/
 
 .edh-portal-footer {
   border-top: 2px solid var(--edh-icon-violet);
