@@ -11,6 +11,10 @@
   font: inherit;
 }
 
+body {
+  padding-bottom: calc(66px + env(safe-area-inset-bottom));
+}
+
 .edh-portal-header a,
 .edh-portal-footer a {
   color: #fff;
@@ -263,9 +267,13 @@
 
 .edh-portal-footer {
   border-top: 2px solid var(--edh-icon-violet);
+  bottom: 0;
   display: flex;
+  left: 0;
   padding: 0 16px;
+  position: fixed;
   width: 100%;
+  z-index: 30;
 }
 
 .edh-portal-footer__inner {
