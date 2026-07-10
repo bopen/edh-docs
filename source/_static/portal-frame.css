@@ -109,7 +109,7 @@ body {
 
 .edh-portal-header__destine-logo img {
   height: auto;
-  width: 69px;
+  width: clamp(69px, calc(15.264vw - 48.2px), 196px);
 }
 
 .edh-portal-header__edh-logo {
@@ -122,7 +122,7 @@ body {
 .edh-portal-header .edh-portal-header__edh-logo-full {
   display: none;
   height: auto;
-  width: 78px;
+  width: clamp(78px, calc(12.26vw - 16.15px), 180px);
 }
 
 .edh-portal-header .edh-portal-header__edh-logo-minimal {
@@ -386,6 +386,16 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .edh-portal-footer__funders {
+    display: flex;
+  }
+}
+
+@media (min-width: 1120px) {
+  .edh-portal-header__inner {
+    flex-wrap: nowrap;
+  }
+
   .edh-portal-header__nav-actions {
     gap: 32px;
     margin-right: 8px;
@@ -402,21 +412,9 @@ body {
   .edh-portal-header__mobile-button {
     display: none;
   }
-
-  .edh-portal-footer__funders {
-    display: flex;
-  }
 }
 
 @media (min-width: 1280px) {
-  .edh-portal-header__destine-logo img {
-    width: 196px;
-  }
-
-  .edh-portal-header .edh-portal-header__edh-logo-full {
-    width: 180px;
-  }
-
   .edh-portal-header__nav-list {
     gap: 24px;
   }
