@@ -15,7 +15,7 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
-   Overview <self>
+   Docs home <self>
 
    getting-started
 
