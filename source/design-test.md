@@ -1,4 +1,4 @@
-# Design Test
+# Design test
 
 ````{grid} 2
 ```{grid-item-card} Getting started

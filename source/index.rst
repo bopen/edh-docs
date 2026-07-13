@@ -24,3 +24,6 @@ documentation for details.
    design-test
 
    long-page-test
+
+   code-snippets-test
+   

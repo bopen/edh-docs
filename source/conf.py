@@ -14,7 +14,14 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["myst_parser", "sphinx_design"]
+extensions = [
+    "myst_parser",
+    "sphinx_design",
+    "sphinx_copybutton",
+    "sphinx_togglebutton",
+]
+
+copybutton_exclude = ".linenos, .gp, .go"
 
 templates_path = ['_templates']
 exclude_patterns = []
