@@ -15,8 +15,8 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
-   getting-started
-
-   markdown-test
+   Docs home <self>
 
    design-test
+
+   code-snippets-test

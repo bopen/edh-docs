@@ -1,0 +1,79 @@
+<footer class="edh-portal-footer">
+  <div class="edh-portal-footer__inner">
+    <a
+      class="edh-portal-footer__desp-logo"
+      href="{{ desp_platform_url }}/"
+      target="_destine"
+      rel="noopener noreferrer"
+    >
+      <img src="{{ pathto('_static/images/portal/desp_logo.svg', 1) }}" alt="DestinE platform">
+    </a>
+
+    <div class="edh-portal-footer__funders" aria-label="Earth Data Hub funders and implementers">
+      <a href="https://destination-earth.eu/" target="_destine" rel="noopener noreferrer">
+        <img
+          class="edh-portal-footer__funder-destine"
+          src="{{ pathto('_static/images/portal/funders/destination-earth-name.png', 1) }}"
+          alt="Destination Earth"
+        >
+      </a>
+      <a href="https://european-union.europa.eu/" target="_destine" rel="noopener noreferrer">
+        <img
+          class="edh-portal-footer__funder-eu"
+          src="{{ pathto('_static/images/portal/funders/funded-by-EU.png', 1) }}"
+          alt="European Union"
+        >
+      </a>
+      <img
+        class="edh-portal-footer__funder-implemented"
+        src="{{ pathto('_static/images/portal/funders/implemented-by.png', 1) }}"
+        alt=""
+      >
+      <a href="https://www.ecmwf.int/" target="_destine" rel="noopener noreferrer">
+        <img
+          class="edh-portal-footer__funder-ecmwf"
+          src="{{ pathto('_static/images/portal/funders/ecmwf.png', 1) }}"
+          alt="European Centre for Medium-Range Weather Forecasts (ECMWF)"
+        >
+      </a>
+      <a href="https://www.esa.int/" target="_destine" rel="noopener noreferrer">
+        <img
+          class="edh-portal-footer__funder-esa"
+          src="{{ pathto('_static/images/portal/funders/esa.png', 1) }}"
+          alt="European Space Agency (ESA)"
+        >
+      </a>
+      <a href="https://www.eumetsat.int/" target="_destine" rel="noopener noreferrer">
+        <img
+          class="edh-portal-footer__funder-eumetsat"
+          src="{{ pathto('_static/images/portal/funders/eumetsat.png', 1) }}"
+          alt="European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT)"
+        >
+      </a>
+    </div>
+
+    <div class="edh-portal-menu" data-portal-menu>
+      <button
+        class="edh-portal-footer__policies-button"
+        type="button"
+        aria-label="Policies menu"
+        aria-controls="edh-footer-policies-menu"
+        aria-expanded="false"
+        data-portal-menu-button
+      >
+        {% include "partials/portal-menu-toggle-icons.html" %}
+      </button>
+      <div
+        id="edh-footer-policies-menu"
+        class="edh-portal-dropdown edh-portal-footer__policies-menu"
+        data-portal-menu-panel
+        hidden
+      >
+        <a href="{{ desp_platform_url }}/code-of-conduct/" target="_destine" rel="noopener noreferrer">Code of Conduct</a>
+        <a href="{{ desp_platform_url }}/terms-and-conditions/" target="_destine" rel="noopener noreferrer">Terms and Conditions</a>
+        <a href="{{ desp_platform_url }}/privacy-policies/" target="_destine" rel="noopener noreferrer">Privacy Policies</a>
+        <a href="{{ portal_url }}/additional-terms-and-conditions">Cookie Management</a>
+      </div>
+    </div>
+  </div>
+</footer>
