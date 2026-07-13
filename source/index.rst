@@ -17,13 +17,6 @@ documentation for details.
 
    Docs home <self>
 
-   getting-started
-
-   markdown-test
-
    design-test
 
-   long-page-test
-
    code-snippets-test
-   

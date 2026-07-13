@@ -1,17 +1,17 @@
 # Design test
 
 ````{grid} 2
-```{grid-item-card} Getting started
-:link: getting-started
+```{grid-item-card} Documentation home
+:link: index
 :link-type: doc
 
-Start here if you are new to EDH.
+Return to the documentation home page.
 ```
 
-```{grid-item-card} Markdown test
-:link: markdown-test
+```{grid-item-card} Code snippets test
+:link: code-snippets-test
 :link-type: doc
 
-Check a page written with MyST Markdown.
+Explore Python code-block features in MyST Markdown.
 ```
 ````
