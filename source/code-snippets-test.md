@@ -23,11 +23,12 @@ Use the `code-block` directive when a snippet needs presentation options. The
 referenceable.
 
 ```{code-block} python
-:caption: Calculate an average temperature
-:name: average-temperature-snippet
-:linenos:
-:emphasize-lines: 4,7
-
+---
+caption: Calculate an average temperature
+name: average-temperature-snippet
+linenos:
+emphasize-lines: 4,7
+---
 from statistics import fmean
 
 def average_temperature(readings: list[float]) -> float:
@@ -55,11 +56,13 @@ does not duplicate the source. It can select a Python object or a range of
 lines.
 
 ```{literalinclude} _snippets/test_snippet.py
-:language: python
-:pyobject: celsius_mean
-:caption: _snippets/test_snippet.py
-:linenos:
-:emphasize-lines: 4-5
+---
+language: python
+pyobject: celsius_mean
+caption: _snippets/test_snippet.py
+linenos:
+emphasize-lines: 4-5
+---
 ```
 
 ## Dark code
@@ -68,8 +71,9 @@ Shibuya's `dark-code` class gives one block a dark treatment that is visible
 when the documentation is in light mode.
 
 ```{code-block} python
-:class: dark-code
-
+---
+class: dark-code
+---
 theme_options = {
     "dark_code": True,
 }
@@ -93,8 +97,9 @@ Both examples below collapse the whole code block rather than selected lines.
 The `toggle` class is provided by `sphinx-togglebutton`.
 
 ```{code-block} python
-:class: toggle
-
+---
+class: toggle
+---
 def normalize(values: list[float]) -> list[float]:
     maximum = max(values)
     return [value / maximum for value in values]
