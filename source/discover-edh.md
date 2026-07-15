@@ -1,0 +1,1 @@
+# {octicon}`globe` Discover EDH

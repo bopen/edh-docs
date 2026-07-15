@@ -25,7 +25,7 @@ repos:
   hooks:
   - id: mdformat
     additional_dependencies:
-    - mdformat-black
+    - mdformat-ruff
     - mdformat-myst
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
   rev: v2.16.0
@@ -45,3 +45,7 @@ repos:
   - id: zizmor
     args: [--no-progress, --fix]
     exclude: .github/workflows/main.yaml
+- repo: https://github.com/PyCQA/doc8
+  rev: v2.0.0
+  hooks:
+  - id: doc8
