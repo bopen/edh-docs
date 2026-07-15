@@ -39,3 +39,8 @@ html_context = {
     "portal_url": "https://earthdatahub.destine.eu",
     "desp_platform_url": "https://platform.destine.eu",
 }
+html_theme_options = {
+    "globaltoc_expand_depth": 2,
+    "toctree_maxdepth": 2, 
+    "toctree_titles_only": False, 
+}
