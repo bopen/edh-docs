@@ -11,7 +11,7 @@ description: Learn what Earth Data Hub is and what you can do with it.
 
 Earth data is amazing. Finding it, downloading it, and preparing it? Not so much.
 
-**Earth Data Hub** removes the friction between you and the data. We gather, organise, and optimise massive Earth datasets so you can start exploring them immediately.
+**Earth Data Hub removes the friction** between you and the data. We gather, organise, and optimise massive Earth datasets so you can start exploring them immediately.
 
 Whether you're a scientist, developer, analyst, student, or simply curious about our planet, EDH helps you spend less time wrestling with data and more time discovering insights.
 
@@ -21,7 +21,7 @@ EDH gives you access to **petabytes of Earth data**, ready for analysis from day
 
 Datasets are organised into collections of homogeneous items and stored in cloud-optimised Zarr format, making them fast to access and easy to work with.
 
-Because EDH is built on open standards, you can stream data directly over HTTP using the programming languages and tools you already know—no specialised software required.
+Because EDH is built on open standards, you can stream data directly over HTTP into the programming languages and tools you already use, with **no bespoke software required**.
 
 ## How it works
 
