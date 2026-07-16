@@ -49,7 +49,7 @@ Discover patterns, trends, and changes across our planet.
 {octicon}`graph` **You analyse**
 Stream the data you need directly into your favourite tools.
 
-{octicon}`rocket` **You create**
+{octicon}`zap` **You create**
 Build models, applications, and new insights without the usual data headaches.
 ```
 
