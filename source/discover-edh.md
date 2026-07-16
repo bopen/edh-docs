@@ -7,7 +7,7 @@
 
 Earth data is amazing. Finding it, downloading it, and preparing it? Not so much.
 
-**Earth Data Hub** removes the friction between you and the data. We gather, organise, and optimise massive Earth observation datasets so you can start exploring them immediately.
+**Earth Data Hub** removes the friction between you and the data. We gather, organise, and optimise massive Earth datasets so you can start exploring them immediately.
 
 Whether you're a scientist, developer, analyst, student, or simply curious about our planet, EDH helps you spend less time wrestling with data and more time discovering insights.
 
@@ -31,7 +31,7 @@ gutter: 3
 :class-card: sd-shadow-sm
 
 {octicon}`database` **We collect**
-We continuously ingest datasets from trusted Earth observation providers.
+We continuously ingest datasets from trusted Earth providers.
 
 {octicon}`tools` **We prepare**
 We organise, standardise, and optimise data into analysis-ready formats.
