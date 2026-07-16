@@ -33,7 +33,7 @@
         :link: quick-start
         :link-type: doc
 
-        Create your account and run your first data workflow in minutes.
+        Get up and running with Earth Data Hub in just a few minutes.
 
     .. grid-item-card:: :octicon:`light-bulb` Core Concepts
         :link: core-concepts

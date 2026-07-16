@@ -26,6 +26,9 @@ copybutton_exclude = ".linenos, .gp, .go"
 templates_path = ["_templates"]
 exclude_patterns = []
 
+myst_enable_extensions = [
+    "attrs_block",
+]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -38,4 +41,10 @@ html_js_files = ["portal-frame.js"]
 html_context = {
     "portal_url": "https://earthdatahub.destine.eu",
     "desp_platform_url": "https://platform.destine.eu",
+}
+html_theme_options = {
+    "globaltoc_expand_depth": 1,
+    "toctree_collapse": True,
+    "toctree_maxdepth": 2,
+    "toctree_titles_only": False,
 }
