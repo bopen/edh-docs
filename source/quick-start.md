@@ -1,19 +1,24 @@
+---
+description: Get up and running with Earth Data Hub in just a few minutes.
+---
+
 # {octicon}`rocket` Quick Start
 
-Get up and running with Earth Data Hub in just a few minutes.
+{ .lead }
+Get up and running with Earth Data Hub and start streaming your first dataset in just a few minutes.
 
 ## Prerequisites
 
-```{admonition} No proprietary SDK is required.
+```{admonition} Pure open standards. Zero vendor lock-in.
 ---
 class: note
 ---
-Earth Data Hub is built on open standards with zero vendor lock-in.
-Our datasets are cloud-optimised Zarr stores accessible over HTTP from any language or library that supports Zarr.
+Earth Data Hub is built entirely on open standards. Our datasets are cloud-optimised Zarr stores, meaning you can stream them directly over HTTP using any language or library you already know.
 ```
 
-While you can connect using any language, our recommended setup uses Python and [Xarray](https://docs.xarray.dev/en/stable/).
-Here is how to install the dependencies required for this quick start in your terminal:
+While you can use any language, we recommend **Python combined with [Xarray](https://docs.xarray.dev/en/stable/)** for the best experience.
+
+Install the required packages for this quick start by running this command in your terminal:
 
 ```{code-block} bash
 ---
@@ -22,98 +27,102 @@ class: dark-code
 pip install xarray "zarr>3" dask aiohttp
 ```
 
-## Open a public test dataset
+## Try a public dataset
 
-Start by opening the **public test dataset**—no credentials required.
-It is ideal for exploring Earth Data Hub, becoming familiar with the data format, and setting up your workflows before accessing the full catalogue.
+Let's verify your environment. We have provided a **public test dataset** that you can access instantly, with **no accounts or passwords required**. It is the perfect place to test your setup before exploring the wider catalogue.
+
+Run the following in your Python console:
 
 ```{code-block} pycon
 >>> import xarray as xr
 
 >>> xr.open_dataset(
 ...     "https://data.earthdatahub.destine.eu/public/test-dataset-v0.zarr",
-...     chunks={},
+...     chunks={},  # Tells Xarray to load data on-demand
 ...     engine="zarr",
 ... )
-<xarray.Dataset>
+<xarray.Dataset> Size: 4GB
+Dimensions:               (latitude: 720, longitude: 1440,
+                           age_band_lower_bound: 14, year: 71)
+Coordinates:
+  * latitude              (latitude) float64 6kB 90.0 89.75 ... -89.5 -89.75
+  * longitude             (longitude) float64 12kB 0.0 0.25 0.5 ... 359.5 359.8
+  * age_band_lower_bound  (age_band_lower_bound) int64 112B 0 5 10 ... 55 60 65
+  * year                  (year) int64 568B 1950 1951 1952 ... 2018 2019 2020
+Data variables:
+    demographic_totals    (latitude, longitude, age_band_lower_bound, year) float32 4GB dask.array<chunksize=(180, 180, 14, 2), meta=np.ndarray>
+
 ```
 
-You have now opened your first Earth Data Hub dataset as an Xarray `Dataset`.
-Most datasets require authentication, so the next step is to configure your API key.
+And just like that, you are connected! The output above shows an Xarray `Dataset` representing the data you are accessing. To access the rest of our catalogue, you will need to **set up authentication**.
 
 ## Set up your API key
 
-To access the full Earth Data Hub catalogue, you will need a **Standard API Key**.
+To access our full suite of datasets, you will need a free **Standard API Key**.
 
-1. Register on the [DestinE Platform](https://platform.destine.eu/).
-1. Open your [Earth Data Hub account settings](https://earthdatahub.destine.eu/account-settings#my-personal-access-tokens).
-1. Copy your default API key or create a new one.
+1. **Register an account** on the [DestinE Platform](https://platform.destine.eu/).
+1. **Visit your [Earth Data Hub account settings](https://earthdatahub.destine.eu/account-settings#my-personal-access-tokens)**.
+1. **Copy your default API key** (or generate a new one).
 
-```{admonition} Climate DT datasets require upgraded access
+```{admonition} Climate DT requires upgraded access.
 ---
 class: warning
 ---
-Datasets in the **Destination Earth Climate Adaptation Digital Twin (Climate DT)** collection require upgraded permissions
-Follow the [Destination Earth User Access Upgrade](https://platform.destine.eu/access-policy-upgrade/) process to request access.
+Datasets in our **Destination Earth Climate Adaptation Digital Twin (Climate DT)** collection require additional permissions. If you need access, follow the [Destination Earth User Access Upgrade](https://platform.destine.eu/access-policy-upgrade/) process.
 ```
 
 ## Access protected datasets
 
-Most datasets in the Earth Data Hub catalogue require authentication with your **Standard API Key**.
+Most datasets in the Earth Data Hub catalogue require your API key. Here are two ways to configure authentication:
 
-There are two ways to provide it:
+### Option 1: Key in the URL
 
-1. **Add it to the dataset URL** — quick and convenient for testing.
-1. **Configure a `.netrc` file** — recommended if you use Earth Data Hub regularly.
+The quickest way to test protected data is to include your API key directly as the password in the dataset URL:
 
-### Option 1: Add the API key to the URL
+```python
+import xarray as xr
 
-For a quick test, include your API key as the password in the dataset URL:
-
-```{code-block} pycon
->>> import xarray as xr
-
->>> xr.open_dataset(
-...     "https://edh:<your API key>@api.earthdatahub.destine.eu/private/test-dataset-v0.zarr",
-...     chunks={},
-...     engine="zarr",
-... )
-<xarray.Dataset>
+# Replace <your API key> with your actual key
+xr.open_dataset(
+    "https://edh:<your API key>@api.earthdatahub.destine.eu/private/test-dataset-v0.zarr",
+    chunks={},
+    engine="zarr",
+)
 ```
 
-### Option 2: Configure a `.netrc` file (recommended)
+### Option 2: Using .netrc (Recommended)
 
-If you plan to use Earth Data Hub regularly, store your API key in a `.netrc` file. This lets your tools authenticate automatically without embedding credentials in every URL.
+For everyday use, we recommend **storing your API key in a hidden `.netrc` file**. This allows your Python scripts to authenticate automatically in the background without exposing your keys.
 
-Create a file named:
+If you don't have it already, **create a text** file in your home directory:
 
 - **macOS/Linux:** `~/.netrc`
 - **Windows:** `C:\Users\<username>\_netrc`
 
-with the following contents:
+Then, **add the following lines** to the file:
 
 ```text
 machine api.earthdatahub.destine.eu
   password <your API key>
+
 ```
 
-When using Xarray, enable `.netrc` support with `trust_env=True`:
+Now, you can load protected datasets cleanly by enabling environment trust (`trust_env=True`):
 
-```{code-block} pycon
->>> import xarray as xr
+```python
+import xarray as xr
 
->>> xr.open_dataset(
-...     "https://api.earthdatahub.destine.eu/private/test-dataset-v0.zarr",
-...     storage_options={"client_kwargs": {"trust_env": True}},
-...     chunks={},
-...     engine="zarr",
-... )
-<xarray.Dataset>
+xr.open_dataset(
+    "https://api.earthdatahub.destine.eu/private/test-dataset-v0.zarr",
+    storage_options={"client_kwargs": {"trust_env": True}},  # Auto-detect your .netrc
+    chunks={},
+    engine="zarr",
+)
 ```
 
-```{admonition} Set it up once, use it everywhere
+```{admonition} Set it up once, use it everywhere.
 ---
 class: tip
 ---
-For everyday use, we recommend configuring a `.netrc` file. It keeps your API key out of your code and works with any protected dataset URL from the Earth Data Hub catalogue.
+Direct authentication is fine for a quick test, but using a `.netrc` file is the recommended approach. It keeps your API key out of your code, helps prevent accidental commits, and makes your scripts easier to share.
 ```
