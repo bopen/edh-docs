@@ -5,7 +5,7 @@
 
 :layout: landing
 :description: Earth Data Hub (EDH) is the fastest route to access
-              and analyse earth data
+              and analyse earth data.
 
 :octicon:`home` Docs Home
 =========================
