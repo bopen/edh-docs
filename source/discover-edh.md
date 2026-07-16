@@ -31,7 +31,7 @@ gutter: 3
 :class-card: sd-shadow-sm
 
 {octicon}`database` **We collect**
-We continuously ingest datasets from trusted Earth providers.
+We continuously ingest datasets from trusted Earth data providers.
 
 {octicon}`tools` **We prepare**
 We organise, standardise, and optimise data into analysis-ready formats.
