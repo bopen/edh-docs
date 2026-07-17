@@ -19,16 +19,38 @@ extensions = [
     "sphinx_design",
     "sphinx_copybutton",
     "sphinx_togglebutton",
+    "sphinx_collections",
+    "nbsphinx",
 ]
 
 copybutton_exclude = ".linenos, .gp, .go"
 
 templates_path = ["_templates"]
-exclude_patterns = []
+exclude_patterns = [
+    "_collections/edh-learning/README.md",
+    "_collections/DESP-UserWorkflowService-Templates",
+]
 
 myst_enable_extensions = [
     "attrs_block",
 ]
+
+collections = {
+    "edh-learning": {
+        "driver": "git",
+        "source": "https://github.com/bopen/edh-learning.git",
+    },
+    "DESP-UserWorkflowService-Templates": {
+        "driver": "git",
+        "source": "https://github.com/SercoSPA/DESP-UserWorkflowService-Templates",
+    },
+    "insula-notebooks": {
+        "driver": "copy_folder",
+        "source": "./_collections/DESP-UserWorkflowService-Templates/EarthDataHub",
+        "target": "insula-notebooks/",
+    },
+}
+nbsphinx_execute = "never"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
