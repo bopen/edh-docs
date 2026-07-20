@@ -23,7 +23,8 @@ extensions = [
     "nbsphinx",
 ]
 
-copybutton_exclude = ".linenos, .gp, .go"
+copybutton_prompt_text = r">>> |\.\.\. "
+copybutton_prompt_is_regexp = True
 
 templates_path = ["_templates"]
 exclude_patterns = [
