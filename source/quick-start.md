@@ -109,7 +109,10 @@ machine api.earthdatahub.destine.eu
 
 Now, you can load protected datasets cleanly by enabling environment trust (`trust_env=True`):
 
-```python
+```{code-block} python
+---
+emphasize-lines: 5
+---
 import xarray as xr
 
 xr.open_dataset(
