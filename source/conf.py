@@ -29,6 +29,7 @@ templates_path = ["_templates"]
 exclude_patterns = [
     "_collections/edh-learning/README.md",
     "_collections/DESP-UserWorkflowService-Templates",
+    "_collections/insula-notebooks/tutorial/demo-*",
 ]
 
 myst_enable_extensions = [
@@ -51,6 +52,7 @@ collections = {
     },
 }
 nbsphinx_execute = "never"
+nbsphinx_codecell_lexer = "ipython3"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
