@@ -262,7 +262,7 @@ requires-dist = [
     { name = "nbsphinx", specifier = ">=0.9.8" },
     { name = "shibuya", specifier = ">=2026.5.19" },
     { name = "sphinx", specifier = ">=9.1.0" },
-    { name = "sphinx-collections", specifier = ">=0.3.2" },
+    { name = "sphinx-collections", git = "https://github.com/malmans2/sphinx-collections?rev=git-pull" },
     { name = "sphinx-copybutton", specifier = ">=0.5.2" },
     { name = "sphinx-design", specifier = ">=0.7.0" },
     { name = "sphinx-togglebutton", specifier = ">=0.4.5" },
@@ -1100,16 +1100,12 @@ wheels = [
 [[package]]
 name = "sphinx-collections"
 version = "0.3.2"
-source = { registry = "https://pypi.org/simple" }
+source = { git = "https://github.com/malmans2/sphinx-collections?rev=git-pull#8c7a670ddcc898613c46b08885edbc001828dd53" }
 dependencies = [
     { name = "gitpython" },
     { name = "jinja2" },
     { name = "packaging" },
     { name = "sphinx" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/e7/21/69cb9ca119f948a4433baf8d30d4f867b441b1f6210ff91c4c4ad082dd87/sphinx_collections-0.3.2.tar.gz", hash = "sha256:42506b0ec456b70a63be1641a84b33399503f3233bfdc1d181775c7475466b85", size = 13286, upload-time = "2026-06-22T17:45:40.967Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/73/70/f97f7d5f20db13afc1dc5a7d941e2f46cbdbda14e5ef603a6fbb3e0a5c5e/sphinx_collections-0.3.2-py3-none-any.whl", hash = "sha256:ab93ab151a045b9dd70a8ed6f8462f3f096c1a3a73bbe1ca8efbda093b5ac6da", size = 16703, upload-time = "2026-06-22T17:45:39.715Z" },
 ]
 
 [[package]]

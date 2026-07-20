@@ -30,7 +30,7 @@ templates_path = ["_templates"]
 exclude_patterns = [
     "_collections/edh-learning/README.md",
     "_collections/DESP-UserWorkflowService-Templates",
-    "_collections/insula-notebooks/tutorial/demo-*",
+    "_collections/insula-notebooks/demo-*",
 ]
 
 myst_enable_extensions = [
@@ -41,15 +41,21 @@ collections = {
     "edh-learning": {
         "driver": "git",
         "source": "https://github.com/bopen/edh-learning.git",
+        "clean": False,
+        "final_clean": False,
     },
     "DESP-UserWorkflowService-Templates": {
         "driver": "git",
         "source": "https://github.com/SercoSPA/DESP-UserWorkflowService-Templates",
+        "clean": False,
+        "final_clean": False,
     },
     "insula-notebooks": {
-        "driver": "copy_folder",
+        "driver": "symlink",
         "source": "./_collections/DESP-UserWorkflowService-Templates/EarthDataHub",
         "target": "insula-notebooks/",
+        "clean": True,
+        "final_clean": False,
     },
 }
 nbsphinx_execute = "never"
