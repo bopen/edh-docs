@@ -60,6 +60,26 @@ collections = {
 }
 nbsphinx_execute = "never"
 nbsphinx_codecell_lexer = "ipython3"
+nbsphinx_prolog = r"""
+{% set doc = env.docname %}
+
+{% if doc.startswith('_collections/edh-learning') %}
+
+.. note::
+   To run this notebook locally, follow the setup instructions in the `GitHub repository <https://github.com/bopen/edh-learning>`_.
+
+----
+
+{% elif doc.startswith('_collections/insula-notebooks') %}
+
+.. tip::
+   Run this notebook directly in the `Insula Code Lab <https://code.insula.destine.eu/>`_.
+   Everything is already configured for you.
+
+----
+
+{% endif %}
+"""
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

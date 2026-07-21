@@ -4,13 +4,12 @@ description: Explore ready-to-run notebooks you can adapt and reuse.
 
 # {octicon}`beaker` Cookbook
 
-Welcome to the Earth Data Hub kitchen! Our ready-to-run Jupyter notebooks help you learn faster, explore datasets, and build your own workflows.
-
-Whether you're new to EDH or looking for examples to build on, these notebooks provide a practical starting point for your work.
+{ .lead }
+Discover ready-to-run Jupyter notebooks to help you get started with Earth Data Hub and make your workflows more efficient.
 
 ## EDH learning
 
-Learn the essentials of working with Earth Data Hub datasets, one notebook at a time.
+Educational notebooks demonstrating best practices for accessing, authenticating, transforming, and visualising Earth Data Hub climate and geospatial datasets.
 
 ```{note}
 Some notebooks require additional dependencies. If you're running them locally, follow the setup instructions in the [GitHub repository](https://github.com/bopen/edh-learning).
@@ -19,7 +18,7 @@ Some notebooks require additional dependencies. If you're running them locally, 
 ```{nbgallery}
 ---
 glob:
-caption: Earth Data Hub learning
+caption: EDH learning
 ---
 _collections/edh-learning/notebooks/*
 ```
@@ -29,7 +28,7 @@ _collections/edh-learning/notebooks/*
 No installation. No setup. Just open your browser and start coding.
 
 ```{note}
-These notebooks run directly in the [Insula Code Lab](https://platform.destine.eu/services/service/insula-code/), with everything already configured for you.
+These notebooks run directly in the [Insula Code Lab](https://code.insula.destine.eu/), with everything already configured for you.
 ```
 
 ```{nbgallery}
