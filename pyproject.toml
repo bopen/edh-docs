@@ -5,9 +5,12 @@ dev = [
 
 [project]
 dependencies = [
+  "ipywidgets>=8.1.8",
   "myst-parser>=5.1.0",
+  "nbsphinx>=0.9.8",
   "shibuya>=2026.5.19",
   "sphinx>=9.1.0",
+  "sphinx-collections",
   "sphinx-copybutton>=0.5.2",
   "sphinx-design>=0.7.0",
   "sphinx-togglebutton>=0.4.5"
@@ -15,3 +18,6 @@ dependencies = [
 name = "edh-docs"
 requires-python = ">=3.14"
 version = "0.1.0"
+
+[tool.uv.sources]
+sphinx-collections = {git = "https://github.com/malmans2/sphinx-collections", rev = "git-pull"}

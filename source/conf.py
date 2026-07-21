@@ -19,17 +19,67 @@ extensions = [
     "sphinx_design",
     "sphinx_copybutton",
     "sphinx_togglebutton",
+    "sphinx_collections",
+    "nbsphinx",
 ]
 
 copybutton_prompt_text = r">>> |\.\.\. "
 copybutton_prompt_is_regexp = True
 
 templates_path = ["_templates"]
-exclude_patterns = []
+exclude_patterns = [
+    "_collections/edh-learning/README.md",
+    "_collections/DESP-UserWorkflowService-Templates",
+    "_collections/insula-notebooks/demo-*",
+]
 
 myst_enable_extensions = [
     "attrs_block",
 ]
+
+collections = {
+    "edh-learning": {
+        "driver": "git",
+        "source": "https://github.com/bopen/edh-learning.git",
+        "clean": False,
+        "final_clean": False,
+    },
+    "DESP-UserWorkflowService-Templates": {
+        "driver": "git",
+        "source": "https://github.com/SercoSPA/DESP-UserWorkflowService-Templates",
+        "clean": False,
+        "final_clean": False,
+    },
+    "insula-notebooks": {
+        "driver": "copy_folder",
+        "source": "./_collections/DESP-UserWorkflowService-Templates/EarthDataHub/",
+        "target": "insula-notebooks/",
+        "clean": True,
+        "final_clean": False,
+    },
+}
+nbsphinx_execute = "never"
+nbsphinx_codecell_lexer = "ipython3"
+nbsphinx_prolog = r"""
+{% set doc = env.docname %}
+
+{% if doc.startswith('_collections/edh-learning') %}
+
+.. note::
+   To run this notebook locally, follow the setup instructions in the `GitHub repository <https://github.com/bopen/edh-learning>`_.
+
+----
+
+{% elif doc.startswith('_collections/insula-notebooks') %}
+
+.. tip::
+   Run this notebook directly in the `Insula Code Lab <https://code.insula.destine.eu/>`_.
+   Everything is already configured for you.
+
+----
+
+{% endif %}
+"""
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
