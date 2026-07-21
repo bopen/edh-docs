@@ -51,8 +51,8 @@ collections = {
         "final_clean": False,
     },
     "insula-notebooks": {
-        "driver": "symlink",
-        "source": "./_collections/DESP-UserWorkflowService-Templates/EarthDataHub",
+        "driver": "copy_folder",
+        "source": "./_collections/DESP-UserWorkflowService-Templates/EarthDataHub/",
         "target": "insula-notebooks/",
         "clean": True,
         "final_clean": False,
