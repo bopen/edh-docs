@@ -258,6 +258,18 @@ body {
   top: 0;
 }
 
+.buttons.edh-notebook-actions {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.edh-notebook-actions .sd-octicon {
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 4px;
+}
+
 /**
 .sy-breadcrumbs-inner > .md\:hidden.mr-3,
 .sy-breadcrumbs-inner > .xl\:hidden.ml-1 {

@@ -68,17 +68,27 @@ nbsphinx_prolog = r"""
 .. note::
    To run this notebook locally, follow the setup instructions in the `GitHub repository <https://github.com/bopen/edh-learning>`_.
 
-----
-
 {% elif doc.startswith('_collections/insula-notebooks') %}
 
 .. tip::
    Run this notebook directly in the `Insula Code Lab <https://code.insula.destine.eu/>`_.
    Everything is already configured for you.
 
-----
-
 {% endif %}
+
+.. |download-link-opening| raw:: html
+
+   <a href="{{ doc.split('/')[-1] | e }}.ipynb" download>
+
+.. |download-link-closing| raw:: html
+
+   </a>
+
+.. container:: buttons edh-notebook-actions
+
+   |download-link-opening| :octicon:`download` Download notebook |download-link-closing|
+
+----
 """
 
 # -- Options for HTML output -------------------------------------------------
