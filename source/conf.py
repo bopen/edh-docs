@@ -21,6 +21,7 @@ extensions = [
     "sphinx_togglebutton",
     "sphinx_collections",
     "nbsphinx",
+    "sphinxcontrib.youtube",
 ]
 
 copybutton_prompt_text = r">>> |\.\.\. "
