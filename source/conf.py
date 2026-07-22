@@ -81,6 +81,13 @@ nbsphinx_prolog = r"""
 {% endif %}
 """
 
+linkcheck_ignore = [
+    r"https://data\.earthdatahub\.destine\.eu/private/.*\.zarr",
+]
+linkcheck_anchors_ignore_for_url = [
+    r"https://earthdatahub\.destine\.eu/quota-api-keys",
+]
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
