@@ -61,7 +61,7 @@ And just like that, you are connected! The output above shows an Xarray `Dataset
 To access our full suite of datasets, you will need a free **Standard API Key**.
 
 1. **Register an account** on the [DestinE Platform](https://platform.destine.eu/).
-1. **Visit your [Earth Data Hub account settings](https://earthdatahub.destine.eu/account-settings#my-personal-access-tokens)**.
+1. **Visit your [Earth Data Hub account settings](https://earthdatahub.destine.eu/quota-api-keys#my-personal-access-tokens)**.
 1. **Copy your default API key** (or generate a new one).
 
 ```{admonition} Climate DT requires upgraded access.
