@@ -58,7 +58,7 @@ And just like that, you are connected! The output above shows an Xarray `Dataset
 
 ## Set up your API key
 
-To access our full suite of datasets, you will need a free **Standard API Key**.
+To access our full suite of datasets, you will need a free **API Key**.
 
 1. **Register an account** on the [DestinE Platform](https://platform.destine.eu/).
 1. **Visit your [Earth Data Hub account settings](https://earthdatahub.destine.eu/quota-api-keys#my-personal-access-tokens)**.
@@ -84,7 +84,7 @@ import xarray as xr
 
 # Replace <your API key> with your actual key
 xr.open_dataset(
-    "https://edh:<your API key>@api.earthdatahub.destine.eu/private/test-dataset-v0.zarr",
+    "https://edh:<your API key>@data.earthdatahub.destine.eu/private/test-dataset-v0.zarr",
     chunks={},
     engine="zarr",
 )
@@ -102,9 +102,11 @@ If you don't have it already, **create a text** file in your home directory:
 Then, **add the following lines** to the file:
 
 ```text
-machine api.earthdatahub.destine.eu
+machine data.earthdatahub.destine.eu
   password <your API key>
 
+machine api.earthdatahub.destine.eu
+  password <your API key>
 ```
 
 Now, you can load protected datasets cleanly by enabling environment trust (`trust_env=True`):
@@ -116,7 +118,7 @@ emphasize-lines: 5
 import xarray as xr
 
 xr.open_dataset(
-    "https://api.earthdatahub.destine.eu/private/test-dataset-v0.zarr",
+    "https://data.earthdatahub.destine.eu/private/test-dataset-v0.zarr",
     storage_options={"client_kwargs": {"trust_env": True}},  # Auto-detect your .netrc
     chunks={},
     engine="zarr",
