@@ -68,25 +68,37 @@ nbsphinx_prolog = r"""
 .. note::
    To run this notebook locally, follow the setup instructions in the `GitHub repository <https://github.com/bopen/edh-learning>`_.
 
-{% elif doc.startswith('_collections/insula-notebooks') %}
-
-.. tip::
-   Run this notebook directly in the `Insula Code Lab <https://code.insula.destine.eu/>`_.
-   Everything is already configured for you.
-
 {% endif %}
 
 .. |download-link-opening| raw:: html
 
-   <a href="{{ doc.split('/')[-1] | e }}.ipynb" download>
+   <span><a href="{{ doc.split('/')[-1] | e }}.ipynb" download>
 
 .. |download-link-closing| raw:: html
 
-   </a>
+   </a></span>
+
+.. |insula-link-opening| raw:: html
+
+   <span><a href="https://code.insula.destine.eu/hub/user-redirect/lab/tree/platform-lab/EarthDataHub/{{ doc.split('/')[-1] | e }}.ipynb" target="_insula">
+
+.. |insula-link-closing| raw:: html
+
+   </a></span>
+
+{% if doc.startswith('_collections/insula-notebooks') %}
+
+.. container:: buttons edh-notebook-actions
+
+   |download-link-opening| :octicon:`download` Download notebook |download-link-closing| |insula-link-opening| :octicon:`terminal` Run this notebook |insula-link-closing|
+
+{% else %}
 
 .. container:: buttons edh-notebook-actions
 
    |download-link-opening| :octicon:`download` Download notebook |download-link-closing|
+
+{% endif %}
 
 ----
 """
