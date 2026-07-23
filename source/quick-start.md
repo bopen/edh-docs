@@ -5,7 +5,7 @@ description: Get up and running with Earth Data Hub in just a few minutes.
 # {octicon}`rocket` Quick Start
 
 { .lead }
-Get up and running with Earth Data Hub and start streaming your first dataset in just a few minutes.
+Get up and running with Earth Data Hub in just a few minutes.
 
 ## Prerequisites
 

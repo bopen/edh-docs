@@ -5,7 +5,7 @@ description: Explore ready-to-run notebooks you can adapt and reuse.
 # {octicon}`beaker` Cookbook
 
 { .lead }
-Discover ready-to-run Jupyter notebooks to help you get started with Earth Data Hub and make your workflows more efficient.
+Explore ready-to-run notebooks you can adapt and reuse.
 
 ## EDH learning
 
