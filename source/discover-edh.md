@@ -5,7 +5,7 @@ description: Learn what Earth Data Hub is and what you can do with it.
 # {octicon}`globe` Discover EDH
 
 { .lead }
-**Earth Data Hub (EDH)** is the fastest route to access and analyse Earth data.
+Learn what Earth Data Hub is and what you can do with it.
 
 ## EDH in a nutshell
 
