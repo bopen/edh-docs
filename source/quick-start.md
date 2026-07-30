@@ -94,12 +94,12 @@ xr.open_dataset(
 
 For everyday use, we recommend **storing your API key in a hidden `.netrc` file**. This allows your Python scripts to authenticate automatically in the background without exposing your keys.
 
-If you don't have it already, **create a text** file in your home directory:
+If you don't have it already, **create a file** in your home directory:
 
 - **macOS/Linux:** `~/.netrc`
 - **Windows:** `C:\Users\<username>\_netrc`
 
-Then, **add the following lines** to the file:
+Then, **add the following lines** to the `.netrc` file:
 
 ```text
 machine data.earthdatahub.destine.eu
