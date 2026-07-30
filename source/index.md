@@ -1,23 +1,20 @@
-.. edh-docs documentation master file, created by
-   sphinx-quickstart on Wed Jul  8 11:57:53 2026.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+---
+description: |-
+  Earth Data Hub (EDH) is the fastest route to access
+  and analyse earth data.
+layout: landing
+---
 
-:layout: landing
-:description: Earth Data Hub (EDH) is the fastest route to access
-              and analyse earth data.
+# {octicon}`home` Docs Home
 
-:octicon:`home` Docs Home
-=========================
+{ .lead }
+Welcome to the Earth Data Hub (EDH) documentation.
 
-.. rst-class:: lead
+```{container} buttons
+[Earth Data Hub](https://earthdatahub.destine.eu/)
+```
 
-    Welcome to the Earth Data Hub (EDH) documentation.
-
-.. container:: buttons
-
-    `Earth Data Hub <https://earthdatahub.destine.eu/>`_
-
+```{eval-rst}
 .. grid:: 1 1 2 3
     :gutter: 2
     :padding: 0
@@ -58,23 +55,26 @@
         :link-type: doc
 
         Find answers to common questions and resolve issues quickly.
+```
 
-.. toctree::
-   :caption: Contents:
-   :hidden:
+```{toctree}
+---
+caption: 'Contents:'
+hidden: true
+---
+self
 
-   self
+discover-edh
 
-   discover-edh
+quick-start
 
-   quick-start
+core-concepts
 
-   core-concepts
+data-access
 
-   data-access
+cookbook
 
-   cookbook
+help-and-troubleshooting
 
-   help-and-troubleshooting
-
-   code-snippets-test
+code-snippets-test
+```

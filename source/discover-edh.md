@@ -30,30 +30,30 @@ We handle the complexity behind the scenes. You focus on exploring our planet, u
 ````{grid} 2
 ---
 gutter: 3
+padding: 0
+class-row: surface
 ---
 ```{grid-item-card} What we do
-:class-card: sd-shadow-sm
 
-{octicon}`database` **We collect**
+{octicon}`database` **We collect**<br>
 We continuously ingest datasets from trusted Earth data providers.
 
-{octicon}`tools` **We prepare**
+{octicon}`tools` **We prepare**<br>
 We organise, standardise, and optimise data into analysis-ready formats.
 
-{octicon}`cloud` **We make it accessible**
+{octicon}`cloud` **We make it accessible**<br>
 We store data in the cloud and make it available through open standards.
 ```
 
 ```{grid-item-card} What you do
-:class-card: sd-shadow-sm
 
-{octicon}`search` **You explore**
+{octicon}`search` **You explore**<br>
 Discover patterns, trends, and changes across our planet.
 
-{octicon}`graph` **You analyse**
+{octicon}`graph` **You analyse**<br>
 Stream the data you need directly into your favourite tools.
 
-{octicon}`zap` **You create**
+{octicon}`zap` **You create**<br>
 Build models, applications, and new insights without the usual data headaches.
 ```
 
