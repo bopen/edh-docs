@@ -2,7 +2,7 @@
 description: Explore ready-to-run notebooks you can adapt and reuse.
 ---
 
-# {octicon}`beaker` Cookbook
+# {octicon}`book` Notebooks
 
 { .lead }
 Explore ready-to-run notebooks you can adapt and reuse.

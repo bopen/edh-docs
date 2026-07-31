@@ -38,19 +38,21 @@ Earth Data Hub is designed to fit into your existing workflows, not replace them
 
 To access any dataset, you only need two things:
 
-```{eval-rst}
-.. grid:: 2
-    :gutter: 3
-    :padding: 0
-    :class-row: surface
+```{grid} 2
+---
+gutter: 2
+padding: 0
+class-row: surface
+---
+~~~{grid-item-card} {octicon}`key` API key
 
-    .. grid-item-card:: :octicon:`key` API key
+Your credentials for authenticating access to protected datasets.
+~~~
 
-       Your credentials for authenticating access to protected datasets.
+~~~{grid-item-card} {octicon}`link` Dataset URL
 
-    .. grid-item-card:: :octicon:`link` Dataset URL
-
-       The address of any dataset in the catalogue.
+The address of any dataset in the catalogue.
+~~~
 ```
 
 Use your API key and dataset URL with your favourite programming languages and libraries, or build your own tools.
@@ -61,19 +63,21 @@ Zarr stores datasets as small chunks that can be streamed on demand. The size an
 
 These two extreme chunking schemes optimise for opposite use cases:
 
-```{eval-rst}
-.. grid:: 2
-    :gutter: 3
-    :padding: 0
-    :class-row: surface
+```{grid} 2
+---
+gutter: 2
+padding: 0
+class-row: surface
+---
+~~~{grid-item-card} {octicon}`stack` Map-optimised
 
-    .. grid-item-card:: :octicon:`stack` Map-optimised
+Best for viewing maps, loading large regions, and comparing snapshots in time.
+~~~
 
-       Best for viewing maps, loading large regions, and comparing snapshots in time.
+~~~{grid-item-card} {octicon}`graph` Time series-optimised
 
-    .. grid-item-card:: :octicon:`graph` Time series-optimised
-
-       Best for analysing how variables change over time at specific locations.
+Best for analysing how variables change over time at specific locations.
+~~~
 ```
 
 No single chunking scheme fits every use case. We optimise each dataset for its most common access patterns and, when needed, publish multiple versions for different workflows.

@@ -14,47 +14,52 @@ Welcome to the Earth Data Hub (EDH) documentation.
 [Earth Data Hub](https://earthdatahub.destine.eu/)
 ```
 
-```{eval-rst}
-.. grid:: 1 1 2 3
-    :gutter: 2
-    :padding: 0
-    :class-row: surface
+```{grid} 1 1 2 3
+---
+gutter: 2
+padding: 0
+class-row: surface
+---
+~~~{grid-item-card}  {octicon}`globe` Discover EDH
+:link: discover-edh
+:link-type: doc
 
-    .. grid-item-card:: :octicon:`globe` Discover EDH
-        :link: discover-edh
-        :link-type: doc
+Learn what Earth Data Hub is and what you can do with it.
+~~~
 
-        Learn what Earth Data Hub is and what you can do with it.
+~~~{grid-item-card} {octicon}`rocket` Quick Start
+:link: quick-start
+:link-type: doc
 
-    .. grid-item-card:: :octicon:`rocket` Quick Start
-        :link: quick-start
-        :link-type: doc
+Get up and running with Earth Data Hub in just a few minutes.
+~~~
 
-        Get up and running with Earth Data Hub in just a few minutes.
+~~~{grid-item-card} {octicon}`light-bulb` Core Concepts
+:link: core-concepts
+:link-type: doc
 
-    .. grid-item-card:: :octicon:`light-bulb` Core Concepts
-        :link: core-concepts
-        :link-type: doc
+Understand how Earth Data Hub makes massive datasets simple to discover and use.
+~~~
 
-        Understand how Earth Data Hub makes massive datasets simple to discover and use.
+~~~{grid-item-card} {octicon}`download` Data Access
+:link: data-access
+:link-type: doc
 
-    .. grid-item-card:: :octicon:`download` Data Access
-        :link: data-access
-        :link-type: doc
+Stream data efficiently with code examples, tools, and best practices.
+~~~
 
-        Stream data efficiently with code examples, tools, and best practices.
+~~~{grid-item-card} {octicon}`book` Notebooks
+:link: notebooks
+:link-type: doc
 
-    .. grid-item-card:: :octicon:`beaker` Cookbook
-        :link: cookbook
-        :link-type: doc
+Explore ready-to-run notebooks you can adapt and reuse.
+~~~
 
-        Explore ready-to-run notebooks you can adapt and reuse.
+~~~{grid-item-card} {octicon}`question` Help & Troubleshooting
+:link: help-and-troubleshooting
+:link-type: doc
 
-    .. grid-item-card:: :octicon:`question` Help & Troubleshooting
-        :link: help-and-troubleshooting
-        :link-type: doc
-
-        Find answers to common questions and resolve issues quickly.
+Find answers to common questions and resolve issues quickly.
 ```
 
 ```{toctree}
@@ -72,9 +77,7 @@ core-concepts
 
 data-access
 
-cookbook
+notebooks
 
 help-and-troubleshooting
-
-code-snippets-test
 ```

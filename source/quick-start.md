@@ -20,12 +20,28 @@ While you can use any language, we recommend **Python combined with [Xarray](htt
 
 Install the required packages for this quick start by running this command in your terminal:
 
-```{code-block} bash
+````{tab-set}
 ---
-class: dark-code
+class: outline
 ---
+~~~{tab-item} {iconify}`vscode-icons:file-type-pypi` pip
+```bash
 pip install xarray "zarr>3" dask aiohttp
 ```
+~~~
+
+~~~{tab-item} {iconify}`vscode-icons:file-type-uv` uv
+```bash
+uv add xarray "zarr>3" dask aiohttp
+```
+~~~
+
+~~~{tab-item} {iconify}`vscode-icons:file-type-conda` conda
+```bash
+conda install -c conda-forge xarray "zarr>3" dask aiohttp
+```
+~~~
+````
 
 ## Try a public dataset
 
@@ -130,4 +146,7 @@ xr.open_dataset(
 class: tip
 ---
 Direct authentication is fine for a quick test, but using a `.netrc` file is the recommended approach. It keeps your API key out of your code, helps prevent accidental commits, and makes your scripts easier to share.
+```
+
+```
 ```
