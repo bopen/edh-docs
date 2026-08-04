@@ -1,7 +1,3 @@
----
-description: Get up and running with Earth Data Hub in just a few minutes.
----
-
 # {octicon}`rocket` Quick Start
 
 { .lead }

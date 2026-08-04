@@ -1,40 +1,33 @@
----
-description: Explore ready-to-run notebooks you can adapt and reuse.
----
-
 # {octicon}`book` Notebooks
 
 { .lead }
-Explore ready-to-run notebooks you can adapt and reuse.
+Explore ready-to-run notebooks to learn Earth Data Hub and accelerate your own workflows.
 
-## EDH learning
+```{grid} 1 1 2 2
+---
+gutter: 2
+padding: 0
+class-row: surface
+---
+~~~{grid-item-card} {octicon}`mortar-board` EDH Learning
+:link: edh-learning
+:link-type: doc
 
-Educational notebooks demonstrating best practices for accessing, authenticating, transforming, and visualising Earth Data Hub climate and geospatial datasets.
+Learn the fundamentals of Earth Data Hub with practical examples.
+~~~
 
-```{note}
-Some notebooks require additional dependencies. If you're running them locally, follow the setup instructions in the [GitHub repository](https://github.com/bopen/edh-learning).
+~~~{grid-item-card} {octicon}`play` Insula Code Lab
+:link: insula-code-lab
+:link-type: doc
+
+Run notebooks instantly in your browser with no installation required.
+~~~
 ```
 
-```{nbgallery}
+```{toctree}
 ---
-glob:
-caption: EDH learning
+hidden: true
 ---
-_collections/edh-learning/notebooks/*
-```
-
-## Insula Code Lab
-
-No installation. No setup. Just open your browser and start coding.
-
-```{note}
-These notebooks run directly in the [Insula Code Lab](https://code.insula.destine.eu/), with everything already configured for you.
-```
-
-```{nbgallery}
----
-glob:
-caption: Insula Code Lab
----
-_collections/insula-notebooks/*
+edh-learning
+insula-code-lab
 ```

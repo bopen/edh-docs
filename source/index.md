@@ -20,7 +20,7 @@ gutter: 2
 padding: 0
 class-row: surface
 ---
-~~~{grid-item-card}  {octicon}`globe` Discover EDH
+~~~{grid-item-card} {octicon}`globe` Discover EDH
 :link: discover-edh
 :link-type: doc
 
@@ -52,7 +52,7 @@ Stream data efficiently with code examples, tools, and best practices.
 :link: notebooks
 :link-type: doc
 
-Explore ready-to-run notebooks you can adapt and reuse.
+Explore ready-to-run notebooks to learn Earth Data Hub and accelerate your own workflows.
 ~~~
 
 ~~~{grid-item-card} {octicon}`question` Help & Troubleshooting

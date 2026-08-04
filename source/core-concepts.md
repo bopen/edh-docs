@@ -1,11 +1,7 @@
----
-description: Understand the key concepts behind Earth Data Hub and how it makes massive datasets easy to discover and use.
----
-
 # {octicon}`light-bulb` Core Concepts
 
 { .lead }
-Understand the key concepts behind Earth Data Hub and how it makes massive datasets easy to discover and use.
+Understand how Earth Data Hub makes massive datasets simple to discover and use.
 
 ## Built on ARCO
 
