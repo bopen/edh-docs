@@ -8,7 +8,7 @@ dependencies = [
   "ipywidgets>=8.1.8",
   "myst-parser>=5.1.0",
   "nbsphinx>=0.9.8",
-  "shibuya>=2026.5.19",
+  "shibuya>=2026.7.12",
   "sphinx>=9.1.0",
   "sphinx-collections",
   "sphinx-copybutton>=0.5.2",
