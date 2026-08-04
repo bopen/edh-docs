@@ -50,6 +50,6 @@ repos:
   hooks:
   - id: doc8
 - repo: https://github.com/astral-sh/uv-pre-commit
-  rev: b7359babf83a050dcd7bf892538f3df09c3d4ba6 # 0.11.29
+  rev: e0db454a41cc9086a0b33a5d5638e834cf8efe1a # 0.11.33
   hooks:
   - id: uv-lock
