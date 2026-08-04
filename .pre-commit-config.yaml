@@ -1,7 +1,7 @@
 exclude: source/_static/
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v6.0.0
+  rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c # v6.0.0
   hooks:
   - id: trailing-whitespace
   - id: end-of-file-fixer
@@ -15,20 +15,20 @@ repos:
   - id: debug-statements
   - id: mixed-line-ending
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: v0.15.22
+  rev: 2700fd5671c633760d912769c041bfcde2b9a01b # v0.15.22
   hooks:
   - id: ruff
     args: [--fix, --show-fixes]
   - id: ruff-format
 - repo: https://github.com/executablebooks/mdformat
-  rev: 1.0.0
+  rev: 82912cdaea4fb830f751504486a7879c70526547 # 1.0.0
   hooks:
   - id: mdformat
     additional_dependencies:
     - mdformat-ruff
     - mdformat-myst
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-  rev: v2.16.0
+  rev: 4380fbb73a154b5f5624794c1c78d9719ccc860f # v2.16.0
   hooks:
   - id: pretty-format-yaml
     args: [--autofix, --preserve-quotes]
@@ -36,20 +36,20 @@ repos:
     args: [--autofix]
     exclude: uv.lock
 - repo: https://github.com/gitleaks/gitleaks
-  rev: v8.30.0
+  rev: 6eaad039603a4de39fddd1cf5f727391efe9974e # v8.30.0
   hooks:
   - id: gitleaks
 - repo: https://github.com/zizmorcore/zizmor-pre-commit
-  rev: v1.27.0
+  rev: 64a97fb7fa63188393d3215c6e312f5f9c6d0f78 # v1.27.0
   hooks:
   - id: zizmor
     args: [--no-progress, --fix]
     exclude: .github/workflows/main.yaml
 - repo: https://github.com/PyCQA/doc8
-  rev: v2.0.0
+  rev: 2a7a5eef1de341fab48019faf3de8a64ac2ad900 # v2.0.0
   hooks:
   - id: doc8
 - repo: https://github.com/astral-sh/uv-pre-commit
-  rev: 0.11.29
+  rev: b7359babf83a050dcd7bf892538f3df09c3d4ba6 # 0.11.29
   hooks:
   - id: uv-lock
