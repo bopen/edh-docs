@@ -7,6 +7,8 @@ description: Get up and running with Earth Data Hub in just a few minutes.
 { .lead }
 Get up and running with Earth Data Hub in just a few minutes.
 
+(prerequisites)=
+
 ## Prerequisites
 
 ```{admonition} Pure open standards. Zero vendor lock-in.
