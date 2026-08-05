@@ -26,7 +26,7 @@ jobs:
         persist-credentials: false
     - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
     - name: Run code quality tools
-      run: uv run pre-commit run --all
+      run: make qa
 
   docs-check:
     name: Check docs build
@@ -42,7 +42,7 @@ jobs:
         sudo apt-get install -y pandoc
     - name: Check build
       run: |
-        uv run make html SPHINXOPTS="-W --keep-going"
+        make html SPHINXOPTS="-W --keep-going"
     - name: Check links
       run: |
-        uv run make linkcheck
+        make linkcheck
