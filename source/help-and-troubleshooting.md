@@ -67,13 +67,13 @@ To install the required Python dependencies, see [](environment-setup).
 
 ### Restricted access
 
-If the dataset URL and API key are correct but you receive a `ClientResponseError: 403` Forbidden error, Earth Data Hub has successfully authenticated you, but your account does not have permission to access that dataset.
+If the dataset URL and API key are correct but you receive a `ClientResponseError: 403 Forbidden`, Earth Data Hub has successfully authenticated you, but your account does not have permission to access that dataset.
 
 Some datasets, including those in the **Destination Earth Climate Adaptation Digital Twin (Climate DT)** collection, require additional permissions.
 
 To request access, follow the instructions in [](set-up-your-api-key).
 
-````{dropdown} ClientResponseError: 403
+````{dropdown} ClientResponseError: 403 Forbidden
 ```python
 ClientResponseError: 403, message='Forbidden', url='https://api.earthdatahub.destine.eu/climate-dt-2/IFS-NEMO-SSP3-7.0-sfc-hourly-standard-v0.zarr/zarr.json'
 ```
