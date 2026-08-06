@@ -119,7 +119,7 @@ html_theme = "shibuya"
 html_title = "Earth Data Hub documentation"
 html_favicon = "_static/favicon.ico"
 html_static_path = ["_static"]
-html_css_files = ["portal-frame.css"]
+html_css_files = ["portal-frame.css", "cards.css"]
 html_js_files = ["portal-frame.js"]
 html_context = {
     "portal_url": "https://earthdatahub.destine.eu",

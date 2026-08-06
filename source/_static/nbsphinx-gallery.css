@@ -16,14 +16,10 @@
   text-decoration: none;
 }
 
-.yue .toctree-wrapper .nbsphinx-gallery > a:hover {
+.yue .toctree-wrapper .nbsphinx-gallery > a:is(:hover, :focus-visible) {
   color: var(--sy-c-link-hover);
   border-color: var(--accent-a9);
-}
-
-.yue .toctree-wrapper .nbsphinx-gallery > a:focus-visible {
-  outline: 2px solid var(--accent-9);
-  outline-offset: 2px;
+  outline: none;
 }
 
 .nbsphinx-gallery > a > div:first-child {

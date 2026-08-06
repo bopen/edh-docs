@@ -1,0 +1,11 @@
+.yue .sd-card-hover:has(.sd-stretched-link:focus-visible) {
+  border-color: var(--sd-color-card-border-hover);
+}
+
+.yue .sd-card-hover:has(.sd-stretched-link:focus-visible) .sd-card-title {
+  color: var(--sy-c-link-hover);
+}
+
+.yue .sd-card-hover .sd-stretched-link:focus-visible {
+  outline: none;
+}
