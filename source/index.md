@@ -28,18 +28,18 @@ class-row: surface
 Discover what Earth Data Hub is and what you can do with it.
 ~~~
 
-~~~{grid-item-card} {octicon}`light-bulb` Core Concepts
-:link: core-concepts
-:link-type: doc
-
-Understand how EDH makes massive datasets simple to use.
-~~~
-
 ~~~{grid-item-card} {octicon}`download` Data Access
 :link: data-access
 :link-type: doc
 
 Learn how to access data and optimise your workflows.
+~~~
+
+~~~{grid-item-card} {octicon}`light-bulb` Core Concepts
+:link: core-concepts
+:link-type: doc
+
+Understand how EDH makes massive datasets simple to use.
 ~~~
 
 ~~~{grid-item-card} {octicon}`book` Notebooks
