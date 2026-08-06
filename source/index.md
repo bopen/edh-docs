@@ -12,6 +12,7 @@ Welcome to the Earth Data Hub (EDH) documentation.
 
 ```{container} buttons
 [Earth Data Hub](https://earthdatahub.destine.eu/)
+[Getting Started](getting-started)
 ```
 
 ```{grid} 1 1 2 3
@@ -24,42 +25,42 @@ class-row: surface
 :link: discover-edh
 :link-type: doc
 
-Learn what Earth Data Hub is and what you can do with it.
-~~~
-
-~~~{grid-item-card} {octicon}`rocket` Quick Start
-:link: quick-start
-:link-type: doc
-
-Get up and running with Earth Data Hub in just a few minutes.
+Discover what Earth Data Hub is and what you can do with it.
 ~~~
 
 ~~~{grid-item-card} {octicon}`light-bulb` Core Concepts
 :link: core-concepts
 :link-type: doc
 
-Understand how Earth Data Hub makes massive datasets simple to discover and use.
+Understand how EDH makes massive datasets simple to use.
 ~~~
 
 ~~~{grid-item-card} {octicon}`download` Data Access
 :link: data-access
 :link-type: doc
 
-Stream data efficiently with code examples, tools, and best practices.
+Learn how to access data and optimise your workflows.
 ~~~
 
 ~~~{grid-item-card} {octicon}`book` Notebooks
 :link: notebooks
 :link-type: doc
 
-Explore ready-to-run notebooks to learn Earth Data Hub and accelerate your own workflows.
+Explore notebooks with examples and best practices.
 ~~~
 
-~~~{grid-item-card} {octicon}`question` Help & Troubleshooting
-:link: help-and-troubleshooting
+~~~{grid-item-card} {octicon}`question` FAQs
+:link: faqs
 :link-type: doc
 
-Find answers to common questions and resolve issues quickly.
+Find answers to common questions.
+~~~
+
+~~~{grid-item-card} {octicon}`bug` Troubleshooting
+:link: troubleshooting
+:link-type: doc
+
+Understand common errors and how to solve them.
 ```
 
 ```{toctree}
@@ -69,9 +70,9 @@ hidden: true
 ---
 self
 
-discover-edh
+getting-started
 
-quick-start
+discover-edh
 
 core-concepts
 
@@ -79,5 +80,7 @@ data-access
 
 notebooks
 
-help-and-troubleshooting
+faqs
+
+troubleshooting
 ```

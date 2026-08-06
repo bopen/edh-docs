@@ -1,7 +1,7 @@
 # {octicon}`light-bulb` Core Concepts
 
 { .lead }
-Understand how Earth Data Hub makes massive datasets simple to discover and use.
+Understand how Earth Data Hub makes massive datasets simple to use.
 
 ## Built on ARCO
 
