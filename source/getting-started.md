@@ -40,7 +40,14 @@ That's it. You now have an Xarray `Dataset` ready to stream data directly into y
 
 ## 3. Go further
 
-You're ready to start exploring.
+You're ready to start crunching data.
+
+Before diving in, we recommend exploring the [](data-access) section in the EDH documentation. You'll find practical examples, performance tips, and best practices, including how to:
+
+- Access restricted datasets (e.g., Climate DT)
+- Store your API key securely in a `.netrc` file
+- Speed up repeated reads with local caching
+- And much more
 
 ```{admonition} Avoid downloading entire datasets.
 ---
@@ -48,10 +55,3 @@ class: caution
 ---
 Earth Data Hub is designed for **on-demand streaming**. Avoid downloading entire datasets: many are massive, and you may exceed your quota before getting useful results.
 ```
-
-Before you start crunching data, we recommend exploring the [](data-access) section. You'll find practical examples, performance tips, and best practices, including how to:
-
-- Access restricted datasets (e.g., Climate DT)
-- Store your API key securely in a `.netrc` file
-- Speed up repeated reads with local caching
-- And much more
