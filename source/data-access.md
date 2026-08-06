@@ -84,7 +84,7 @@ To access our full suite of datasets, you will need a free **API Key**.
 ---
 class: warning
 ---
-Datasets in our **Destination Earth Climate Adaptation Digital Twin (Climate DT)** collection require additional permissions. If you need access, follow the [Destination Earth User Access Upgrade](https://platform.destine.eu/access-policy-upgrade/) process.
+Some datasets, including the **Destination Earth Climate Adaptation Digital Twin (Climate DT)** collection, require additional permissions. See [](upgraded-access). 
 ```
 
 ## Access protected datasets
@@ -147,6 +147,16 @@ class: tip
 ---
 Direct authentication is fine for a quick test, but using a `.netrc` file is the recommended approach. It keeps your API key out of your code, helps prevent accidental commits, and makes your scripts easier to share.
 ```
+
+(upgraded-access)=
+
+## Upgraded access
+
+Some datasets, including the [Destination Earth Climate Adaptation Digital Twin (Climate DT)](https://earthdatahub.destine.eu/collections/climate-dt-2) collection, require upgraded access. You can easily recognise these datasets in the catalogue by their {bdg-info}`Restricted` badge.
+
+For example, if you try to access a Climate DT dataset without the required permissions, your request will fail with `HTTP 403 Forbidden`.
+
+Visit the [**Destination Earth User Access Upgrade**](https://platform.destine.eu/access-policy-upgrade/) page to check your eligibility and learn how to apply for upgraded access.
 
 ## Cache data locally
 

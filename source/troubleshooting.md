@@ -63,7 +63,7 @@ If the dataset URL and API key are correct but you receive a `ClientResponseErro
 
 Some datasets, including those in the **Destination Earth Climate Adaptation Digital Twin (Climate DT)** collection, require additional permissions.
 
-To request access, follow the instructions in [](set-up-your-api-key).
+To request access, follow the instructions in [](upgraded-access).
 
 ````{dropdown} ClientResponseError: 403 Forbidden
 ```python
