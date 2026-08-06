@@ -1,7 +1,7 @@
 # {octicon}`book` Notebooks
 
 { .lead }
-Explore ready-to-run notebooks to learn Earth Data Hub and accelerate your own workflows.
+Explore notebooks with examples and best practices.
 
 ```{grid} 1 1 2 2
 ---
