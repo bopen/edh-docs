@@ -1,0 +1,43 @@
+.nbsphinx-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.yue .toctree-wrapper .nbsphinx-gallery > a {
+  min-width: 0;
+  padding: 0.75rem;
+  color: var(--sy-c-text);
+  background: var(--sy-c-surface);
+  border: 1px solid var(--sy-c-border);
+  border-radius: 0.25rem;
+  text-align: left;
+  text-decoration: none;
+}
+
+.yue .toctree-wrapper .nbsphinx-gallery > a:hover {
+  color: var(--sy-c-link-hover);
+  border-color: var(--accent-a9);
+}
+
+.yue .toctree-wrapper .nbsphinx-gallery > a:focus-visible {
+  outline: 2px solid var(--accent-9);
+  outline-offset: 2px;
+}
+
+.nbsphinx-gallery > a > div:first-child {
+  display: grid;
+  place-items: center;
+  height: 9rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.nbsphinx-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
