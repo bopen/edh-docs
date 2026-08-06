@@ -70,6 +70,8 @@ Data variables:
 
 And just like that, you are connected! The output above shows an Xarray `Dataset` representing the data you are accessing. To access the rest of our catalogue, you will need to **set up authentication**.
 
+(set-up-your-api-key)=
+
 ## Set up your API key
 
 To access our full suite of datasets, you will need a free **API Key**.
