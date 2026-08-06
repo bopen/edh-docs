@@ -1,7 +1,7 @@
 # {octicon}`globe` Discover EDH
 
 { .lead }
-Learn what Earth Data Hub is and what you can do with it.
+Discover what Earth Data Hub is and what you can do with it.
 
 ## EDH in a nutshell
 

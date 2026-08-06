@@ -1,17 +1,9 @@
-# {octicon}`question` Help & Troubleshooting
+# {octicon}`bug` Troubleshooting
 
 { .lead }
-Find answers to common questions and resolve issues quickly.
+Understand common errors and how to solve them.
 
-## FAQs
-
-```{warning}
-Work in progress.
-```
-
-## Troubleshooting
-
-### Zarr v3 compatibility issues
+## Zarr v3 compatibility issues
 
 If the dataset URL is correct but you get a `FileNotFoundError` or `NotImplementedError` when opening a dataset, your Zarr library may not support the **Zarr v3** format used by Earth Data Hub.
 
@@ -65,7 +57,7 @@ print(f"Zarr Version: {zarr.__version__}")
 
 To install the required Python dependencies, see [](environment-setup).
 
-### Restricted access
+## Restricted access
 
 If the dataset URL and API key are correct but you receive a `ClientResponseError: 403 Forbidden`, Earth Data Hub has successfully authenticated you, but your account does not have permission to access that dataset.
 
