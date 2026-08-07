@@ -1,0 +1,28 @@
+/* Shared styling for all webportal badges. */
+.yue .edh-badge {
+  border-radius: 9999px;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .25rem .75rem;
+}
+
+/* Restricted and EDH keyword badges. */
+.yue .edh-badge--restricted,
+.yue .edh-badge--edh-keyword {
+  background-color: #1d3c7c;
+  color: #fff;
+}
+
+/* Draft and Deprecated badges. */
+.yue .edh-badge--draft,
+.yue .edh-badge--deprecated {
+  background-color: #ebc953;
+  color: #1d3c7c;
+}
+
+/* Geobrowser available badge. */
+.yue .edh-badge--geobrowser {
+  background-color: #5b37e6;
+  color: #e8e8e8;
+}
