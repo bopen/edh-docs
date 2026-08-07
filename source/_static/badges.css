@@ -1,3 +1,4 @@
+/* Shared styling for all webportal badges. */
 .yue .sd-badge {
   border-radius: 9999px;
   font-size: .875rem;
@@ -6,10 +7,29 @@
   padding: .25rem .75rem;
 }
 
+/* Restricted and EDH keyword badges. */
 .yue .sd-badge.sd-bg-info {
   background-color: #1d3c7c !important;
 }
 
 .yue .sd-badge.sd-bg-text-info {
   color: #fff !important;
+}
+
+/* Draft and Deprecated badges. */
+.yue .sd-badge.sd-bg-warning {
+  background-color: #ebc953 !important;
+}
+
+.yue .sd-badge.sd-bg-text-warning {
+  color: #1d3c7c !important;
+}
+
+/* Geobrowser available badge. */
+.yue .sd-badge.sd-bg-secondary {
+  background-color: #5b37e6 !important;
+}
+
+.yue .sd-badge.sd-bg-text-secondary {
+  color: #e8e8e8 !important;
 }
