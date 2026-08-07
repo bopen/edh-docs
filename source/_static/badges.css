@@ -1,5 +1,5 @@
 /* Shared styling for all webportal badges. */
-.yue .sd-badge {
+.yue .edh-badge {
   border-radius: 9999px;
   font-size: .875rem;
   font-weight: 600;
@@ -8,28 +8,21 @@
 }
 
 /* Restricted and EDH keyword badges. */
-.yue .sd-badge.sd-bg-info {
-  background-color: #1d3c7c !important;
-}
-
-.yue .sd-badge.sd-bg-text-info {
-  color: #fff !important;
+.yue .edh-badge--restricted,
+.yue .edh-badge--edh-keyword {
+  background-color: #1d3c7c;
+  color: #fff;
 }
 
 /* Draft and Deprecated badges. */
-.yue .sd-badge.sd-bg-warning {
-  background-color: #ebc953 !important;
-}
-
-.yue .sd-badge.sd-bg-text-warning {
-  color: #1d3c7c !important;
+.yue .edh-badge--draft,
+.yue .edh-badge--deprecated {
+  background-color: #ebc953;
+  color: #1d3c7c;
 }
 
 /* Geobrowser available badge. */
-.yue .sd-badge.sd-bg-secondary {
-  background-color: #5b37e6 !important;
-}
-
-.yue .sd-badge.sd-bg-text-secondary {
-  color: #e8e8e8 !important;
+.yue .edh-badge--geobrowser {
+  background-color: #5b37e6;
+  color: #e8e8e8;
 }

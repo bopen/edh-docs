@@ -152,7 +152,7 @@ Direct authentication is fine for a quick test, but using a `.netrc` file is the
 
 ## Upgraded access
 
-Some datasets, including the [Destination Earth Climate Adaptation Digital Twin (Climate DT)](https://earthdatahub.destine.eu/collections/climate-dt-2) collection, require upgraded access. You can easily recognise these datasets in the catalogue by their {bdg-info}`Restricted` badge.
+Some datasets, including the [Destination Earth Climate Adaptation Digital Twin (Climate DT)](https://earthdatahub.destine.eu/collections/climate-dt-2) collection, require upgraded access. You can easily recognise these datasets in the catalogue by their {bdg-restricted}`Restricted` badge.
 
 For example, if you try to access a Climate DT dataset without the required permissions, your request will fail with `HTTP 403 Forbidden`.
 

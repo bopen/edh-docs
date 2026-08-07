@@ -3,6 +3,11 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import sys
+from pathlib import Path
+
+sys.path.append(str((Path(__file__).parent / "_ext").resolve()))
+
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
@@ -23,6 +28,7 @@ extensions = [
     "nbsphinx",
     "sphinxcontrib.youtube",
     "sphinx_iconify",
+    "edh_badges",
 ]
 
 copybutton_prompt_text = r">>> |\.\.\. "
@@ -119,7 +125,7 @@ html_theme = "shibuya"
 html_title = "Earth Data Hub documentation"
 html_favicon = "_static/favicon.ico"
 html_static_path = ["_static"]
-html_css_files = ["portal-frame.css", "cards.css"]
+html_css_files = ["portal-frame.css", "cards.css", "notebook-gallery.css", "badges.css"]
 html_js_files = ["portal-frame.js"]
 html_context = {
     "portal_url": "https://earthdatahub.destine.eu",

@@ -22,3 +22,15 @@ make serve
 ```
 
 Then go to <http://localhost:8000>.
+
+## Custom badges
+
+Use these roles for badges matching the Earth Data Hub webportal:
+
+```md
+{bdg-restricted}`Restricted`
+{bdg-edh-keyword}`EDH keyword`
+{bdg-draft}`Draft`
+{bdg-deprecated}`Deprecated`
+{bdg-geobrowser}`Geobrowser available`
+```
