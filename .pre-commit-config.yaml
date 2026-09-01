@@ -14,7 +14,7 @@ repos:
   - id: debug-statements
   - id: mixed-line-ending
 - repo: https://github.com/astral-sh/ruff-pre-commit
-  rev: cb8c523fd4835aba42af70f4cad5568db4df0b6c # v0.16.0
+  rev: aab412d509121cb5f7533134b7e67f9fab59c682 # v0.16.4
   hooks:
   - id: ruff
     args: [--fix, --show-fixes]
