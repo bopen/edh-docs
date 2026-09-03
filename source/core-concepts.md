@@ -53,6 +53,8 @@ The address of any dataset in the catalogue.
 
 Use your API key and dataset URL with your favourite programming languages and libraries, or build your own tools.
 
+(chunking-schemes)=
+
 ## Chunking schemes
 
 Zarr stores datasets as small chunks that can be streamed on demand. The size and arrangement of these chunks have a major impact on performance.
