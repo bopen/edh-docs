@@ -75,7 +75,7 @@ ClientResponseError: 403, message='Forbidden', url='https://api.earthdatahub.des
 
 If you receive a `ClientResponseError: 429 Too Many Requests`, Earth Data Hub has successfully recognised your account, but you have used all of your available requests for the month.
 
-Your quota resets on the 1st of each month. You will need to wait until then before accessing more data.
+Your quota resets on the **1st of each month**. You will need to wait until then before accessing more data.
 
 To learn more about quotas and how to make the most of them, see [](quota).
 
