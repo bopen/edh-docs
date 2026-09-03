@@ -158,6 +158,18 @@ For example, if you try to access a Climate DT dataset without the required perm
 
 Visit the [**Destination Earth User Access Upgrade**](https://platform.destine.eu/access-policy-upgrade/) page to check your eligibility and learn how to apply for upgraded access.
 
+(quota)=
+
+## Quota
+
+Earth Data Hub datasets are divided into small blocks of data called **chunks**, so you only retrieve the parts of the data you need. To learn more about how chunks are organised, see [](chunking-schemes).
+
+When you stream data on demand, each chunk is retrieved through an HTTP request behind the scenes. To keep the service fair and reliable for everyone, each user has a **monthly quota of 500,000 requests**.
+
+That may sound like a lot, and for most workflows, it is. But if you need to access large amounts of data, the key is to **stream only the data you need** and avoid downloading the same chunks repeatedly. To reduce unnecessary requests, see [](cache-data-locally).
+
+(cache-data-locally)=
+
 ## Cache data locally
 
 Accessing the same dataset multiple times? **Local caching** makes repeated reads much faster and avoids downloading the same chunks again, saving both time and quota.

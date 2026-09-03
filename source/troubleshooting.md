@@ -70,3 +70,17 @@ To request access, follow the instructions in [](upgraded-access).
 ClientResponseError: 403, message='Forbidden', url='https://api.earthdatahub.destine.eu/climate-dt-2/IFS-NEMO-SSP3-7.0-sfc-hourly-standard-v0.zarr/zarr.json'
 ```
 ````
+
+## Exhausted quota
+
+If you receive a `ClientResponseError: 429 Too Many Requests`, Earth Data Hub has successfully recognised your account, but you have used all of your available requests for the month.
+
+Your quota resets on the 1st of each month. You will need to wait until then before accessing more data.
+
+To learn more about quotas and how to make the most of them, see [](quota).
+
+````{dropdown} ClientResponseError: 429 Too Many Requests
+```python
+ClientResponseError: 429, message='Too Many Requests', url='https://data.earthdatahub.destine.eu/era5/era5-single-levels-atmosphere-daily-utc-v0.zarr/zarr.json'
+```
+````
