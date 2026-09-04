@@ -74,9 +74,9 @@ getting-started
 
 discover-edh
 
-core-concepts
-
 data-access
+
+core-concepts
 
 notebooks
 
