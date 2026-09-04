@@ -125,6 +125,10 @@ machine api.earthdatahub.destine.eu
   password <your API key>
 ```
 
+```{note}
+Earth Data Hub uses multiple endpoints, so your `.netrc` file needs an entry for each one. You can retrieve your `.netrc` file directly from your [EDH account settings](https://earthdatahub.destine.eu/quota-api-keys##my-personal-access-tokens) using the {octicon}`info` button.
+```
+
 Now, you can load protected datasets cleanly by enabling environment trust (`trust_env=True`):
 
 ```{code-block} python
