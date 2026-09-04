@@ -168,6 +168,10 @@ When you stream data on demand, each chunk is retrieved through an HTTP request 
 
 That may sound like a lot, and for most workflows, it is. But if you need to access large amounts of data, the key is to **stream only the data you need** and avoid downloading the same chunks repeatedly. To reduce unnecessary requests, see [](cache-data-locally).
 
+```{note}
+Your quota resets at midnight on the **first day of each month**. You can [check your quota usage](https://earthdatahub.destine.eu/quota-api-keys) at any time.
+```
+
 (cache-data-locally)=
 
 ## Cache data locally
