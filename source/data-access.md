@@ -158,9 +158,9 @@ For example, if you try to access a Climate DT dataset without the required perm
 
 Visit the [**Destination Earth User Access Upgrade**](https://platform.destine.eu/access-policy-upgrade/) page to check your eligibility and learn how to apply for upgraded access.
 
-(quota)=
+(quotas)=
 
-## Quota
+## Quotas
 
 Earth Data Hub datasets are divided into small blocks of data called **chunks**, so you only retrieve the parts of the data you need. To learn more about how chunks are organised, see [](chunking-schemes).
 
