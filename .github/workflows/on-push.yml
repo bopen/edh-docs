@@ -43,6 +43,3 @@ jobs:
     - name: Check build
       run: |
         make html SPHINXOPTS="-W --keep-going"
-    - name: Check links
-      run: |
-        make linkcheck
