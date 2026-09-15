@@ -12,7 +12,6 @@ Welcome to the Earth Data Hub (EDH) documentation.
 
 ```{container} buttons
 [Earth Data Hub](https://earthdatahub.destine.eu/)
-[Getting Started](getting-started)
 ```
 
 ```{grid} 1 1 2 3
@@ -69,8 +68,6 @@ caption: 'Contents:'
 hidden: true
 ---
 self
-
-getting-started
 
 discover-edh
 
