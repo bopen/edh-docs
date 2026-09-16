@@ -254,6 +254,24 @@ body {
   margin-bottom: 20px;
 }
 
+.edh-docs-home-link {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.4rem;
+}
+
+.edh-docs-home-link .icon {
+  border: 0;
+  margin-right: 0;
+  opacity: 1;
+  padding: 0;
+}
+
+.edh-docs-home-link:hover,
+.edh-docs-home-link:focus-visible {
+  color: var(--sy-c-link-hover);
+}
+
 .sy-breadcrumbs {
   top: 0;
 }
