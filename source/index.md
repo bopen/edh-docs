@@ -67,8 +67,6 @@ Understand common errors and how to solve them.
 caption: 'Contents:'
 hidden: true
 ---
-self
-
 discover-edh
 
 data-access
