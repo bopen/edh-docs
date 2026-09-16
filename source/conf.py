@@ -136,6 +136,13 @@ html_context = {
     "source_repo": "edh-docs",
     "source_docs_path": "/source/",
 }
+html_sidebars = {
+    "**": [
+        "sidebars/localtoc.html",
+        "sidebars/carbon-ads.html",
+        "sidebars/ethical-ads.html",
+    ],
+}
 html_theme_options = {
     "globaltoc_expand_depth": 1,
     "toctree_collapse": True,
