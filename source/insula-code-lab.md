@@ -1,3 +1,7 @@
+---
+description: Run notebooks instantly in your browser with no installation required.
+---
+
 # {octicon}`play` Insula Code Lab
 
 { .lead }

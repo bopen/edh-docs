@@ -1,3 +1,7 @@
+---
+description: Learn the fundamentals of Earth Data Hub with practical examples.
+---
+
 # {octicon}`mortar-board` EDH Learning
 
 { .lead }

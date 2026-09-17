@@ -1,3 +1,7 @@
+---
+description: Understand how Earth Data Hub makes massive datasets simple to use.
+---
+
 # {octicon}`light-bulb` Core Concepts
 
 { .lead }

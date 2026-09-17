@@ -1,3 +1,7 @@
+---
+description: Understand common errors and how to solve them.
+---
+
 # {octicon}`bug` Troubleshooting
 
 { .lead }
