@@ -1,3 +1,7 @@
+---
+description: Find answers to common questions.
+---
+
 # {octicon}`question` FAQs
 
 { .lead }

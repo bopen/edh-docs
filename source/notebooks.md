@@ -1,3 +1,7 @@
+---
+description: Explore notebooks with examples and best practices.
+---
+
 # {octicon}`book` Notebooks
 
 { .lead }
