@@ -1,0 +1,8 @@
+{% extends "!layout.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% if not meta or meta.layout == "404" %}
+    {% include "components/meta-opengraph.html" %}
+  {% endif %}
+{% endblock %}
