@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 from docutils import nodes
 from sphinx.util.docutils import SphinxRole
 from sphinx_design.icons import get_octicon
@@ -17,6 +20,21 @@ def visit_edh_octicon_html(translator, node):
 
 def skip_edh_octicon(translator, node):
     raise nodes.SkipNode
+
+
+def write_search_icons(app, exception):
+    if exception is not None or app.builder.format != "html":
+        return
+
+    icons = {}
+    for docname, title in app.env.longtitles.items():
+        icon = next(iter(title.findall(EdhOcticon)), None)
+        if icon is not None:
+            icons[docname] = icon["svg"]
+
+    output = Path(app.outdir) / "_static" / "edh-search-icons.json"
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(icons, sort_keys=True) + "\n", encoding="utf-8")
 
 
 class EdhOcticonRole(SphinxRole):
@@ -55,6 +73,7 @@ def setup(app):
         text=(skip_edh_octicon, None),
     )
     app.add_role("edh-octicon", EdhOcticonRole())
+    app.connect("build-finished", write_search_icons)
 
     return {
         "version": "0.1",
