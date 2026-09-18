@@ -28,7 +28,7 @@ class EdhOcticonRole(SphinxRole):
         icon = icon.strip()
         try:
             svg = get_octicon(icon, height=height, classes=classes.split())
-        except Exception as exc:
+        except (KeyError, ValueError) as exc:
             message = self.inliner.reporter.error(
                 f"Invalid octicon content: {exc}",
                 line=self.lineno,
