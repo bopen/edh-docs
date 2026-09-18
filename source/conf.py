@@ -29,6 +29,7 @@ extensions = [
     "sphinxcontrib.youtube",
     "sphinx_iconify",
     "edh_badges",
+    "edh_icons",
 ]
 
 copybutton_prompt_text = r">>> |\.\.\. "
@@ -125,8 +126,14 @@ html_theme = "shibuya"
 html_title = "Earth Data Hub documentation"
 html_favicon = "_static/favicon.ico"
 html_static_path = ["_static"]
-html_css_files = ["portal-frame.css", "cards.css", "notebook-gallery.css", "badges.css"]
-html_js_files = ["portal-frame.js"]
+html_css_files = [
+    "portal-frame.css",
+    "cards.css",
+    "notebook-gallery.css",
+    "badges.css",
+    "search-icons.css",
+]
+html_js_files = ["portal-frame.js", "search-icons.js"]
 html_context = {
     "portal_url": "https://earthdatahub.destine.eu",
     "desp_platform_url": "https://platform.destine.eu",

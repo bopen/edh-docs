@@ -2,7 +2,7 @@
 description: Explore notebooks with examples and best practices.
 ---
 
-# {octicon}`book` Notebooks
+# {edh-octicon}`book` Notebooks
 
 { .lead }
 Explore notebooks with examples and best practices.
@@ -13,14 +13,14 @@ gutter: 2
 padding: 0
 class-row: surface
 ---
-~~~{grid-item-card} {octicon}`mortar-board` EDH Learning
+~~~{grid-item-card} {edh-octicon}`mortar-board` EDH Learning
 :link: edh-learning
 :link-type: doc
 
 Learn the fundamentals of Earth Data Hub with practical examples.
 ~~~
 
-~~~{grid-item-card} {octicon}`play` Insula Code Lab
+~~~{grid-item-card} {edh-octicon}`play` Insula Code Lab
 :link: insula-code-lab
 :link-type: doc
 

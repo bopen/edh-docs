@@ -2,7 +2,7 @@
 description: Learn how to access data and optimise your workflows.
 ---
 
-# {octicon}`download` Data Access
+# {edh-octicon}`download` Data Access
 
 { .lead }
 Learn how to access data and optimise your workflows.
