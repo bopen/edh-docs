@@ -2,7 +2,7 @@
 description: Understand common errors and how to solve them.
 ---
 
-# {octicon}`bug` Troubleshooting
+# {edh-octicon}`bug` Troubleshooting
 
 { .lead }
 Understand common errors and how to solve them.

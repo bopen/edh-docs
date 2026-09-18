@@ -2,7 +2,7 @@
 description: Discover what Earth Data Hub is and what you can do with it.
 ---
 
-# {octicon}`globe` Discover EDH
+# {edh-octicon}`globe` Discover EDH
 
 { .lead }
 Discover what Earth Data Hub is and what you can do with it.

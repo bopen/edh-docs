@@ -29,6 +29,7 @@ extensions = [
     "sphinxcontrib.youtube",
     "sphinx_iconify",
     "edh_badges",
+    "edh_icons",
 ]
 
 copybutton_prompt_text = r">>> |\.\.\. "

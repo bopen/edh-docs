@@ -2,7 +2,7 @@
 description: Find answers to common questions.
 ---
 
-# {octicon}`question` FAQs
+# {edh-octicon}`question` FAQs
 
 { .lead }
 Find answers to common questions.

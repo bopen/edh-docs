@@ -2,7 +2,7 @@
 description: Understand how Earth Data Hub makes massive datasets simple to use.
 ---
 
-# {octicon}`light-bulb` Core Concepts
+# {edh-octicon}`light-bulb` Core Concepts
 
 { .lead }
 Understand how Earth Data Hub makes massive datasets simple to use.
@@ -44,12 +44,12 @@ gutter: 2
 padding: 0
 class-row: surface
 ---
-~~~{grid-item-card} {octicon}`key` API key
+~~~{grid-item-card} {edh-octicon}`key` API key
 
 Your credentials for authenticating access to protected datasets.
 ~~~
 
-~~~{grid-item-card} {octicon}`link` Dataset URL
+~~~{grid-item-card} {edh-octicon}`link` Dataset URL
 
 The address of any dataset in the catalogue.
 ~~~
@@ -71,12 +71,12 @@ gutter: 2
 padding: 0
 class-row: surface
 ---
-~~~{grid-item-card} {octicon}`stack` Map-optimised
+~~~{grid-item-card} {edh-octicon}`stack` Map-optimised
 
 Best for viewing maps, loading large regions, and comparing snapshots in time.
 ~~~
 
-~~~{grid-item-card} {octicon}`graph` Time series-optimised
+~~~{grid-item-card} {edh-octicon}`graph` Time series-optimised
 
 Best for analysing how variables change over time at specific locations.
 ~~~
