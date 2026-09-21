@@ -38,7 +38,7 @@ Discover patterns, trends, and changes across our planet.
 Stream the data you need directly into your favourite tools.
 
 {octicon}`zap` **You create**<br>
-Build models, applications, and new insights without the usual data headaches.
+Build models, applications, and new insights without the usual data access headaches.
 ```
 ````
 
