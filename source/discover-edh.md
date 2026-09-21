@@ -11,7 +11,7 @@ Discover what Earth Data Hub is and what you can do with it.
 
 Earth data is amazing. Finding it, downloading it, and preparing it? Not so much.
 
-Earth Data Hub removes the friction between you and the data. We handle the complexity behind the scenes. You focus on exploring our planet, uncovering insights, and building new applications.
+Earth Data Hub removes the friction between you and the data. We handle the complexity behind the scenes while you focus on exploring our planet, uncovering insights, and building new applications.
 
 ````{grid} 2
 ---
