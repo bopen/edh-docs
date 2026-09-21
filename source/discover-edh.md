@@ -42,7 +42,7 @@ Build models, applications, and new insights without the usual data access heada
 ```
 ````
 
-Whether you're a scientist, developer, analyst, student, or simply curious about our planet, EDH helps you spend less time wrestling with data and more time discovering insights.
+Whether you are a scientist, developer, analyst, student, or simply curious about our planet, EDH helps you spend less time wrestling with data and more time discovering insights.
 
 ## What we offer
 
