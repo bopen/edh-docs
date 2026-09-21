@@ -88,7 +88,7 @@ No single chunking scheme fits every use case. We optimise each dataset for its 
 The [Climate DT](https://earthdatahub.destine.eu/collections/climate-dt-2) high-resolution datasets are available with both map-optimised and time series-optimised chunking, so you can choose the version that best fits your workflow.
 ```
 
-## Webinars
+## Webinar
 
 ```{youtube} JV5g9XWBWfI
 ---

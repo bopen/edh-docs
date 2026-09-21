@@ -24,7 +24,7 @@ ZARR_V3_EXPERIMENTAL_API=1
 ```
 ````
 
-If you're using Python, make sure you have **zarr-python 3.0** or later installed.
+If you are using Python, make sure you have **zarr-python 3.0** or later installed.
 
 You can check your installed version in several ways:
 
