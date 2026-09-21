@@ -123,11 +123,10 @@ linkcheck_anchors_ignore_for_url = [
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_baseurl = "https://docs.earthdatahub.destine.eu/"
+html_baseurl = "https://earthdatahub.destine.eu/docs/"
 html_theme = "shibuya"
 html_title = "Earth Data Hub documentation"
 html_favicon = "_static/favicon.ico"
-html_extra_path = ["robots.txt"]
 html_static_path = ["_static"]
 sitemap_excludes = ["genindex.html", "search.html"]
 sitemap_url_scheme = "{link}"
