@@ -5,7 +5,7 @@ description: |-
 layout: landing
 ---
 
-# {edh-octicon}`home` Docs Home
+# Earth Data Hub Documentation
 
 { .lead }
 Welcome to the Earth Data Hub (EDH) documentation.
