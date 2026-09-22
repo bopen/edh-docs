@@ -1,3 +1,7 @@
+.edh-portal-header {
+  height: 64px;
+}
+
 .edh-portal-header,
 .edh-portal-footer {
   --desp-gradient-start: #8739c4;
@@ -203,12 +207,10 @@ body {
 
 .edh-portal-header__signin {
   align-items: center;
-  background: linear-gradient(
-    249deg,
-    var(--desp-gradient-start) 20%,
-    #db3f86 64%,
-    var(--desp-gradient-end) 100%
-  );
+  background: linear-gradient(249deg,
+      var(--desp-gradient-start) 20%,
+      #db3f86 64%,
+      var(--desp-gradient-end) 100%);
   border-radius: 19px;
   display: inline-flex;
   font-size: 16px;
@@ -282,7 +284,7 @@ body {
   margin: 0;
 }
 
-.edh-notebook-actions + hr {
+.edh-notebook-actions+hr {
   margin-top: 1rem;
 }
 

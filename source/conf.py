@@ -127,6 +127,7 @@ html_title = "Earth Data Hub documentation"
 html_favicon = "_static/favicon.ico"
 html_static_path = ["_static"]
 html_css_files = [
+    "headings.css",
     "portal-frame.css",
     "cards.css",
     "notebook-gallery.css",
