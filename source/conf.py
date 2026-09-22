@@ -22,6 +22,7 @@ release = "0.1"
 extensions = [
     "myst_parser",
     "sphinx_design",
+    "sphinx_sitemap",
     "sphinx_copybutton",
     "sphinx_togglebutton",
     "sphinx_collections",
@@ -122,11 +123,14 @@ linkcheck_anchors_ignore_for_url = [
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+html_baseurl = "https://earthdatahub.destine.eu/docs/"
 html_theme = "shibuya"
 html_title = "Earth Data Hub documentation"
 html_copy_source = False
 html_favicon = "_static/favicon.ico"
 html_static_path = ["_static"]
+sitemap_excludes = ["genindex.html", "search.html"]
+sitemap_url_scheme = "{link}"
 html_css_files = [
     "headings.css",
     "portal-frame.css",
