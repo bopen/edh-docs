@@ -124,6 +124,7 @@ linkcheck_anchors_ignore_for_url = [
 
 html_theme = "shibuya"
 html_title = "Earth Data Hub documentation"
+html_copy_source = False
 html_favicon = "_static/favicon.ico"
 html_static_path = ["_static"]
 html_css_files = [
@@ -138,6 +139,17 @@ html_js_files = ["portal-frame.js", "search-icons.js"]
 html_context = {
     "portal_url": "https://earthdatahub.destine.eu",
     "desp_platform_url": "https://platform.destine.eu",
+    "source_type": "github",
+    "source_user": "bopen",
+    "source_repo": "edh-docs",
+    "source_docs_path": "/source/",
+}
+html_sidebars = {
+    "**": [
+        "sidebars/localtoc.html",
+        "sidebars/carbon-ads.html",
+        "sidebars/ethical-ads.html",
+    ],
 }
 html_theme_options = {
     "globaltoc_expand_depth": 1,
