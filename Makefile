@@ -40,4 +40,4 @@ serve:
 
 # Robust serve
 prod-serve: html
-	@uv run uvicorn 'edh_docs:app'
+	@uv run uvicorn --host 0.0.0.0 'edh_docs:app'
