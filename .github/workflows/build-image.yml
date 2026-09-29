@@ -2,6 +2,9 @@ name: build-image
 
 on:
   push:
+    # FIXME: remove branches when testing is done
+    branches:
+    - '**'
     tags:
     - '*'
   workflow_dispatch:
@@ -111,32 +114,32 @@ jobs:
         cat grype-report-edh-docs-${{ github.run_id }}.txt >> $GITHUB_STEP_SUMMARY
         echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
 
-  release-e2e:
-    name: Trigger GitLab pipeline for release-edh-docs-e2e
-    runs-on: bopen
-    needs: build-docker-image
-    if: github.event_name == 'push'
-    steps:
-    - name: Trigger GitLab pipeline
-      run: |
-        curl -X POST -F "token=${{ secrets.DESP_GITLAB_TOKEN }}" \
-             -F "ref=main" \
-             -F "variables[EDH_CATALOGUE_API_E2E_TAG]=${{ env.IMAGE_TAG }}" \
-             ${{ vars.DESP_GITLAB_URL }}
-      env:
-        DESP_GITLAB_TOKEN: ${{ secrets.DESP_GITLAB_TOKEN }}
+  # release-e2e:
+  #   name: Trigger GitLab pipeline for release-edh-docs-e2e
+  #   runs-on: bopen
+  #   needs: build-docker-image
+  #   if: github.event_name == 'push'
+  #   steps:
+  #   - name: Trigger GitLab pipeline
+  #     run: |
+  #       curl -X POST -F "token=${{ secrets.DESP_GITLAB_TOKEN }}" \
+  #            -F "ref=main" \
+  #            -F "variables[EDH_CATALOGUE_API_E2E_TAG]=${{ env.IMAGE_TAG }}" \
+  #            ${{ vars.DESP_GITLAB_URL }}
+  #     env:
+  #       DESP_GITLAB_TOKEN: ${{ secrets.DESP_GITLAB_TOKEN }}
 
-  release-dev:
-    name: Trigger GitLab pipeline for release-edh-docs-dev
-    runs-on: bopen
-    needs: build-docker-image
-    if: github.event_name == 'workflow_dispatch'
-    steps:
-    - name: Trigger GitLab pipeline
-      run: |
-        curl -X POST -F "token=${{ secrets.DESP_GITLAB_TOKEN }}" \
-             -F "ref=main" \
-             -F "variables[EDH_CATALOGUE_API_DEV_TAG]=${{ env.IMAGE_TAG }}" \
-             https://forge.dev.desp.space/api/v4/projects/92/trigger/pipeline
-      env:
-        DESP_GITLAB_TOKEN: ${{ secrets.DESP_GITLAB_TOKEN }}
+  # release-dev:
+  #   name: Trigger GitLab pipeline for release-edh-docs-dev
+  #   runs-on: bopen
+  #   needs: build-docker-image
+  #   if: github.event_name == 'workflow_dispatch'
+  #   steps:
+  #   - name: Trigger GitLab pipeline
+  #     run: |
+  #       curl -X POST -F "token=${{ secrets.DESP_GITLAB_TOKEN }}" \
+  #            -F "ref=main" \
+  #            -F "variables[EDH_CATALOGUE_API_DEV_TAG]=${{ env.IMAGE_TAG }}" \
+  #            https://forge.dev.desp.space/api/v4/projects/92/trigger/pipeline
+  #     env:
+  #       DESP_GITLAB_TOKEN: ${{ secrets.DESP_GITLAB_TOKEN }}
