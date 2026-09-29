@@ -66,6 +66,10 @@ jobs:
     name: Security scan edh-docs:${{ inputs.image_tag || github.ref_name }}
     runs-on: bopen
     needs: build-docker-image
+    env:
+      # runners have mixed architectures: always scan the published platform
+      TRIVY_PLATFORM: linux/amd64
+      GRYPE_PLATFORM: linux/amd64
     steps:
     - name: Login to Harbor
       uses: docker/login-action@v3
