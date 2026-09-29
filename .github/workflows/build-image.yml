@@ -29,7 +29,7 @@ jobs:
 
   build-docker-image:
     name: Build edh-docs:${{ inputs.image_tag || github.ref_name }}
-    runs-on: bopen
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -65,7 +65,7 @@ jobs:
 
   security-scan:
     name: Security scan edh-docs:${{ inputs.image_tag || github.ref_name }}
-    runs-on: bopen
+    runs-on: ubuntu-latest
     needs: build-docker-image
     env:
       # runners have mixed architectures: always scan the published platform
@@ -122,7 +122,7 @@ jobs:
 
   # release-e2e:
   #   name: Trigger GitLab pipeline for release-edh-docs-e2e
-  #   runs-on: bopen
+  #   runs-on: ubuntu-latest
   #   needs: build-docker-image
   #   if: github.event_name == 'push'
   #   steps:
@@ -137,7 +137,7 @@ jobs:
 
   # release-dev:
   #   name: Trigger GitLab pipeline for release-edh-docs-dev
-  #   runs-on: bopen
+  #   runs-on: ubuntu-latest
   #   needs: build-docker-image
   #   if: github.event_name == 'workflow_dispatch'
   #   steps:
