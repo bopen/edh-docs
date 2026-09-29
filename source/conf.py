@@ -27,6 +27,7 @@ extensions = [
     "sphinx_togglebutton",
     "sphinx_collections",
     "nbsphinx",
+    "notfound.extension",
     "sphinxcontrib.youtube",
     "sphinx_iconify",
     "edh_badges",
