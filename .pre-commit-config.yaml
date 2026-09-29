@@ -52,3 +52,9 @@ repos:
   rev: 6021faba75ed39152339148a1d9e51fda8e9ee2c # 0.12.14
   hooks:
   - id: uv-lock
+- repo: https://github.com/google/addlicense
+  rev: b289835c0741ba2fb92dd5f61af070e79c69a55e # v1.2.0
+  hooks:
+  - id: addlicense
+    args: ["-c", "European Union", "-l", "apache"]
+    exclude: '\.(yaml|yml|toml)$'
