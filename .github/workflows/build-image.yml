@@ -50,6 +50,9 @@ jobs:
       uses: docker/setup-qemu-action@v3
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
+      with:
+        # the docker-container driver's bundled runc fails on bopen runners
+        driver: docker
     - name: Build and push
       uses: docker/build-push-action@v6
       with:
@@ -57,8 +60,6 @@ jobs:
         platforms: linux/amd64
         context: bopen
         file: bopen/edh-docs/Dockerfile
-        build-args: |
-          GIT_PAT=${{ secrets.GIT_PAT }}
         tags: |
           ${{ vars.HARBOR_URL }}/hedp/edh-docs:${{ env.IMAGE_TAG }}
 
