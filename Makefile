@@ -17,7 +17,7 @@ help:
 	@echo "  qa          to run quality assurance checks (pre-commit)"
 	@echo "  serve       to start a local HTTP server at http://localhost:8000"
 
-.PHONY: help Makefile qa serve clean prod-serve
+.PHONY: help Makefile qa serve clean
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
@@ -37,7 +37,3 @@ qa:
 # Start a local HTTP server at http://localhost:8000
 serve:
 	@uv run python -m http.server $(PORT) --directory build/html
-
-# Robust serve
-prod-serve: html
-	@uv run uvicorn --host 0.0.0.0 'edh_docs:app'
