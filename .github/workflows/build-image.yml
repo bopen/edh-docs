@@ -2,9 +2,6 @@ name: build-image
 
 on:
   push:
-    # FIXME: remove branches when testing is done
-    branches:
-    - '**'
     tags:
     - '*'
   workflow_dispatch:
