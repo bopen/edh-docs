@@ -1,7 +1,7 @@
 # EDH Docs
 
-Earth Data Hub documentation built with Sphinx.
-It uses the Shibuya theme and supports Markdown pages through MyST.
+Source code for the Earth Data Hub documentation, built with [Sphinx](https://www.sphinx-doc.org/).
+It uses the [Shibuya](https://shibuya.lepture.com/) theme and supports Markdown pages through [MyST](https://mystmd.org/).
 
 Run quality assurance checks:
 
@@ -34,3 +34,8 @@ Use these roles for badges matching the Earth Data Hub webportal:
 {bdg-deprecated}`Deprecated`
 {bdg-geobrowser}`Geobrowser available`
 ```
+
+## Licenses
+
+- Documentation and other content: [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode)
+- Code: [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)
