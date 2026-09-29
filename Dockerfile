@@ -1,4 +1,5 @@
-FROM ghcr.io/astral-sh/uv:alpine3.23
+FROM --platform=linux/amd64 ubuntu:26.04
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 ENV UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
