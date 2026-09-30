@@ -3,8 +3,11 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+import os
 import sys
 from pathlib import Path
+
+from docutils import nodes
 
 sys.path.append(str((Path(__file__).parent / "_ext").resolve()))
 
@@ -162,3 +165,47 @@ html_theme_options = {
     "toctree_maxdepth": 2,
     "toctree_titles_only": False,
 }
+
+
+def edh_url_role(name, rawtext, text, lineno, inliner, options=None, content=None):
+    """Generates configurable URL to EDH.
+
+    Syntax:
+    {portal}`Link Text </aaa/bb/ccc>`
+    Or just:    {portal}`/aaa/bb/ccc`
+    """
+
+    options = options or {}
+
+    # Read the base URL from the environment variable.
+    # Provide a default fallback just in case it's not set locally.
+    base_url = os.getenv("BASE_URL", "https://anotherportal.com")
+
+    # Clean up trailing slashes on the base URL to prevent double slashes later
+    base_url = base_url.rstrip("/")
+
+    # Parse the text (Link Text <path>)
+    if "<" in text and ">" in text:
+        link_text, path = text.split("<")
+        link_text = link_text.strip()
+        path = path.strip(">")
+    else:
+        # Fallback if the user just types {portal}`/aaa/bb/ccc`
+        link_text = text
+        path = text
+
+    # Ensure the path starts with a slash
+    path = path.strip()
+    if not path.startswith("/"):
+        path = "/" + path
+
+    # Construct the final URL
+    full_url = f"{base_url}{path}"
+
+    # Create the HTML anchor node
+    node = nodes.reference(rawtext, link_text, refuri=full_url, **options)
+    return [node], []
+
+
+def setup(app):
+    app.add_role("edh_url", edh_url_role)

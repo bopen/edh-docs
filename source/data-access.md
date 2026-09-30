@@ -81,7 +81,7 @@ And just like that, you are connected! The output above shows an Xarray `Dataset
 To access our full suite of datasets, you will need a free **API Key**.
 
 1. **Register an account** on the [DestinE Platform](https://earthdatahub.destine.eu/login?came_from=https%3A%2F%2Fearthdatahub.destine.eu%2Fdocs%2Fdata-access.html%23set-up-your-api-key).
-1. **Visit your [Earth Data Hub account settings](https://earthdatahub.destine.eu/quota-api-keys#my-personal-access-tokens)**.
+1. Visit {edh_url}`API keys management section </quota-api-keys#my-personal-access-tokens>`.
 1. **Copy your default API key** (or generate a new one).
 
 ```{admonition} Climate DT requires upgraded access.
@@ -130,7 +130,7 @@ machine api.earthdatahub.destine.eu
 ```
 
 ```{note}
-Earth Data Hub uses multiple endpoints, so your `.netrc` file needs an entry for each one. You can retrieve your `.netrc` file directly from your [EDH account settings](https://earthdatahub.destine.eu/quota-api-keys##my-personal-access-tokens) using the {octicon}`info` button.
+Earth Data Hub uses multiple endpoints, so your `.netrc` file needs an entry for each one. You can retrieve your `.netrc` file directly from your {edh_url}`EDH account settings </quota-api-keys#my-personal-access-tokens>` using the {octicon}`info` button.
 ```
 
 Now, you can load protected datasets cleanly by enabling environment trust (`trust_env=True`):
@@ -177,7 +177,7 @@ When you stream data on demand, each chunk is retrieved through an HTTP request 
 That may sound like a lot, and for most workflows, it is. But if you need to access large amounts of data, the key is to **stream only the data you need** and avoid downloading the same chunks repeatedly. To reduce unnecessary requests, see [](cache-data-locally).
 
 ```{note}
-Your quota resets at midnight on the **first day of each month**. You can [check your quota usage](https://earthdatahub.destine.eu/quota-api-keys#quota) at any time.
+Your quota resets at midnight on the **first day of each month**. You can {edh_url}`check your quota usage </quota-api-keys#quota>` at any time.
 ```
 
 (cache-data-locally)=
