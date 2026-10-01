@@ -17,3 +17,8 @@
 {% with title=title|striptags ~ " - Earth Data Hub Documentation" %}
   {% include "!components/meta-opengraph.html" %}
 {% endwith %}
+
+{#- Shibuya prints metatags only when sphinxext.opengraph is enabled: keep the sphinx-llm links -#}
+{%- for line in (metatags or "").splitlines() if 'type="text/markdown"' in line or 'rel="describedby"' in line %}
+  {{ line }}
+{%- endfor %}
