@@ -23,6 +23,15 @@ make serve
 
 Then go to <http://localhost:8000>.
 
+## Markdown for LLMs
+
+Every page is also published as Markdown (`page.md` next to `page.html`), together with `llms.txt` and `llms-full.txt`, by [sphinx-llm](https://github.com/NVIDIA/sphinx-llm).
+The "Copy page" and "Open in ..." buttons point to the Markdown on the production site: to try them locally, build with
+
+```bash
+make html O="-D html_baseurl=http://localhost:8000/"
+```
+
 ## Custom badges
 
 Use these roles for badges matching the Earth Data Hub webportal:

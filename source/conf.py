@@ -30,8 +30,10 @@ extensions = [
     "notfound.extension",
     "sphinxcontrib.youtube",
     "sphinx_iconify",
+    "sphinx_llm.txt",
     "edh_badges",
     "edh_icons",
+    "edh_llms_markdown",
 ]
 
 copybutton_prompt_text = r">>> |\.\.\. "
@@ -162,3 +164,10 @@ html_theme_options = {
     "toctree_maxdepth": 2,
     "toctree_titles_only": False,
 }
+
+# -- Options for LLMs (sphinx-llm) -------------------------------------------
+# https://github.com/NVIDIA/sphinx-llm#configuration
+
+llms_txt_full_build = True
+llms_txt_suffix_mode = "replace"
+llms_txt_exclude = ["404"]
