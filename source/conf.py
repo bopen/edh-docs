@@ -171,3 +171,4 @@ html_theme_options = {
 llms_txt_full_build = True
 llms_txt_suffix_mode = "replace"
 llms_txt_exclude = ["404"]
+markdown_http_base = html_baseurl
