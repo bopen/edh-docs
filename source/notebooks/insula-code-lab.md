@@ -15,5 +15,5 @@ These notebooks run directly in the [Insula Code Lab](https://code.insula.destin
 ---
 glob:
 ---
-_collections/insula-notebooks/*
+insula-code-lab/*
 ```

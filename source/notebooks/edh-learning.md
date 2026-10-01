@@ -15,5 +15,5 @@ To run these notebooks locally, install the required dependencies by following t
 ---
 glob:
 ---
-_collections/edh-learning/notebooks/*
+edh-learning/*
 ```

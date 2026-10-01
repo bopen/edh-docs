@@ -24,11 +24,11 @@ help:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-# Extend 'clean' to remove source/_collections
+# Extend 'clean' to remove the downloaded collections and the copied notebooks
 clean:
 	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-	@echo "Removing everything under '$(SOURCEDIR)/_collections'..."
-	@rm -rf $(SOURCEDIR)/_collections
+	@echo "Removing '$(SOURCEDIR)/_collections' and the copied notebooks..."
+	@rm -rf $(SOURCEDIR)/_collections $(SOURCEDIR)/notebooks/edh-learning $(SOURCEDIR)/notebooks/insula-code-lab
 
 # Run quality assurance checks (pre-commit)
 qa:
