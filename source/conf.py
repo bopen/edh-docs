@@ -33,6 +33,7 @@ extensions = [
     "notfound.extension",
     "sphinxcontrib.youtube",
     "sphinx_iconify",
+    "sphinx_substitution_extensions",
     "edh_badges",
     "edh_icons",
 ]
@@ -47,9 +48,14 @@ exclude_patterns = [
     "_collections/insula-notebooks/demo-*",
 ]
 
-myst_enable_extensions = [
-    "attrs_block",
-]
+myst_enable_extensions = ["attrs_block", "substitution"]
+
+myst_substitutions = {
+    "datastore_host": os.getenv("VITE_DATASTORE_HOST", "api.earthdatahub.destine.eu"),
+    "datastore_internal_host": os.getenv(
+        "DATASTORE_INTERNAL_HOST", "data.earthdatahub.destine.eu"
+    ),
+}
 
 collections = {
     "edh-learning": {

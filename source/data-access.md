@@ -52,10 +52,11 @@ Let's verify your environment. We have provided a **public test dataset** that y
 Run the following in your Python console:
 
 ```{code-block} pycon
+:substitutions:
 >>> import xarray as xr
 
 >>> xr.open_dataset(
-...     "https://data.earthdatahub.destine.eu/public/test-dataset-v0.zarr",
+...     "https://|datastore_internal_host|/public/test-dataset-v0.zarr",
 ...     chunks={},  # Tells Xarray to load data on-demand
 ...     engine="zarr",
 ... )
@@ -99,12 +100,13 @@ Most datasets in the Earth Data Hub catalogue require your API key. Here are two
 
 The quickest way to test protected data is to include your API key directly as the password in the dataset URL:
 
-```python
+```{code-block} python
+:substitutions:
 import xarray as xr
 
 # Replace <your API key> with your actual key
 xr.open_dataset(
-    "https://edh:<your API key>@data.earthdatahub.destine.eu/private/test-dataset-v0.zarr",
+    "https://edh:<your API key>@|datastore_internal_host|/private/test-dataset-v0.zarr",
     chunks={},
     engine="zarr",
 )
@@ -121,11 +123,12 @@ If you don't have it already, **create a file** in your home directory:
 
 Then, **add the following lines** to the `.netrc` file:
 
-```text
-machine data.earthdatahub.destine.eu
+```{code-block} text
+:substitutions:
+machine |datastore_internal_host|
   password <your API key>
 
-machine api.earthdatahub.destine.eu
+machine |datastore_host|
   password <your API key>
 ```
 
@@ -138,11 +141,12 @@ Now, you can load protected datasets cleanly by enabling environment trust (`tru
 ```{code-block} python
 ---
 emphasize-lines: 5
+substitutions:
 ---
 import xarray as xr
 
 xr.open_dataset(
-    "https://data.earthdatahub.destine.eu/private/test-dataset-v0.zarr",
+    "https://|datastore_internal_host|/private/test-dataset-v0.zarr",
     storage_options={"client_kwargs": {"trust_env": True}},  # Auto-detect your .netrc
     chunks={},
     engine="zarr",
@@ -160,7 +164,7 @@ Direct authentication is fine for a quick test, but using a `.netrc` file is the
 
 ## Upgraded access
 
-Some datasets, including the [Destination Earth Climate Adaptation Digital Twin (Climate DT)](https://earthdatahub.destine.eu/collections/climate-dt-2) collection, require upgraded access. You can easily recognise these datasets in the catalogue by their {bdg-restricted}`Restricted` badge.
+Some datasets, including the [Destination Earth Climate Adaptation Digital Twin ({edh_url}`Climate DT </collections/climate-dt-2>`) collection, require upgraded access. You can easily recognise these datasets in the catalogue by their {bdg-restricted}`Restricted` badge.
 
 For example, if you try to access a Climate DT dataset without the required permissions, your request will fail with `HTTP 403 Forbidden`.
 
@@ -191,11 +195,12 @@ Before running the example, replace **`URL`** with your dataset URL and **`CACHE
 ```{code-block} python
 ---
 emphasize-lines: 10-15
+substitutions:
 ---
 import xarray as xr
 
 # Replace with the Earth Data Hub dataset URL you'd like to access
-URL = "https://data.earthdatahub.destine.eu/private/test-dataset-v0.zarr"
+URL = "https://|datastore_internal_host|/private/test-dataset-v0.zarr"
 
 # Replace with the local directory you'd like to use for caching
 CACHE_STORAGE = "./edh_cache/"
