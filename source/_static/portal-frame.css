@@ -294,6 +294,17 @@ body {
   margin-right: 4px;
 }
 
+/* "Copy page" floats next to the title: keep it in flow when content precedes it. */
+@media (min-width: 64rem) {
+  .copy-page-wrapper:has(+ .yue > :first-child:not(section)) {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: fit-content;
+    margin-left: auto;
+  }
+}
+
 /**
 .sy-breadcrumbs-inner > .md\:hidden.mr-3,
 .sy-breadcrumbs-inner > .xl\:hidden.ml-1 {
