@@ -81,7 +81,7 @@ And just like that, you are connected! The output above shows an Xarray `Dataset
 
 To access our full suite of datasets, you will need a free **API Key**.
 
-1. **Register an account** on the [DestinE Platform](https://earthdatahub.destine.eu/login?came_from=https%3A%2F%2Fearthdatahub.destine.eu%2Fdocs%2Fdata-access.html%23set-up-your-api-key).
+1. **Register an account** on the {edh_url_with_camefrom}`DestinE Platform </login>`.
 1. Visit {edh_url}`API keys management section </quota-api-keys#my-personal-access-tokens>`.
 1. **Copy your default API key** (or generate a new one).
 

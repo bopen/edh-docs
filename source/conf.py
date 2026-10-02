@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 from docutils import nodes
+import urllib
 
 sys.path.append(str((Path(__file__).parent / "_ext").resolve()))
 
@@ -173,22 +174,26 @@ html_theme_options = {
 }
 
 
-def edh_url_role(name, rawtext, text, lineno, inliner, options=None, content=None):
-    """Generates configurable URL to EDH.
+def edh_url_with_camefrom_role(name, rawtext, text, lineno, inliner, options=None):
+    """Generates configurable URL to EDH with a came_from parameter back to documentation portal.
 
     Syntax:
-    {portal}`Link Text </aaa/bb/ccc>`
-    Or just:    {portal}`/aaa/bb/ccc`
+    {edh_url_with_camefrom}`Link Text </aaa/bb/ccc>`
+    Or just:    {edh_url_with_camefrom}`/aaa/bb/ccc`
     """
 
     options = options or {}
 
-    # Read the base URL from the environment variable.
-    # Provide a default fallback just in case it's not set locally.
-    base_url = os.getenv("BASE_URL", "https://anotherportal.com")
+    # Extract the current document name (e.g., 'folder/page')
+    env = inliner.document.settings.env
+    docname = env.docname
+    current_page = f"{docname}.html"
 
-    # Clean up trailing slashes on the base URL to prevent double slashes later
-    base_url = base_url.rstrip("/")
+    # Read the base URL from the environment variable.
+    base_url = os.getenv("BASE_URL", "https://earthdatahub.destine.eu").rstrip("/")
+    docs_root_url = os.getenv(
+        "DOCUMENTATION_PORTAL_ROOT", "https://earthdatahub.destine.eu/docs"
+    ).rstrip("/")
 
     # Parse the text (Link Text <path>)
     if "<" in text and ">" in text:
@@ -196,7 +201,47 @@ def edh_url_role(name, rawtext, text, lineno, inliner, options=None, content=Non
         link_text = link_text.strip()
         path = path.strip(">")
     else:
-        # Fallback if the user just types {portal}`/aaa/bb/ccc`
+        # Fallback if the user just types {edh_url}`/aaa/bb/ccc`
+        link_text = text
+        path = text
+
+    # Ensure the path starts with a slash
+    path = path.strip()
+    if not path.startswith("/"):
+        path = "/" + path
+
+    # Safely URL-encode the current page name
+    encoded_page = urllib.parse.quote(f"{docs_root_url}/{current_page}")
+
+    # Construct the final URL
+    separator = "&" if "?" in base_url else "?"
+    full_url = f"{base_url}{path}{separator}came_from={encoded_page}"
+
+    # Create the docutils reference node
+    node = nodes.reference(rawtext, link_text, refuri=full_url, **options)
+    return [node], []
+
+
+def edh_url_role(name, rawtext, text, lineno, inliner, options=None):
+    """Generates configurable URL to EDH.
+
+    Syntax:
+    {edh_url}`Link Text </aaa/bb/ccc>`
+    Or just:    {edh_url}`/aaa/bb/ccc`
+    """
+
+    options = options or {}
+
+    # Read the base URL from the environment variable.
+    base_url = os.getenv("BASE_URL", "https://earthdatahub.destine.eu").rstrip("/")
+
+    # Parse the text (Link Text <path>)
+    if "<" in text and ">" in text:
+        link_text, path = text.split("<")
+        link_text = link_text.strip()
+        path = path.strip(">")
+    else:
+        # Fallback if the user just types {edh_url}`/aaa/bb/ccc`
         link_text = text
         path = text
 
@@ -215,3 +260,4 @@ def edh_url_role(name, rawtext, text, lineno, inliner, options=None, content=Non
 
 def setup(app):
     app.add_role("edh_url", edh_url_role)
+    app.add_role("edh_url_with_camefrom", edh_url_with_camefrom_role)

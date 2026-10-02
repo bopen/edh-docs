@@ -35,6 +35,20 @@ Use these roles for badges matching the Earth Data Hub webportal:
 {bdg-geobrowser}`Geobrowser available`
 ```
 
+## Required envars to properly build the documentation
+
+- `READTHEDOCS_CANONICAL_URL`:\
+  Root of the documentation site
+  (can be also a root absolute path)
+- `BASE_URL`:\
+  external full URL to the EDH portal
+- `DATASTORE_INTERNAL_HOST`:\
+  Main EDH access domain (by default `data.earthdatahub.destine.eu`)
+- `DATASTORE_HOST`:\
+  Alternative EDH access URL (required for restricted datasets, by default `api.earthdatahub.destine.eu`)
+- `DOCUMENTATION_PORTAL`:\
+  Public URL to the documentation portal (by default `https://earthdatahub.destine.eu/docs`)
+
 ## Licenses
 
 - Documentation and other content: [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode)
