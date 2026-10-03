@@ -11,7 +11,7 @@ layout: landing
 Welcome to the Earth Data Hub (EDH) documentation.
 
 ```{container} buttons
-[Earth Data Hub](https://earthdatahub.destine.eu/)
+{edh_url}`Earth Data Hub </>`
 ```
 
 ```{grid} 1 1 2 3
