@@ -34,6 +34,8 @@ clean:
 qa:
 	@uv run pre-commit run --all
 
-# Start a local HTTP server at http://localhost:8000
+# Start a local HTTP server at http://localhost:8000 (UTF-8 for .txt and .md)
 serve:
-	@uv run python -m http.server $(PORT) --directory build/html
+	@uv run python -c "import mimetypes as m, runpy; \
+	m.add_type('text/plain; charset=utf-8', '.txt'); m.add_type('text/markdown; charset=utf-8', '.md'); \
+	runpy.run_module('http.server', run_name='__main__')" $(PORT) --directory build/html
