@@ -5,10 +5,10 @@
 
 import os
 import sys
+import urllib
 from pathlib import Path
 
 from docutils import nodes
-import urllib
 
 sys.path.append(str((Path(__file__).parent / "_ext").resolve()))
 

@@ -52,7 +52,9 @@ Let's verify your environment. We have provided a **public test dataset** that y
 Run the following in your Python console:
 
 ```{code-block} pycon
-:substitutions:
+---
+substitutions:
+---
 >>> import xarray as xr
 
 >>> xr.open_dataset(
@@ -101,7 +103,9 @@ Most datasets in the Earth Data Hub catalogue require your API key. Here are two
 The quickest way to test protected data is to include your API key directly as the password in the dataset URL:
 
 ```{code-block} python
-:substitutions:
+---
+substitutions:
+---
 import xarray as xr
 
 # Replace <your API key> with your actual key
@@ -124,7 +128,9 @@ If you don't have it already, **create a file** in your home directory:
 Then, **add the following lines** to the `.netrc` file:
 
 ```{code-block} text
-:substitutions:
+---
+substitutions:
+---
 machine |datastore_internal_host|
   password <your API key>
 
@@ -164,7 +170,7 @@ Direct authentication is fine for a quick test, but using a `.netrc` file is the
 
 ## Upgraded access
 
-Some datasets, including the [Destination Earth Climate Adaptation Digital Twin ({edh_url}`Climate DT </collections/climate-dt-2>`) collection, require upgraded access. You can easily recognise these datasets in the catalogue by their {bdg-restricted}`Restricted` badge.
+Some datasets, including the \[Destination Earth Climate Adaptation Digital Twin ({edh_url}`Climate DT </collections/climate-dt-2>`) collection, require upgraded access. You can easily recognise these datasets in the catalogue by their {bdg-restricted}`Restricted` badge.
 
 For example, if you try to access a Climate DT dataset without the required permissions, your request will fail with `HTTP 403 Forbidden`.
 
