@@ -24,16 +24,18 @@ help:
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-# Extend 'clean' to remove source/_collections
+# Extend 'clean' to remove the downloaded collections and the copied notebooks
 clean:
 	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
-	@echo "Removing everything under '$(SOURCEDIR)/_collections'..."
-	@rm -rf $(SOURCEDIR)/_collections
+	@echo "Removing '$(SOURCEDIR)/_collections' and the copied notebooks..."
+	@rm -rf $(SOURCEDIR)/_collections $(SOURCEDIR)/notebooks/edh-learning $(SOURCEDIR)/notebooks/insula-code-lab
 
 # Run quality assurance checks (pre-commit)
 qa:
 	@uv run pre-commit run --all
 
-# Start a local HTTP server at http://localhost:8000
+# Start a local HTTP server at http://localhost:8000 (UTF-8 for .txt and .md)
 serve:
-	@uv run python -m http.server $(PORT) --directory build/html
+	@uv run python -c "import mimetypes as m, runpy; \
+	m.add_type('text/plain; charset=utf-8', '.txt'); m.add_type('text/markdown; charset=utf-8', '.md'); \
+	runpy.run_module('http.server', run_name='__main__')" $(PORT) --directory build/html
