@@ -1,4 +1,6 @@
 /source/_collections
+/source/notebooks/edh-learning/
+/source/notebooks/insula-code-lab/
 /build/
 .DS_Store
 __pycache__/

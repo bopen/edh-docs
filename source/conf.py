@@ -16,7 +16,7 @@ sys.path.append(str((Path(__file__).parent / "_ext").resolve()))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "edh-docs"
-copyright = "2026, Europen Union"
+copyright = "2026, European Union"
 author = "B-Open"
 release = "0.1"
 
@@ -35,19 +35,17 @@ extensions = [
     "sphinxcontrib.youtube",
     "sphinx_iconify",
     "sphinx_substitution_extensions",
+    "sphinx_llm.txt",
     "edh_badges",
     "edh_icons",
+    "edh_llms_markdown",
 ]
 
 copybutton_prompt_text = r">>> |\.\.\. "
 copybutton_prompt_is_regexp = True
 
 templates_path = ["_templates"]
-exclude_patterns = [
-    "_collections/edh-learning/README.md",
-    "_collections/DESP-UserWorkflowService-Templates",
-    "_collections/insula-notebooks/demo-*",
-]
+exclude_patterns = ["_collections"]
 
 myst_enable_extensions = ["attrs_block", "substitution"]
 
@@ -71,20 +69,32 @@ collections = {
         "clean": False,
         "final_clean": False,
     },
+    "edh-learning-notebooks": {
+        "driver": "copy_folder",
+        "source": "./_collections/edh-learning/notebooks/",
+        "target": "../notebooks/edh-learning/",
+        "clean": True,
+        "final_clean": False,
+    },
     "insula-notebooks": {
         "driver": "copy_folder",
         "source": "./_collections/DESP-UserWorkflowService-Templates/EarthDataHub/",
-        "target": "insula-notebooks/",
+        "target": "../notebooks/insula-code-lab/",
+        "ignore": ["demo-*"],
         "clean": True,
         "final_clean": False,
     },
 }
+# The parallel sphinx-llm build must reuse these files: re-fetching would wipe them
+# mid-build and crash it (alternative: llms_txt_build_parallel = False, but slower)
+if "sphinx_llm_markdown" in tags:  # noqa: F821
+    collections = {}
 nbsphinx_execute = "never"
 nbsphinx_codecell_lexer = "ipython3"
 nbsphinx_prolog = r"""
 {% set doc = env.docname %}
 
-{% if doc.startswith('_collections/edh-learning') %}
+{% if doc.startswith('notebooks/edh-learning/') %}
 
 .. note::
    To run this notebook locally, follow the setup instructions in the `GitHub repository <https://github.com/bopen/edh-learning>`_.
@@ -107,7 +117,7 @@ nbsphinx_prolog = r"""
 
    </a></span>
 
-{% if doc.startswith('_collections/insula-notebooks') %}
+{% if doc.startswith('notebooks/insula-code-lab/') %}
 
 .. container:: buttons edh-notebook-actions
 
@@ -172,6 +182,16 @@ html_theme_options = {
     "toctree_maxdepth": 2,
     "toctree_titles_only": False,
 }
+
+# -- Options for LLMs (sphinx-llm) -------------------------------------------
+# https://github.com/NVIDIA/sphinx-llm#configuration
+
+llms_txt_full_build = True
+llms_txt_suffix_mode = "replace"
+llms_txt_exclude = ["404"]
+# Meta nodes (notebook descriptions, see edh_llms_markdown) have no Markdown equivalent
+llms_txt_suppress_unknown_node_warnings = ["meta"]
+markdown_http_base = html_baseurl
 
 
 def edh_url_with_camefrom_role(name, rawtext, text, lineno, inliner, options=None):

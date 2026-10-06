@@ -14,14 +14,14 @@ padding: 0
 class-row: surface
 ---
 ~~~{grid-item-card} {edh-octicon}`mortar-board` EDH Learning
-:link: edh-learning
+:link: notebooks/edh-learning
 :link-type: doc
 
 Learn the fundamentals of Earth Data Hub with practical examples.
 ~~~
 
 ~~~{grid-item-card} {edh-octicon}`play` Insula Code Lab
-:link: insula-code-lab
+:link: notebooks/insula-code-lab
 :link-type: doc
 
 Run notebooks instantly in your browser with no installation required.
@@ -32,6 +32,6 @@ Run notebooks instantly in your browser with no installation required.
 ---
 hidden: true
 ---
-edh-learning
-insula-code-lab
+notebooks/edh-learning
+notebooks/insula-code-lab
 ```
