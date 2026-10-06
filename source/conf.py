@@ -12,7 +12,7 @@ sys.path.append(str((Path(__file__).parent / "_ext").resolve()))
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "edh-docs"
-copyright = "2026, Europen Union"
+copyright = "2026, European Union"
 author = "B-Open"
 release = "0.1"
 
