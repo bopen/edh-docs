@@ -89,3 +89,21 @@ You will need to wait for your quota to reset before accessing more data. To lea
 ClientResponseError: 429, message='Too Many Requests', url='https://|datastore_internal_host|/era5/era5-single-levels-atmosphere-daily-utc-v0.zarr/zarr.json'
 ```
 ````
+
+## API key needs to be updated
+
+If you see the error `ClientResponseError: 426 Upgrade Required`, it means that your API key cannot be used with the API domain you are currently accessing.
+
+This can happen if you created your API key directly on the DestinE platform and are using the {{ datastore_internal_host }} domain to access the data.
+
+You can fix this in two ways:
+
+1. **Create a new API key** on the {edh_url}`Earth Data Hub dedicated page </quota-api-keys#my-personal-access-tokens>`, and use the new key to access the data.
+1. **Keep your current API key** and use the Earth Data Hub API domain instead: https://{{ datastore_host }}
+
+````{dropdown} ClientResponseError: 426 Upgrade Required
+```{code-block} python
+:substitutions:
+ClientResponseError: 429, message='Too Many Requests', url='https://|datastore_internal_host|/era5/era5-pressure-levels-v0.zarr/zarr.json'
+```
+````
