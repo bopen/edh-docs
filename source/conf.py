@@ -212,7 +212,7 @@ def edh_url_with_camefrom_role(name, rawtext, text, lineno, inliner, options=Non
     # Read the base URL from the environment variable.
     base_url = os.getenv("BASE_URL", "https://earthdatahub.destine.eu").rstrip("/")
     docs_root_url = os.getenv(
-        "DOCUMENTATION_PORTAL_ROOT", "https://earthdatahub.destine.eu/docs"
+        "DOCUMENTATION_PORTAL_URL", "https://earthdatahub.destine.eu/docs"
     ).rstrip("/")
 
     # Parse the text (Link Text <path>)
