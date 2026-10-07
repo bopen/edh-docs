@@ -12,8 +12,9 @@ Understand common errors and how to solve them.
 If the dataset URL is correct but you get a `FileNotFoundError` or `NotImplementedError` when opening a dataset, your Zarr library may not support the **Zarr v3** format used by Earth Data Hub.
 
 ````{dropdown} FileNotFoundError
-```python
-FileNotFoundError: No such file or directory: 'https://data.earthdatahub.destine.eu/era5/era5-single-levels-atmosphere-daily-utc-v0.zarr'
+```{code-block} python
+:substitutions:
+FileNotFoundError: No such file or directory: 'https://|datastore_internal_host|/era5/era5-single-levels-atmosphere-daily-utc-v0.zarr'
 ```
 ````
 
@@ -70,8 +71,9 @@ Some datasets, including those in the **Destination Earth Climate Adaptation Dig
 To request access, follow the instructions in [](upgraded-access).
 
 ````{dropdown} ClientResponseError: 403 Forbidden
-```python
-ClientResponseError: 403, message='Forbidden', url='https://api.earthdatahub.destine.eu/climate-dt-2/IFS-NEMO-SSP3-7.0-sfc-hourly-standard-v0.zarr/zarr.json'
+```{code-block} python
+:substitutions:
+ClientResponseError: 403, message='Forbidden', url='https://|datastore_host|/climate-dt-2/IFS-NEMO-SSP3-7.0-sfc-hourly-standard-v0.zarr/zarr.json'
 ```
 ````
 
@@ -82,7 +84,8 @@ If you receive a `ClientResponseError: 429 Too Many Requests`, Earth Data Hub ha
 You will need to wait for your quota to reset before accessing more data. To learn more about quotas and how to make the most of them, see [](quotas).
 
 ````{dropdown} ClientResponseError: 429 Too Many Requests
-```python
-ClientResponseError: 429, message='Too Many Requests', url='https://data.earthdatahub.destine.eu/era5/era5-single-levels-atmosphere-daily-utc-v0.zarr/zarr.json'
+```{code-block} python
+:substitutions:
+ClientResponseError: 429, message='Too Many Requests', url='https://|datastore_internal_host|/era5/era5-single-levels-atmosphere-daily-utc-v0.zarr/zarr.json'
 ```
 ````
