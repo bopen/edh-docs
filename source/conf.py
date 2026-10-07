@@ -23,6 +23,8 @@ release = "0.1"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
+BASE_URL = os.getenv("BASE_URL", "https://earthdatahub.destine.eu").rstrip("/")
+
 extensions = [
     "myst_parser",
     "sphinx_design",
@@ -163,7 +165,7 @@ html_css_files = [
 ]
 html_js_files = ["portal-frame.js", "search-icons.js"]
 html_context = {
-    "portal_url": "https://earthdatahub.destine.eu",
+    "portal_url": BASE_URL,
     "desp_platform_url": "https://platform.destine.eu",
     "source_type": "github",
     "source_user": "bopen",
@@ -211,7 +213,7 @@ def edh_url_with_camefrom_role(name, rawtext, text, lineno, inliner, options=Non
     current_page = f"{docname}.html"
 
     # Read the base URL from the environment variable.
-    base_url = os.getenv("BASE_URL", "https://earthdatahub.destine.eu").rstrip("/")
+    base_url = BASE_URL
     docs_root_url = os.getenv(
         "DOCUMENTATION_PORTAL_URL", "https://earthdatahub.destine.eu/docs"
     ).rstrip("/")
