@@ -139,7 +139,7 @@ machine |datastore_host|
 ```
 
 ```{note}
-Earth Data Hub uses multiple endpoints, so your `.netrc` file needs an entry for each one. You can retrieve your `.netrc` file directly from your {edh_url}`EDH account settings </quota-api-keys#my-personal-access-tokens>` using the {octicon}`info` button.
+Earth Data Hub uses multiple endpoints, so your `.netrc` file needs an entry for each one. You can retrieve your `.netrc` file directly from your {edh_url}`EDH account settings </quota-api-keys#my-personal-access-tokens>` using the {{ info_icon }} button.
 ```
 
 Now, you can load protected datasets cleanly by enabling environment trust (`trust_env=True`):

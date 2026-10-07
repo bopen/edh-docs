@@ -54,6 +54,7 @@ myst_substitutions = {
     "datastore_internal_host": os.getenv(
         "DATASTORE_INTERNAL_HOST", "data.earthdatahub.destine.eu"
     ),
+    "info_icon": "info" if "sphinx_llm_markdown" in tags else "{octicon}`info`",  # noqa: F821
 }
 
 collections = {
