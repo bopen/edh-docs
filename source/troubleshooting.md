@@ -104,6 +104,6 @@ You can fix this in two ways:
 ````{dropdown} ClientResponseError: 426 Upgrade Required
 ```{code-block} python
 :substitutions:
-ClientResponseError: 429, message='Too Many Requests', url='https://|datastore_internal_host|/era5/era5-pressure-levels-v0.zarr/zarr.json'
+ClientResponseError: 429, message='Upgrade Required', url='https://|datastore_internal_host|/era5/era5-pressure-levels-v0.zarr/zarr.json'
 ```
 ````
