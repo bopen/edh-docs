@@ -99,7 +99,7 @@ This can happen if you created your API key directly on the DestinE platform and
 You can fix this in two ways:
 
 1. **Create a new API key** on the {edh_url}`Earth Data Hub dedicated page </quota-api-keys#my-personal-access-tokens>`, and use the new key to access the data.
-1. **Keep your current API key** and use the Earth Data Hub API domain instead: https://{{ datastore_host }}
+1. **Keep your current API key** and use the Earth Data Hub API domain instead: <code>https://{{ datastore_host }}</code>
 
 ````{dropdown} ClientResponseError: 426 Upgrade Required
 ```{code-block} python
