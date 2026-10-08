@@ -1,5 +1,7 @@
 ---
-description: Find answers to common questions.
+myst:
+  html_meta:
+    description lang=en: This page answers frequently asked questions about Earth Data Hub datasets, including dataset versioning, recommended versions, update schedules, and other common usage questions.
 ---
 
 # {edh-octicon}`question` FAQs

@@ -1,5 +1,7 @@
 ---
-description: Explore notebooks with examples and best practices.
+myst:
+  html_meta:
+    description lang=en: This page introduces the notebook resources available for Earth Data Hub, including EDH Learning for guided learning and Insula Code Lab for running notebooks directly in a browser.
 ---
 
 # {edh-octicon}`book` Notebooks

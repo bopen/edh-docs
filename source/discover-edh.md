@@ -1,5 +1,7 @@
 ---
-description: Discover what Earth Data Hub is and what you can do with it.
+myst:
+  html_meta:
+    description lang=en: This page introduces Earth Data Hub and explains how it provides cloud-optimized, analysis-ready Earth data in Zarr format that can be streamed over HTTP into standard analysis tools.
 ---
 
 # {edh-octicon}`globe` Discover EDH

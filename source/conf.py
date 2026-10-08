@@ -194,6 +194,7 @@ html_theme_options = {
 # -- Options for LLMs (sphinx-llm) -------------------------------------------
 # https://github.com/NVIDIA/sphinx-llm#configuration
 
+llms_txt_description = "The Earth Data Hub documentation provides guides on discovering the platform, accessing data, core concepts, notebooks, FAQs, and troubleshooting."
 llms_txt_full_build = True
 llms_txt_suffix_mode = "replace"
 llms_txt_exclude = ["404"]

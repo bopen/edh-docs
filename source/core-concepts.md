@@ -1,5 +1,7 @@
 ---
-description: Understand how Earth Data Hub makes massive datasets simple to use.
+myst:
+  html_meta:
+    description lang=en: This page explains the core technical concepts behind Earth Data Hub, including ARCO principles, object storage, Zarr, STAC, cloud streaming, authentication, and dataset chunking for different analysis workflows.
 ---
 
 # {edh-octicon}`light-bulb` Core Concepts
