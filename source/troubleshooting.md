@@ -120,6 +120,6 @@ For full instructions on how to access protected datasets and configure your cre
 ````{dropdown} ClientResponseError: 401, message='Unauthorized'
 ```{code-block} python
 :substitutions:
-ClientResponseError: 401, message='Unauthorized', url='https://data.earthdatahub.destine.eu/private/test-dataset-v0.zarr/.zattrs'
+ClientResponseError: 401, message='Unauthorized', url='https://|datastore_internal_host|/private/test-dataset-v0.zarr/.zattrs'
 ```
 ````
