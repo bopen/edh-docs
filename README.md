@@ -29,7 +29,7 @@ Every page is also published as Markdown (`page.md` next to `page.html`), togeth
 The "Copy page" and "Open in ..." buttons point to the Markdown on the production site: to try them locally, build with
 
 ```bash
-make html O="-D html_baseurl=http://localhost:8000/"
+make html-llm
 ```
 
 ## Custom badges
