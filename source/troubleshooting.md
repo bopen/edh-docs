@@ -107,3 +107,10 @@ You can fix this in two ways:
 ClientResponseError: 429, message='Upgrade Required', url='https://|datastore_internal_host|/era5/era5-pressure-levels-v0.zarr/zarr.json'
 ```
 ````
+
+## Unauthorized
+
+If you see the error `ClientResponseError: 401, message='Unauthorized'`, the two most likely scenarios are:
+
+1. **You are adding your token directly to the url**: in this case check that the token you use is correct and that your are using `f-string` correctly if you do.
+1. **Your are using a .netrc file**: besides checking the cretentials in your `.netrc` file, a common error if you use Xarray / Zarr is to forget to add the `storage_options={"client_kwargs": {"trust_env": True}}` keyword argument to force the use of that identification file.
