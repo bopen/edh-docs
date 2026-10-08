@@ -114,3 +114,10 @@ If you see the error `ClientResponseError: 401, message='Unauthorized'`, the two
 
 1. **You are adding your token directly to the url**: in this case check that the token you use is correct and that your are using `f-string` correctly if you do.
 1. **Your are using a .netrc file**: in this case, besides checking the credentials in your `.netrc` file, a common error if you use Xarray / Zarr is to forget to add the `storage_options={"client_kwargs": {"trust_env": True}}` keyword argument to force the use of that identification file.
+
+````{dropdown} ClientResponseError: 401, message='Unauthorized'
+```{code-block} python
+:substitutions:
+ClientResponseError: 401, message='Unauthorized', url='https://data.earthdatahub.destine.eu/private/test-dataset-v0.zarr/.zattrs'
+```
+````
