@@ -9,8 +9,13 @@ import urllib
 from pathlib import Path
 
 from docutils import nodes
+from sphinx_collections.api import register_driver
 
 sys.path.append(str((Path(__file__).parent / "_ext").resolve()))
+
+from git_pull_driver import GitPullDriver
+
+register_driver("git_pull", GitPullDriver)
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -61,13 +66,13 @@ myst_substitutions = {
 
 collections = {
     "edh-learning": {
-        "driver": "git",
+        "driver": "git_pull",
         "source": "https://github.com/bopen/edh-learning.git",
         "clean": False,
         "final_clean": False,
     },
     "DESP-UserWorkflowService-Templates": {
-        "driver": "git",
+        "driver": "git_pull",
         "source": "https://github.com/SercoSPA/DESP-UserWorkflowService-Templates",
         "clean": False,
         "final_clean": False,
