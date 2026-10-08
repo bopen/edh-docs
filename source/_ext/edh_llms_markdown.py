@@ -144,6 +144,11 @@ class MarkdownCleanup(SphinxPostTransform):
                 ]
             admonition.parent.replace(admonition, heading + body)
 
+        # Captions (e.g. of code blocks) have no Markdown handler.
+        for caption in list(self.document.findall(nodes.caption)):
+            title = nodes.strong("", "", *caption.children)
+            caption.replace_self(nodes.paragraph("", "", title))
+
         for video in list(self.document.findall(youtube)):
             url = f"https://www.youtube.com/watch?v={video['id']}"
             link = nodes.reference(url, url, refuri=url)
