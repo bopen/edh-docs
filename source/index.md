@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description lang=en: This is the main Earth Data Hub documentation page, providing an overview of the platform and links to guides on discovering and accessing data, core concepts, notebooks, FAQs, and troubleshooting.
+    description lang=en: This is the main Earth Data Hub documentation page, providing links to guides on discovering and accessing data, core concepts, notebooks, FAQs, and troubleshooting.
 layout: landing
 ---
 
