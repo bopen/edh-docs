@@ -123,3 +123,18 @@ For full instructions on how to access protected datasets and configure your cre
 ClientResponseError: 401, message='Unauthorized', url='https://|datastore_internal_host|/private/test-dataset-v0.zarr/.zattrs'
 ```
 ````
+
+## Debugging when using the local cache
+
+The caching mechanism explained in the [](cache-data-locally) section can sometimes make it harder to understand what went wrong.
+
+When an error occurs while using the local cache, you may see a generic error such as `GroupNotFoundError`. This error may not indicate the actual cause of the problem.
+
+If you encounter an error while using the local cache, we recommend trying the same request **without using the cache**. This can provide a more detailed error message and help identify the cause of the problem.
+
+````{dropdown} GroupNotFoundError
+```{code-block} python
+:substitutions:
+GroupNotFoundError: No group found in store 'asyncwrapper::simplecache::https://|datastore_internal_host|/wrong-collection/wrong-dataset-v0.zarr' at path ''
+```
+````
