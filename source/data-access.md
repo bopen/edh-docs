@@ -91,8 +91,10 @@ To access our full suite of datasets, you will need a free **API Key**.
 ---
 class: warning
 ---
-Some datasets, including the **Destination Earth Climate Adaptation Digital Twin (Climate DT)** collection, require additional permissions. See [](upgraded-access). 
+Some datasets, including the **Destination Earth Climate Adaptation Digital Twin (Climate DT)** collection, require additional permissions. See [](upgraded-access).
 ```
+
+(protected-datasets)=
 
 ## Access protected datasets
 
