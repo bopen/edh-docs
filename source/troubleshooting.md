@@ -128,13 +128,51 @@ ClientResponseError: 401, message='Unauthorized', url='https://|datastore_intern
 
 The caching mechanism explained in the [](cache-data-locally) section can sometimes make it harder to understand what went wrong.
 
-When an error occurs while using the local cache, you may see a generic error such as `GroupNotFoundError`. This error may not indicate the actual cause of the problem.
-
-If you encounter an error while using the local cache, we recommend trying the same request **without using the cache**. This can provide a more detailed error message and help identify the cause of the problem.
+When using the local cache, you may get a generic error such as `GroupNotFoundError`, which doesn't necessarily tell you the actual cause of the problem. For example, you might see the following error:
 
 ````{dropdown} GroupNotFoundError
 ```{code-block} python
 :substitutions:
-GroupNotFoundError: No group found in store 'asyncwrapper::simplecache::https://|datastore_internal_host|/wrong-collection/wrong-dataset-v0.zarr' at path ''
+GroupNotFoundError: No group found in store 'asyncwrapper::simplecache::https://edh:WRONG_API_KEY@|datastore_internal_host|/private/test-dataset-v0.zarr' at path ''
 ```
 ````
+
+If an error occurs while using the local cache, it is recommended to try the same request **without using the cache**. This can provide a more detailed error message and help identify the cause of the problem.
+
+The following example shows the code with the cache enabled:
+
+```{code-block} python
+---
+caption: Cache enabled
+emphasize-lines: 4-8
+substitutions:
+---
+import xarray as xr
+
+xr.open_dataset(
+    "asyncwrapper::simplecache::https://edh:WRONG_API_KEY@|datastore_internal_host|/private/test-dataset-v0.zarr",
+    storage_options={
+        "simplecache": {"cache_storage": "./edh_cache/"},
+        "asyncwrapper": {"asynchronous": True},
+    },
+    chunks={},
+    engine="zarr",
+)
+```
+
+The same request without the cache looks like this:
+
+```{code-block} python
+---
+caption: Cache disabled
+emphasize-lines: 4
+substitutions:
+---
+import xarray as xr
+
+xr.open_dataset(
+    "https://edh:WRONG_API_KEY@|datastore_internal_host|/private/test-dataset-v0.zarr",
+    chunks={},
+    engine="zarr",
+)
+```
