@@ -22,3 +22,11 @@ Examples of changes between versions include:
 - changes to dataset variables
 
 The Earth Data Hub website always displays the URL for the **recommended version** of the dataset. We recommend using this version unless you specifically need to access an older version.
+
+## How often are datasets updated?
+
+Some datasets are updated regularly to include the latest data available from their original source.
+
+The update frequency for each dataset is shown on the Earth Data Hub website in the **Update Frequency** field in the right-hand column of the dataset page.
+
+For datasets marked as **monthly**, updates are completed **by the third week of each month**. We’re currently experimenting with more frequent updates, and some datasets marked as monthly may already be updated every two weeks.
