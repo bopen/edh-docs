@@ -10,7 +10,7 @@ myst:
 Run notebooks instantly in your browser with no installation required.
 
 ```{note}
-These notebooks run directly in the [Insula Code Lab](https://code.insula.destine.eu/). Simply open one and start coding.
+These notebooks run directly in the [Insula Code Lab](https://code.insula.destine.eu/hub/user-redirect/lab/tree/platform-lab/EarthDataHub/). Simply open one and start coding.
 ```
 
 ```{nbgallery}
