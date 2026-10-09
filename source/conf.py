@@ -62,9 +62,9 @@ myst_substitutions = {
         "DATASTORE_INTERNAL_HOST", "data.earthdatahub.destine.eu"
     ),
     "private_test_dataset_path": "/"
-    + os.getenv(
-        "PRIVATE_TEST_DATASET_PATH", "/private/test-dataset-v1.zarr"
-    ).lstrip("/"),
+    + os.getenv("PRIVATE_TEST_DATASET_PATH", "/private/test-dataset-v1.zarr").lstrip(
+        "/"
+    ),
     "info_icon": "info" if "sphinx_llm_markdown" in tags else "{octicon}`info`",  # noqa: F821
 }
 
