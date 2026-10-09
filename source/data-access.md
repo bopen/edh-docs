@@ -1,5 +1,7 @@
 ---
-description: Learn how to access data and optimise your workflows.
+myst:
+  html_meta:
+    description lang=en: This page explains how to access Earth Data Hub datasets using open standards such as Xarray and Zarr, including environment setup, API key authentication, protected datasets, quotas, and local caching.
 ---
 
 # {edh-octicon}`download` Data Access

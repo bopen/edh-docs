@@ -1,5 +1,7 @@
 ---
-description: Learn the fundamentals of Earth Data Hub with practical examples.
+myst:
+  html_meta:
+    description lang=en: This page provides a collection of learning notebooks for getting started with Earth Data Hub and exploring practical use cases with datasets such as ERA5, CMIP6, and Sentinel-1.
 ---
 
 # {edh-octicon}`mortar-board` EDH Learning

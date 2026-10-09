@@ -1,5 +1,7 @@
 ---
-description: Understand common errors and how to solve them.
+myst:
+  html_meta:
+    description lang=en: This page provides solutions for common Earth Data Hub issues, including Zarr v3 compatibility, restricted dataset access, exhausted quotas, API key and authorization errors, and local cache problems.
 ---
 
 # {edh-octicon}`bug` Troubleshooting
