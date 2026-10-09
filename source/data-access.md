@@ -114,7 +114,7 @@ import xarray as xr
 
 # Replace <your API key> with your actual key
 xr.open_dataset(
-    "https://edh:<your API key>@|datastore_internal_host|/private/test-dataset-v0.zarr",
+    "https://edh:<your API key>@|datastore_internal_host||private_test_dataset_path|",
     chunks={},
     engine="zarr",
 )
@@ -156,7 +156,7 @@ substitutions:
 import xarray as xr
 
 xr.open_dataset(
-    "https://|datastore_internal_host|/private/test-dataset-v0.zarr",
+    "https://|datastore_internal_host||private_test_dataset_path|",
     storage_options={"client_kwargs": {"trust_env": True}},  # Auto-detect your .netrc
     chunks={},
     engine="zarr",
@@ -210,7 +210,7 @@ substitutions:
 import xarray as xr
 
 # Replace with the Earth Data Hub dataset URL you'd like to access
-URL = "https://|datastore_internal_host|/private/test-dataset-v0.zarr"
+URL = "https://|datastore_internal_host||private_test_dataset_path|"
 
 # Replace with the local directory you'd like to use for caching
 CACHE_STORAGE = "./edh_cache/"
