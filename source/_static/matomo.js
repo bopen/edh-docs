@@ -20,6 +20,17 @@
     queue.push(['setConsentGiven']);
   }
 
+  function markCopyButtons() {
+    document.querySelectorAll('button.copybtn:not([data-matomo-copy])').forEach(function (button) {
+      button.setAttribute('data-matomo-copy', 'docs-code-snippet');
+    });
+    document.querySelectorAll('.copy-page-wrapper button.js-copy:not([data-matomo-copy])').forEach(function (button) {
+      button.setAttribute('data-matomo-copy', 'docs-page-content');
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', markCopyButtons);
+
   enableTracking();
   var dataLayer = window._mtm = window._mtm || [];
   dataLayer.push({'mtm.startTime': new Date().getTime(), event: 'mtm.Start'});
@@ -27,7 +38,6 @@
   var script = document.createElement('script');
   script.async = true;
   script.src = containerUrl;
-  // Tag Manager creates its tracker during load, so enable it again afterwards.
   script.onload = enableTracking;
   document.head.appendChild(script);
 }());
