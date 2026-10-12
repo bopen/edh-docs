@@ -57,6 +57,9 @@ Use these roles for badges matching the Earth Data Hub webportal:
   Alternative EDH access URL (required for restricted datasets, by default `api.earthdatahub.destine.eu`)
 - `DOCUMENTATION_PORTAL`:\
   Public URL to the documentation portal (by default `https://earthdatahub.destine.eu/docs`)
+- `PRIVATE_TEST_DATASET_PATH`:\
+  Path to demo dataset to be displayed in quickstart guide
+  (must be equal to same dataset on the web portal, default to `/private/test-dataset-v1.zarr`)
 
 ## Licenses
 
