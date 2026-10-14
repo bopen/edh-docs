@@ -193,6 +193,7 @@ html_theme_options = {
     "toctree_collapse": True,
     "toctree_maxdepth": 2,
     "toctree_titles_only": False,
+    "open_in_perplexity": True,
 }
 
 # -- Options for LLMs (sphinx-llm) -------------------------------------------
