@@ -29,6 +29,9 @@ release = "0.1"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 BASE_URL = os.getenv("BASE_URL", "https://earthdatahub.destine.eu").rstrip("/")
+DOCUMENTATION_PORTAL_URL = os.getenv(
+    "DOCUMENTATION_PORTAL_URL", f"{BASE_URL}/docs"
+).rstrip("/")
 
 extensions = [
     "myst_parser",
@@ -156,7 +159,7 @@ linkcheck_anchors_ignore_for_url = [
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_baseurl = "https://earthdatahub.destine.eu/docs/"
+html_baseurl = f"{DOCUMENTATION_PORTAL_URL}/"
 html_theme = "shibuya"
 html_title = "Earth Data Hub documentation"
 html_copy_source = False
@@ -225,9 +228,6 @@ def edh_url_with_camefrom_role(name, rawtext, text, lineno, inliner, options=Non
 
     # Read the base URL from the environment variable.
     base_url = BASE_URL
-    docs_root_url = os.getenv(
-        "DOCUMENTATION_PORTAL_URL", "https://earthdatahub.destine.eu/docs"
-    ).rstrip("/")
 
     # Parse the text (Link Text <path>)
     if "<" in text and ">" in text:
@@ -245,7 +245,7 @@ def edh_url_with_camefrom_role(name, rawtext, text, lineno, inliner, options=Non
         path = "/" + path
 
     # Safely URL-encode the current page name
-    encoded_page = urllib.parse.quote(f"{docs_root_url}/{current_page}")
+    encoded_page = urllib.parse.quote(f"{DOCUMENTATION_PORTAL_URL}/{current_page}")
 
     # Construct the final URL
     separator = "&" if "?" in base_url else "?"

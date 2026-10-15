@@ -43,4 +43,4 @@ serve:
 
 # Build HTML with a local base URL for Markdown for LLMs links
 html-llm:
-	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) -D html_baseurl=http://localhost:$(PORT)/ $(O)
+	@DOCUMENTATION_PORTAL_URL=http://localhost:$(PORT) $(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
