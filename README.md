@@ -26,7 +26,8 @@ Then go to <http://localhost:8000>.
 ## Markdown for LLMs
 
 Every page is also published as Markdown (`page.md` next to `page.html`), together with `llms.txt` and `llms-full.txt`, by [sphinx-llm](https://github.com/NVIDIA/sphinx-llm).
-The "Use with AI" menu contains "Copy page" and "Open in ..." actions that point to the Markdown on the production site: to try them locally, build with
+The "Use with AI" links use `DOCUMENTATION_PORTAL_URL`.
+To try them locally, build with:
 
 ```bash
 make html-llm
@@ -54,7 +55,7 @@ Use these roles for badges matching the Earth Data Hub webportal:
   Main EDH access domain (by default `data.earthdatahub.destine.eu`)
 - `DATASTORE_HOST`:\
   Alternative EDH access URL (required for restricted datasets, by default `api.earthdatahub.destine.eu`)
-- `DOCUMENTATION_PORTAL_URL`:\
+- `DOCUMENTATION_PORTAL`:\
   Public URL to the documentation portal (by default `https://earthdatahub.destine.eu/docs`)
 - `PRIVATE_TEST_DATASET_PATH`:\
   Path to demo dataset to be displayed in quickstart guide
