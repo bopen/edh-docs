@@ -106,7 +106,7 @@ You can fix this in two ways:
 ````{dropdown} ClientResponseError: 426 Upgrade Required
 ```{code-block} python
 :substitutions:
-ClientResponseError: 429, message='Upgrade Required', url='https://|datastore_internal_host|/era5/era5-pressure-levels-v0.zarr/zarr.json'
+ClientResponseError: 426, message='Upgrade Required', url='https://|datastore_internal_host|/era5/era5-pressure-levels-v0.zarr/zarr.json'
 ```
 ````
 
@@ -114,10 +114,10 @@ ClientResponseError: 429, message='Upgrade Required', url='https://|datastore_in
 
 If you see the error `ClientResponseError: 401, message='Unauthorized'`, the two most likely scenarios are:
 
-1. **You are adding your token directly to the url**: in this case check that the token you use is correct and that your are using `f-string` correctly if you do.
-1. **Your are using a .netrc file**: in this case, besides checking the credentials in your `.netrc` file, a common error if you use Xarray / Zarr is to forget to add the `storage_options={"client_kwargs": {"trust_env": True}}` keyword argument to force the use of that identification file.
+1. **You are adding your token directly to the URL**: in this case check that the token you use is correct and that you are using `f-string` correctly if you do.
+1. **You are using a .netrc file**: in this case, besides checking the credentials in your `.netrc` file, a common error if you use Xarray / Zarr is to forget to add the `storage_options={"client_kwargs": {"trust_env": True}}` keyword argument to force the use of that identification file.
 
-For full instructions on how to access protected datasets and configure your credentials look-up the [](protected-datasets) section.
+For full instructions on how to access protected datasets and configure your credentials, see the [](protected-datasets) section.
 
 ````{dropdown} ClientResponseError: 401, message='Unauthorized'
 ```{code-block} python

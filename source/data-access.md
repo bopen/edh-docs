@@ -86,7 +86,7 @@ And just like that, you are connected! The output above shows an Xarray `Dataset
 To access our full suite of datasets, you will need a free **API Key**.
 
 1. **Register an account** on the {edh_url_with_camefrom}`DestinE Platform </login>`.
-1. Visit {edh_url}`API keys management section </quota-api-keys#my-personal-access-tokens>`.
+1. Visit the {edh_url}`API keys management section </quota-api-keys#my-personal-access-tokens>`.
 1. **Copy your default API key** (or generate a new one).
 
 ```{admonition} Climate DT requires upgraded access.
@@ -174,7 +174,7 @@ Direct authentication is fine for a quick test, but using a `.netrc` file is the
 
 ## Upgraded access
 
-Some datasets, including the \[Destination Earth Climate Adaptation Digital Twin ({edh_url}`Climate DT </collections/climate-dt-2>`) collection, require upgraded access. You can easily recognise these datasets in the catalogue by their {bdg-restricted}`Restricted` badge.
+Some datasets, including the Destination Earth Climate Adaptation Digital Twin ({edh_url}`Climate DT </collections/climate-dt-2>`) collection, require upgraded access. You can easily recognise these datasets in the catalogue by their {bdg-restricted}`Restricted` badge.
 
 For example, if you try to access a Climate DT dataset without the required permissions, your request will fail with `HTTP 403 Forbidden`.
 
