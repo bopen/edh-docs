@@ -55,7 +55,7 @@ Use these roles for badges matching the Earth Data Hub webportal:
   Main EDH access domain (by default `data.earthdatahub.destine.eu`)
 - `DATASTORE_HOST`:\
   Alternative EDH access URL (required for restricted datasets, by default `api.earthdatahub.destine.eu`)
-- `DOCUMENTATION_PORTAL`:\
+- `DOCUMENTATION_PORTAL_URL`:\
   Public URL to the documentation portal (by default `https://earthdatahub.destine.eu/docs`)
 - `PRIVATE_TEST_DATASET_PATH`:\
   Path to demo dataset to be displayed in quickstart guide
