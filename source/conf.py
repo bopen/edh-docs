@@ -30,7 +30,7 @@ release = "0.1"
 
 BASE_URL = os.getenv("BASE_URL", "https://earthdatahub.destine.eu").rstrip("/")
 DOCUMENTATION_PORTAL_URL = os.getenv(
-    "DOCUMENTATION_PORTAL_URL", f"{BASE_URL}/docs"
+    "DOCUMENTATION_PORTAL_URL", "https://earthdatahub.destine.eu/docs"
 ).rstrip("/")
 
 extensions = [
