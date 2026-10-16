@@ -168,6 +168,7 @@ html_static_path = ["_static"]
 sitemap_excludes = ["genindex.html", "search.html"]
 sitemap_url_scheme = "{link}"
 html_css_files = [
+    "fonts.css",
     "headings.css",
     "portal-frame.css",
     "cards.css",
