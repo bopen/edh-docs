@@ -96,7 +96,7 @@ ClientResponseError: 429, message='Too Many Requests', url='https://|datastore_i
 
 If you see the error `ClientResponseError: 426 Upgrade Required`, it means that your API key cannot be used with the API domain you are currently accessing.
 
-This can happen if you created your API key directly on the DestinE platform and are using the {{ datastore_internal_host }} domain to access the data.
+This can happen if you created your API key directly on the DestinE platform and are using the <code>https://{{ datastore_internal_host }}</code> domain to access the data.
 
 You can fix this in two ways:
 
