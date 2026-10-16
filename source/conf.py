@@ -206,7 +206,7 @@ html_theme_options = {
 llms_txt_description = "The Earth Data Hub documentation provides an overview of the platform and guides on accessing data, core concepts, notebooks, FAQs, and troubleshooting."
 llms_txt_full_build = True
 llms_txt_suffix_mode = "replace"
-llms_txt_exclude = ["404"]
+llms_txt_exclude = ["404", "index"]
 # Meta nodes (notebook descriptions, see edh_llms_markdown) have no Markdown equivalent
 llms_txt_suppress_unknown_node_warnings = ["meta"]
 markdown_http_base = html_baseurl
