@@ -177,6 +177,12 @@ html_css_files = [
     "search-icons.css",
 ]
 html_js_files = ["portal-frame.js", "search-icons.js"]
+matomo_container_url = os.getenv("MATOMO_TAG_MANAGER_CONTAINER_URL", "").strip()
+if matomo_container_url:
+    html_js_files.append(
+        ("matomo.js", {"data-matomo-container-url": matomo_container_url})
+    )
+
 html_context = {
     "portal_url": BASE_URL,
     "desp_platform_url": "https://platform.destine.eu",
