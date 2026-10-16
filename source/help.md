@@ -7,7 +7,7 @@ myst:
 # {edh-octicon}`comment-discussion` Help
 
 { .lead }
-Find answers to common questions and solutions to common errors.
+Find answers and troubleshoot common issues.
 
 ```{grid} 1 1 2 2
 ---
