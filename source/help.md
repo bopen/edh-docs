@@ -1,0 +1,39 @@
+---
+myst:
+  html_meta:
+    description lang=en: TODO
+---
+
+# {edh-octicon}`comment-discussion` Help
+
+{ .lead }
+Find answers to common questions and solutions to common errors.
+
+```{grid} 1 1 2 2
+---
+gutter: 2
+padding: 0
+class-row: surface
+---
+~~~{grid-item-card} {edh-octicon}`question` FAQs
+:link: help/faqs
+:link-type: doc
+
+Find answers to common questions.
+~~~
+
+~~~{grid-item-card} {edh-octicon}`bug` Troubleshooting
+:link: help/troubleshooting
+:link-type: doc
+
+Understand common errors and how to solve them.
+~~~
+```
+
+```{toctree}
+---
+hidden: true
+---
+help/faqs
+help/troubleshooting
+```

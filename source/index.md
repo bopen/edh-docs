@@ -48,18 +48,19 @@ Understand how EDH makes massive datasets simple to use.
 Explore notebooks with examples and best practices.
 ~~~
 
-~~~{grid-item-card} {edh-octicon}`question` FAQs
-:link: faqs
+~~~{grid-item-card} {edh-octicon}`comment-discussion` Help
+:link: help
 :link-type: doc
 
-Find answers to common questions.
+Find answers and troubleshoot common issues.
 ~~~
 
-~~~{grid-item-card} {edh-octicon}`bug` Troubleshooting
-:link: troubleshooting
+~~~{grid-item-card} {edh-octicon}`megaphone` What's new
+:link: whats-new
 :link-type: doc
 
-Understand common errors and how to solve them.
+Stay up to date with the latest Earth Data Hub changes.
+~~~
 ```
 
 ```{toctree}
@@ -75,7 +76,7 @@ core-concepts
 
 notebooks
 
-faqs
+help
 
-troubleshooting
+whats-new
 ```
