@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description lang=en: TODO
+    description lang=en: This page provides links to FAQs and troubleshooting resources for common questions and errors.
 ---
 
 # {edh-octicon}`comment-discussion` Help
