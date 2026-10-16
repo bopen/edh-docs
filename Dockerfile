@@ -41,11 +41,6 @@ COPY ./git-clone-ref.py /tmp/git-clone-ref.py
 
 COPY edh-docs /src/bopen/edh-docs
 
-# Download all dependencies into the uv cache.
-# but delete the virtual environment to save space, it will be re-created during uv run.
-RUN uv sync --frozen --all-extras \
-    && rm -rf /venv
-
 EXPOSE 8000
 
 CMD ["make", "prod-serve"]
