@@ -25,8 +25,16 @@ ENV UV_COMPILE_BYTECODE=1 \
 WORKDIR /src/
 
 # install git-clone-ref.py dependencies
-RUN apt update && apt install -y git make pandoc \
+RUN apt update && apt install -y \
+    git make pandoc \
     && apt clean
+
+# security fixes
+RUN apt update && apt install -y --only-upgrade \
+    libssl3t64 openssl-provider-legacy \
+    && apt clean
+
+RUN rm -f /usr/bin/pebble
 
 # get git-clone-ref.py script
 COPY ./git-clone-ref.py /tmp/git-clone-ref.py
