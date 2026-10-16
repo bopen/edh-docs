@@ -29,6 +29,9 @@ release = "0.1"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 BASE_URL = os.getenv("BASE_URL", "https://earthdatahub.destine.eu").rstrip("/")
+DOCUMENTATION_PORTAL_URL = os.getenv(
+    "DOCUMENTATION_PORTAL_URL", "https://earthdatahub.destine.eu/docs"
+).rstrip("/")
 
 extensions = [
     "myst_parser",
@@ -156,7 +159,7 @@ linkcheck_anchors_ignore_for_url = [
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_baseurl = "https://earthdatahub.destine.eu/docs/"
+html_baseurl = f"{DOCUMENTATION_PORTAL_URL}/"
 html_theme = "shibuya"
 html_title = "Earth Data Hub documentation"
 html_copy_source = False
@@ -165,6 +168,7 @@ html_static_path = ["_static"]
 sitemap_excludes = ["genindex.html", "search.html"]
 sitemap_url_scheme = "{link}"
 html_css_files = [
+    "fonts.css",
     "headings.css",
     "portal-frame.css",
     "cards.css",
@@ -199,6 +203,7 @@ html_theme_options = {
     "toctree_collapse": True,
     "toctree_maxdepth": 2,
     "toctree_titles_only": False,
+    "open_in_perplexity": True,
 }
 
 # -- Options for LLMs (sphinx-llm) -------------------------------------------
@@ -207,7 +212,7 @@ html_theme_options = {
 llms_txt_description = "The Earth Data Hub documentation provides an overview of the platform and guides on accessing data, core concepts, notebooks, FAQs, and troubleshooting."
 llms_txt_full_build = True
 llms_txt_suffix_mode = "replace"
-llms_txt_exclude = ["404"]
+llms_txt_exclude = ["404", "index"]
 # Meta nodes (notebook descriptions, see edh_llms_markdown) have no Markdown equivalent
 llms_txt_suppress_unknown_node_warnings = ["meta"]
 markdown_http_base = html_baseurl
@@ -230,9 +235,6 @@ def edh_url_with_camefrom_role(name, rawtext, text, lineno, inliner, options=Non
 
     # Read the base URL from the environment variable.
     base_url = BASE_URL
-    docs_root_url = os.getenv(
-        "DOCUMENTATION_PORTAL_URL", "https://earthdatahub.destine.eu/docs"
-    ).rstrip("/")
 
     # Parse the text (Link Text <path>)
     if "<" in text and ">" in text:
@@ -250,7 +252,7 @@ def edh_url_with_camefrom_role(name, rawtext, text, lineno, inliner, options=Non
         path = "/" + path
 
     # Safely URL-encode the current page name
-    encoded_page = urllib.parse.quote(f"{docs_root_url}/{current_page}")
+    encoded_page = urllib.parse.quote(f"{DOCUMENTATION_PORTAL_URL}/{current_page}")
 
     # Construct the final URL
     separator = "&" if "?" in base_url else "?"

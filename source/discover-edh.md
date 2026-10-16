@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description lang=en: This page introduces Earth Data Hub and explains how it provides cloud-optimized, analysis-ready Earth data in Zarr format that can be streamed over HTTP into standard analysis tools.
+    description lang=en: This page introduces Earth Data Hub and explains how it provides cloud-optimised, analysis-ready Earth data in Zarr format that can be streamed over HTTP into standard analysis tools.
 ---
 
 # {edh-octicon}`globe` Discover EDH
