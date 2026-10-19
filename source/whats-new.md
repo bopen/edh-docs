@@ -45,3 +45,56 @@ Version 1 of the global Copernicus DEM datasets, **GLO-30** and **GLO-90**, is n
    ```
 
 1. Review code that relies on array positions: row 0 is now the northern edge, and GLO-30 has one fewer longitude column.
+
+(era5-zarr-v3)=
+
+## ERA5 on Zarr v3 (2026-07-06)
+
+The hourly ERA5 datasets and ERA5 monthly data on single levels moved to new Zarr v3 stores. The data is unchanged, but the chunks are new. The previous Zarr v2 stores are no longer updated.
+
+### Breaking changes
+
+- The Zarr format is v3 instead of v2.
+- The store URLs are new.
+
+### Performance
+
+- The hourly datasets use spatio-temporal chunks that suit both regional and time-series analysis. See each dataset page for the chunk shapes.
+
+(era5-zarr-v3-migration)=
+
+### Migrating from Zarr v2
+
+1. Use zarr-python 3 (`pip install "zarr>=3"`).
+
+1. Replace the store names in the `https://data.earthdatahub.destine.eu/era5/` URLs:
+
+   - `reanalysis-era5-land-no-antartica-v0.zarr` → `era5-land-v0.zarr`
+   - `reanalysis-era5-single-levels-v0.zarr` → `era5-single-levels-atmosphere-v0.zarr`
+   - `reanalysis-era5-single-levels-ocean-v0.zarr` → `era5-single-levels-ocean-waves-v0.zarr`
+   - `reanalysis-era5-pressure-levels-v0.zarr` → `era5-pressure-levels-v0.zarr`
+   - `reanalysis-era5-single-levels-monthly-means-v0.zarr` → `era5-single-levels-atmosphere-monthly-v0.zarr`
+
+1. If you pass explicit `chunks` to `xr.open_dataset`, align them with the new chunk shapes.
+
+(era5-ecv-discontinued)=
+
+## ERA5 ECV anomalies discontinued (2026-07-06)
+
+The ERA5 monthly anomalies of Essential Climate Variables are no longer updated. Compute up-to-date anomalies from {edh_url}`ERA5 monthly data on single levels </collections/era5/datasets/era5-single-levels-atmosphere-monthly>` instead, with the reference period of your choice.
+
+(era5-ecv-migration)=
+
+### Migrating from the ECV dataset
+
+1. Open `era5-single-levels-atmosphere-monthly-v0.zarr` instead of `ecv-for-climate-change-1981-2010-anomaly-v0`: `t2m`, `tp` and `siconc` keep their names.
+
+1. Subtract the monthly climatology of the reference period:
+
+   ```python
+   t2m = ds.t2m
+   clima = t2m.sel(valid_time=slice("1991", "2020")).groupby("valid_time.month").mean()
+   t2m_anomaly = t2m.groupby("valid_time.month") - clima
+   ```
+
+   The discontinued dataset used 1981–2010: use `slice("1981", "2010")` to match it.
