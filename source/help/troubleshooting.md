@@ -122,7 +122,7 @@ For full instructions on how to access protected datasets and configure your cre
 ````{dropdown} ClientResponseError: 401, message='Unauthorized'
 ```{code-block} python
 :substitutions:
-ClientResponseError: 401, message='Unauthorized', url='https://|datastore_internal_host|/private/test-dataset-v0.zarr/.zattrs'
+ClientResponseError: 401, message='Unauthorized', url='https://|datastore_internal_host|/private/test-dataset-v1.zarr/zarr.json'
 ```
 ````
 
@@ -135,7 +135,7 @@ When using the local cache, you may get a generic error such as `GroupNotFoundEr
 ````{dropdown} GroupNotFoundError
 ```{code-block} python
 :substitutions:
-GroupNotFoundError: No group found in store 'asyncwrapper::simplecache::https://edh:WRONG_API_KEY@|datastore_internal_host|/private/test-dataset-v0.zarr' at path ''
+GroupNotFoundError: No group found in store 'asyncwrapper::simplecache::https://edh:WRONG_API_KEY@|datastore_internal_host|/private/test-dataset-v1.zarr' at path ''
 ```
 ````
 
@@ -152,7 +152,7 @@ substitutions:
 import xarray as xr
 
 xr.open_dataset(
-    "asyncwrapper::simplecache::https://edh:WRONG_API_KEY@|datastore_internal_host|/private/test-dataset-v0.zarr",
+    "asyncwrapper::simplecache::https://edh:WRONG_API_KEY@|datastore_internal_host|/private/test-dataset-v1.zarr",
     storage_options={
         "simplecache": {"cache_storage": "./edh_cache/"},
         "asyncwrapper": {"asynchronous": True},
@@ -173,7 +173,7 @@ substitutions:
 import xarray as xr
 
 xr.open_dataset(
-    "https://edh:WRONG_API_KEY@|datastore_internal_host|/private/test-dataset-v0.zarr",
+    "https://edh:WRONG_API_KEY@|datastore_internal_host|/private/test-dataset-v1.zarr",
     chunks={},
     engine="zarr",
 )
