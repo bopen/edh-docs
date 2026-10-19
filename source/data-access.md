@@ -60,7 +60,7 @@ substitutions:
 >>> import xarray as xr
 
 >>> xr.open_dataset(
-...     "https://|datastore_internal_host|/public/test-dataset-v0.zarr",
+...     "https://|datastore_internal_host|/public/test-dataset-v1.zarr",
 ...     chunks={},  # Tells Xarray to load data on-demand
 ...     engine="zarr",
 ... )
