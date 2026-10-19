@@ -34,12 +34,14 @@ Version 1 of the global Copernicus DEM datasets, **GLO-30** and **GLO-90**, is n
 ### Migrating from version 0
 
 1. Use zarr-python 3 (`pip install "zarr>=3"`) or GDAL 3.8 or newer.
-2. Replace `-v0.zarr` with `-v1.zarr` in the store URLs.
-3. Reverse latitude slices: the bounds now go from north to south. A slice in the old order returns an empty selection, _silently_:
+
+1. Replace `-v0.zarr` with `-v1.zarr` in the store URLs.
+
+1. Reverse latitude slices: the bounds now go from north to south. A slice in the old order returns an empty selection, _silently_:
 
    ```python
    rome = ds.dsm.sel(lat=slice(41.8, 42.0), lon=slice(12.4, 12.6))  # v0 south-up
    rome = ds.dsm.sel(lat=slice(42.0, 41.8), lon=slice(12.4, 12.6))  # v1 north-up
    ```
 
-4. Review code that relies on array positions: row 0 is now the northern edge, and GLO-30 has one fewer longitude column.
+1. Review code that relies on array positions: row 0 is now the northern edge, and GLO-30 has one fewer longitude column.
