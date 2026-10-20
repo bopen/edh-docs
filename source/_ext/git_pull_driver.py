@@ -22,7 +22,7 @@ class GitPullDriver(GitDriver):
     def _clone(self):
         self.info("Cloning git repository...")
         try:
-            Repo.clone_from(self.config["source"], self.config["target"])
+            Repo.clone_from(self.config["source"], self.config["target"], depth=1)
         except Exception as e:  # noqa: BLE001
             self.error("Problems during cloning repository.", e)
 
