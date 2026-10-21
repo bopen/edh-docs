@@ -29,3 +29,4 @@ version = "0.1.0"
 
 [tool.uv]
 exclude-newer = "1 week"
+exclude-newer-package = { certifi = false }
