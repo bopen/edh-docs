@@ -38,12 +38,35 @@
 }
 
 .edh-cookie-settings[open] {
+  animation:
+    edh-cookie-settings-fade 300ms ease-out,
+    edh-cookie-settings-slide 400ms ease;
   display: flex;
   flex-direction: column;
 }
 
 .edh-cookie-settings::backdrop {
+  animation: edh-cookie-settings-fade 300ms ease-out;
   background: rgb(0 0 0 / 50%);
+}
+
+/* HeroUI's modal enter animation */
+@keyframes edh-cookie-settings-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes edh-cookie-settings-slide {
+  from {
+    translate: 0 80px;
+  }
+}
+
+@keyframes edh-cookie-settings-scale {
+  from {
+    scale: 1.03;
+  }
 }
 
 html:has(.edh-cookie-settings[open]) {
@@ -190,6 +213,12 @@ html:has(.edh-cookie-settings[open]) {
 @media (min-width: 640px) {
   .edh-cookie-settings {
     max-width: min(896px, calc(100% - 48px));
+  }
+
+  .edh-cookie-settings[open] {
+    animation:
+      edh-cookie-settings-fade 300ms ease-out,
+      edh-cookie-settings-scale 300ms ease-out;
   }
 
   .edh-cookie-settings__body,

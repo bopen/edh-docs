@@ -127,6 +127,9 @@
   }
 
   if (!storedConsent) {
-    openCookieSettings();
+    new PerformanceObserver(function (list, observer) {
+      observer.disconnect();
+      openCookieSettings();
+    }).observe({type: 'paint', buffered: true});
   }
 }());
