@@ -1,6 +1,9 @@
 version = 1
-revision = 5
+revision = 3
 requires-python = ">=3.14"
+
+[manifest]
+constraints = [{ name = "certifi", specifier = ">=2026.10.19" }]
 
 [[package]]
 name = "alabaster"

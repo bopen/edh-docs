@@ -26,3 +26,7 @@ license-files = ["LICENSE-CODE"]
 name = "edh-docs"
 requires-python = ">=3.14"
 version = "0.1.0"
+
+[tool.uv]
+# certifi >= 2026.10.19 fixes GHSA-6q48-6c7w-9gw2 
+constraint-dependencies = ["certifi>=2026.10.19"]
