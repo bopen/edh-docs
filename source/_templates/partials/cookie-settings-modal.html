@@ -1,0 +1,61 @@
+<!--
+ Copyright 2026 European Union
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<dialog class="edh-cookie-settings" aria-label="Cookie settings" tabindex="-1" data-cookie-settings>
+  <div class="edh-cookie-settings__body">
+    <p class="edh-cookie-settings__intro">
+      We use cookies to improve your experience, analyse traffic, and secure our services. You
+      can enable or disable non-essential cookies at any time. Essential cookies cannot be
+      turned off because they are required for the site to function properly.
+    </p>
+
+    <section class="edh-cookie-settings__category">
+      <div>
+        <h3>Functional</h3>
+        <p>
+          Functional cookies ensure that the website works properly. Without these cookies,
+          important features such as session handling would not work correctly.
+        </p>
+      </div>
+      <label class="edh-cookie-settings__switch">
+        <input type="checkbox" role="switch" checked disabled aria-label="Functional cookies are required">
+        <span class="edh-cookie-settings__track" aria-hidden="true"></span>
+        <span>Required</span>
+      </label>
+    </section>
+
+    <section class="edh-cookie-settings__category">
+      <div>
+        <h3>Tracking Cookies</h3>
+        <p>
+          Tracking cookies help us collect metrics on visitor behaviour and fix issues on the
+          website. They are optional and are only activated after your consent.
+        </p>
+      </div>
+      <label class="edh-cookie-settings__switch">
+        <input type="checkbox" role="switch" checked autocomplete="off" aria-label="Tracking cookies" data-cookie-settings-tracking>
+        <span class="edh-cookie-settings__track" aria-hidden="true"></span>
+        <span data-cookie-settings-tracking-label>Enabled</span>
+      </label>
+    </section>
+  </div>
+
+  <footer class="edh-cookie-settings__footer">
+    <button class="edh-cookie-settings__button edh-cookie-settings__button--deny" type="button" data-cookie-settings-deny>Deny all</button>
+    <button class="edh-cookie-settings__button edh-cookie-settings__button--accept" type="button" data-cookie-settings-accept>Accept all</button>
+    <button class="edh-cookie-settings__button edh-cookie-settings__button--save" type="button" data-cookie-settings-save>Save</button>
+  </footer>
+</dialog>
