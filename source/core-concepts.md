@@ -95,5 +95,6 @@ The {edh_url}`Climate DT </collections/climate-dt-2>` high-resolution datasets a
 ```{youtube} JV5g9XWBWfI
 ---
 width: 100%
+url_parameters: ?enablejsapi=1
 ---
 ```
