@@ -20,6 +20,20 @@
     queue.push(['setConsentGiven']);
   }
 
+  function enableMediaEvents() {
+    window.Matomo.getAsyncTrackers().forEach(function (tracker) {
+      if (tracker.MediaAnalytics) {
+        tracker.MediaAnalytics.enableTrackEvents();
+      }
+    });
+  }
+
+  function initMediaAnalytics() {
+    // Tag Manager can add trackers after Media Analytics has initialized.
+    window.Matomo.on('TrackerAdded', enableMediaEvents);
+    enableMediaEvents();
+  }
+
   function markCopyButtons() {
     document.querySelectorAll('button.copybtn:not([data-matomo-copy])').forEach(function (button) {
       button.setAttribute('data-matomo-copy', 'docs-code-snippet');
@@ -30,6 +44,13 @@
   }
 
   document.addEventListener('DOMContentLoaded', markCopyButtons);
+
+  if (window.Matomo) {
+    initMediaAnalytics();
+  } else {
+    var pluginInit = window.matomoPluginAsyncInit = window.matomoPluginAsyncInit || [];
+    pluginInit.push(initMediaAnalytics);
+  }
 
   enableTracking();
   var dataLayer = window._mtm = window._mtm || [];
