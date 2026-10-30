@@ -101,8 +101,8 @@ asset = item.assets["data"]
 
 xr.open_dataset(
     asset.href,
-    storage_options=asset.extra_fields["xarray:storage_options"],
-    **asset.extra_fields["xarray:open_kwargs"],
+    storage_options=asset.extra_fields.get("xarray:storage_options"),
+    **asset.extra_fields.get("xarray:open_kwargs", {}),
 )
 
 ```
