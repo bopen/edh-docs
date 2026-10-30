@@ -231,16 +231,9 @@ Behind the scenes, caching is handled by the **fsspec** library. The `simplecach
 
 To learn more about available caching options, see the [fsspec documentation](https://filesystem-spec.readthedocs.io/en/latest/features.html#caching-files-locally).
 
-```{include} _includes/api-reference.md
-```
-
-(api-reference)=
-
 ## API reference
 
 Under the hood, Earth Data Hub is just two open interfaces: a **STAC catalogue** to find data, and **Zarr over HTTPS** to read it. No SDK required. If your tool can make a web request, it can use Earth Data Hub.
-
-(stac-api)=
 
 ### STAC catalogue
 
@@ -337,8 +330,6 @@ xr.open_dataset(
 )
 
 ```
-
-(zarr-over-https)=
 
 ### Zarr over HTTPS
 
