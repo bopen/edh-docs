@@ -8,14 +8,7 @@ Under the hood, Earth Data Hub is just two open interfaces: a **STAC catalogue**
 
 ### STAC catalogue
 
-[STAC](https://stacspec.org/) (SpatioTemporal Asset Catalog) is a standard, searchable catalogue of Earth data. Every collection and dataset you see in the Earth Data Hub catalogue is also available as STAC metadata, starting from a single root URL:
-
-```{code-block} text
----
-substitutions:
----
-|stac_api_url|/
-```
+[STAC](https://stacspec.org/) (SpatioTemporal Asset Catalog) is a standard, searchable catalogue of Earth data. Every collection and dataset you see in the Earth Data Hub catalogue is also available as STAC metadata, starting from a single root URL: <code>{{ stac_api_url }}</code>
 
 ```{admonition} One URL to discover everything.
 ---
@@ -42,6 +35,8 @@ curl |stac_api_url|/collections/era5/items
 # Search across the catalogue
 curl "|stac_api_url|/search?collections=era5&limit=5"
 ```
+
+For the full list of endpoints and query parameters, see the {edh_url}`interactive STAC API documentation </api/stac/v1/api.html>`.
 
 In STAC, each dataset is an **item**. Its `data` asset holds the **dataset URL**, along with the exact arguments needed to open it with Xarray:
 
@@ -131,17 +126,20 @@ curl -o chunk.bin https://|datastore_internal_host|/public/test-dataset-v1.zarr/
 
 File names follow the standard [Zarr conventions](https://zarr-specs.readthedocs.io/en/latest/v3/core/index.html). To learn more about how chunks are organised, see [](chunking-schemes).
 
-For protected datasets, let `curl` read your API key from your `.netrc` file, or pass it directly:
+For protected datasets, add your API key to the request:
 
 ```{code-block} bash
 ---
 substitutions:
 ---
-# Using your .netrc file (recommended)
-curl --netrc https://|datastore_internal_host||private_test_dataset_path|/zarr.json
-
 # Using your API key directly
 curl -u edh:<your API key> https://|datastore_internal_host||private_test_dataset_path|/zarr.json
+
+# Using your API key (with bearer auth)
+curl https://|datastore_internal_host||private_test_dataset_path|/zarr.json -H "Authorization: Bearer <your API key>"
+
+# Using your .netrc file
+curl --netrc https://|datastore_internal_host||private_test_dataset_path|/zarr.json
 ```
 
 ```{note}
