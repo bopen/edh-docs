@@ -20,6 +20,7 @@ unknown ones emit warnings, which fail the CI build.
 
 import json
 import posixpath
+from pathlib import Path
 
 from docutils import nodes
 from edh_icons import EdhOcticon
@@ -211,13 +212,32 @@ def add_notebook_description(app, doctree):
         doctree.insert(0, nodes.meta(name="description", content=description))
 
 
+def append_llms_txt(app, exception):
+    """Append configured Markdown after sphinx-llm generates the root index."""
+    if (
+        exception is not None
+        or app.statuscode
+        or app.builder.name not in ("html", "dirhtml")
+        or not app.config.llms_txt_enabled
+    ):
+        return
+    content = app.config.edh_llms_txt_append.strip()
+    path = Path(app.builder.outdir) / "llms.txt"
+    if content and path.is_file():
+        with path.open("a", encoding="utf-8") as f:
+            f.write(f"\n{content}\n")
+
+
 def setup(app):
+    app.add_config_value("edh_llms_txt_append", "", "html")
     app.add_post_transform(NotebookCells)
     app.add_post_transform(MarkdownCleanup)
     app.connect("doctree-read", add_notebook_description)
     # After the nbsphinx doctree-resolved handler, which fills the entries.
     app.connect("doctree-resolved", gallery_to_list, priority=600)
     app.connect("html-page-context", ai_links_to_markdown)
+    # After sphinx-llm combines the HTML and Markdown builds (priority 101).
+    app.connect("build-finished", append_llms_txt, priority=102)
 
     return {
         "version": "0.1",

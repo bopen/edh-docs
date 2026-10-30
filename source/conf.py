@@ -219,6 +219,11 @@ llms_txt_suffix_mode = "replace"
 llms_txt_exclude = ["404", "index"]
 # Meta nodes (notebook descriptions, see edh_llms_markdown) have no Markdown equivalent
 llms_txt_suppress_unknown_node_warnings = ["meta"]
+edh_llms_txt_append = f"""
+## API Reference
+
+- [{BASE_URL}/api/stac/v1/]({BASE_URL}/api/stac/v1/): STAC API root catalog for Earth Data Hub, with links to dataset collections, search endpoints, conformance information, and the OpenAPI specification.
+"""
 markdown_http_base = html_baseurl
 
 
