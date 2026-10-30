@@ -52,7 +52,7 @@
           </span>
           <span>{{ _('Copy page') }}</span>
         </button>
-        <a role="menuitem" href="{{ raw_source_url }}" target="_blank" rel="nofollow">
+        <a class="matomo_link" role="menuitem" href="{{ raw_source_url }}" target="_blank" rel="nofollow">
           {%- if page_source_suffix and page_source_suffix.endswith(".md") -%}
             <iconify-icon icon="bi:markdown"></iconify-icon>
             <span>{{ _('View as Markdown') }}</span>
