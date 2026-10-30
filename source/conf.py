@@ -55,7 +55,7 @@ copybutton_prompt_text = r">>> |\.\.\. "
 copybutton_prompt_is_regexp = True
 
 templates_path = ["_templates"]
-exclude_patterns = ["_collections", "_includes"]
+exclude_patterns = ["_collections"]
 
 myst_enable_extensions = ["attrs_block", "substitution"]
 
