@@ -1,7 +1,7 @@
 ---
 myst:
   html_meta:
-    description lang=en: This page explains how to access Earth Data Hub datasets using open standards such as Xarray and Zarr, including environment setup, API key authentication, protected datasets, quotas, and local caching.
+    description lang=en: This page explains how to access Earth Data Hub datasets using open standards such as Xarray and Zarr, including environment setup, API key authentication, protected datasets, quotas, and local caching, plus the STAC catalogue API and direct Zarr access over HTTPS.
 ---
 
 # {edh-octicon}`download` Data Access
@@ -230,3 +230,6 @@ ds = xr.open_dataset(
 Behind the scenes, caching is handled by the **fsspec** library. The `simplecache` backend is a great default for most workflows, while other caching backends provide additional features such as customisable cache expiration and size limits.
 
 To learn more about available caching options, see the [fsspec documentation](https://filesystem-spec.readthedocs.io/en/latest/features.html#caching-files-locally).
+
+```{include} _includes/api-reference.md
+```

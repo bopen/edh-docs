@@ -55,11 +55,12 @@ copybutton_prompt_text = r">>> |\.\.\. "
 copybutton_prompt_is_regexp = True
 
 templates_path = ["_templates"]
-exclude_patterns = ["_collections"]
+exclude_patterns = ["_collections", "_includes"]
 
 myst_enable_extensions = ["attrs_block", "substitution"]
 
 myst_substitutions = {
+    "stac_api_url": f"{BASE_URL}/api/stac/v1",
     "datastore_host": os.getenv("DATASTORE_HOST", "api.earthdatahub.destine.eu"),
     "datastore_internal_host": os.getenv(
         "DATASTORE_INTERNAL_HOST", "data.earthdatahub.destine.eu"
