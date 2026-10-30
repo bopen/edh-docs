@@ -113,13 +113,6 @@ xr.open_dataset(
 
 A Zarr dataset is simply a **folder of small files** on the web: a few JSON files describing the data, plus the data itself split into chunks. Each of those files has its own URL, so a plain HTTPS request is all it takes to read one.
 
-```{admonition} If it speaks HTTP, it speaks Zarr.
----
-class: tip
----
-Xarray, `curl`, a browser, or your own code in any language: they all read the same files the same way.
-```
-
 Try it with the public test dataset:
 
 ```{code-block} bash
