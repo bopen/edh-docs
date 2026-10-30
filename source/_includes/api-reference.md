@@ -88,35 +88,22 @@ conda install -c conda-forge pystac-client xarray "zarr>3" dask aiohttp
 
 Then find a dataset in the catalogue and open it, with no URLs to copy and paste. This example uses your `.netrc` file, see [](protected-datasets):
 
-```{code-block} pycon
+```{code-block} python
 ---
 substitutions:
 ---
->>> import pystac_client
->>> import xarray as xr
+import pystac_client
+import xarray as xr
 
->>> catalog = pystac_client.Client.open("|stac_api_url|")
->>> item = catalog.get_collection("era5").get_item("era5-land-monthly")
->>> asset = item.assets["data"]
+catalog = pystac_client.Client.open("|stac_api_url|")
+item = catalog.get_collection("era5").get_item("era5-land")
+asset = item.assets["data"]
 
->>> xr.open_dataset(
-...     asset.href,
-...     storage_options=asset.extra_fields["xarray:storage_options"],
-...     **asset.extra_fields["xarray:open_kwargs"],
-... )
-<xarray.Dataset> Size: 1TB
-Dimensions:     (valid_time: 921, latitude: 1801, longitude: 3600)
-Coordinates:
-  * valid_time  (valid_time) datetime64[ns] 7kB 1950-01-01 ... 2026-09-01
-  * latitude    (latitude) float64 14kB 90.0 89.9 89.8 ... -89.8 -89.9 -90.0
-  * longitude   (longitude) float64 29kB 0.0 0.1 0.2 0.3 ... 359.7 359.8 359.9
-Data variables: (12/60)
-    asn         (valid_time, latitude, longitude) float32 24GB dask.array<chunksize=(120, 200, 200), meta=np.ndarray>
-    cl          (latitude, longitude) float32 26MB dask.array<chunksize=(200, 200), meta=np.ndarray>
-    ...          ...
-    u10         (valid_time, latitude, longitude) float32 24GB dask.array<chunksize=(120, 200, 200), meta=np.ndarray>
-    v10         (valid_time, latitude, longitude) float32 24GB dask.array<chunksize=(120, 200, 200), meta=np.ndarray>
-    z           (latitude, longitude) float32 26MB dask.array<chunksize=(200, 200), meta=np.ndarray>
+xr.open_dataset(
+    asset.href,
+    storage_options=asset.extra_fields["xarray:storage_options"],
+    **asset.extra_fields["xarray:open_kwargs"],
+)
 
 ```
 
